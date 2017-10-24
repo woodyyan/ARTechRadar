@@ -23,11 +23,10 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         // Show statistics such as fps and timing information
         sceneView.showsStatistics = true
         
-        // Create a new scene
-        let scene = SCNScene(named: "art.scnassets/ship.scn")!
-        
-        // Set the scene to the view
+        let scene = SCNScene()
         sceneView.scene = scene
+        sceneView.autoenablesDefaultLighting = true
+        sceneView.debugOptions = [ARSCNDebugOptions.showFeaturePoints]
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -36,6 +35,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         // Create a session configuration
         let configuration = ARWorldTrackingConfiguration()
 
+        configuration.planeDetection = .horizontal
         // Run the view's session
         sceneView.session.run(configuration)
     }
@@ -53,6 +53,18 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     }
 
     // MARK: - ARSCNViewDelegate
+    
+    func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
+        if let planeAnchor = anchor as? ARPlaneAnchor {
+            let plane = SCNBox(width: CGFloat(planeAnchor.extent.x), height: CGFloat(0.01), length: CGFloat(planeAnchor.extent.z), chamferRadius: 0)
+            plane.firstMaterial?.diffuse.contents = UIColor.red
+            
+            let planeNode = SCNNode(geometry: plane)
+            planeNode.position = SCNVector3.init(planeAnchor.center.x, 0, planeAnchor.center.z)
+            planeNode.physicsBody = SCNPhysicsBody(type: SCNPhysicsBodyType.kinematic, shape: SCNPhysicsShape(geometry: plane, options: nil))
+            node.addChildNode(planeNode)
+        }
+    }
     
 /*
     // Override to create and configure nodes for anchors added to the view's session.
