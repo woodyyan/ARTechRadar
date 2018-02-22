@@ -56,12 +56,14 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     
     func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
         if let planeAnchor = anchor as? ARPlaneAnchor {
-            let plane = SCNBox(width: CGFloat(planeAnchor.extent.x), height: CGFloat(0.01), length: CGFloat(planeAnchor.extent.z), chamferRadius: 0)
-            plane.firstMaterial?.diffuse.contents = UIColor.red
-            
-            let planeNode = SCNNode(geometry: plane)
+            let cylinderNode = SCNCylinder(radius: CGFloat(planeAnchor.extent.x/2), height: 0.05)
+            cylinderNode.firstMaterial?.diffuse.contents = UIImage(named: "radar")
+//            let plane = SCNBox(width: CGFloat(planeAnchor.extent.x), height: CGFloat(0.01), length: CGFloat(planeAnchor.extent.z), chamferRadius: 0)
+//            plane.firstMaterial?.diffuse.contents = UIColor.red
+//
+            let planeNode = SCNNode(geometry: cylinderNode)
             planeNode.position = SCNVector3.init(planeAnchor.center.x, 0, planeAnchor.center.z)
-            planeNode.physicsBody = SCNPhysicsBody(type: SCNPhysicsBodyType.kinematic, shape: SCNPhysicsShape(geometry: plane, options: nil))
+            planeNode.physicsBody = SCNPhysicsBody(type: SCNPhysicsBodyType.kinematic, shape: SCNPhysicsShape(geometry: cylinderNode, options: nil))
             node.addChildNode(planeNode)
         }
     }
