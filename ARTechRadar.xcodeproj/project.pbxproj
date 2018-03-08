@@ -17,6 +17,7 @@
 		829450A41F9DE799004D066E /* ARTechRadarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829450A31F9DE799004D066E /* ARTechRadarUITests.swift */; };
 		F8CD8CFC20513A0400222B39 /* CylinderNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8CD8CFB20513A0400222B39 /* CylinderNode.swift */; };
 		F8CD8CFE20513BC700222B39 /* TubeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8CD8CFD20513BC700222B39 /* TubeNode.swift */; };
+		F8CD8D0020513F8E00222B39 /* ConeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8CD8CFF20513F8E00222B39 /* ConeNode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		829450A51F9DE799004D066E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F8CD8CFB20513A0400222B39 /* CylinderNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CylinderNode.swift; sourceTree = "<group>"; };
 		F8CD8CFD20513BC700222B39 /* TubeNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TubeNode.swift; sourceTree = "<group>"; };
+		F8CD8CFF20513F8E00222B39 /* ConeNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConeNode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +140,7 @@
 			children = (
 				F8CD8CFB20513A0400222B39 /* CylinderNode.swift */,
 				F8CD8CFD20513BC700222B39 /* TubeNode.swift */,
+				F8CD8CFF20513F8E00222B39 /* ConeNode.swift */,
 			);
 			path = Nodes;
 			sourceTree = "<group>";
@@ -278,6 +281,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8CD8CFC20513A0400222B39 /* CylinderNode.swift in Sources */,
+				F8CD8D0020513F8E00222B39 /* ConeNode.swift in Sources */,
 				829450861F9DE799004D066E /* ViewController.swift in Sources */,
 				829450821F9DE799004D066E /* AppDelegate.swift in Sources */,
 				F8CD8CFE20513BC700222B39 /* TubeNode.swift in Sources */,

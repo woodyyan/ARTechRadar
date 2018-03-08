@@ -68,6 +68,10 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             node.addChildNode(trialNode)
             node.addChildNode(assessNode)
             node.addChildNode(holdNode)
+            
+            let firstConeNode = ConeNode.init(UIColor(red: 232/255, green: 135/255, blue: 68/255, alpha: 1))
+            firstConeNode.position = SCNVector3.init(planeAnchor.center.x + basicRadius/2, baseHeight, planeAnchor.center.z + basicRadius/2)
+            node.addChildNode(firstConeNode)
         }
     }
     
