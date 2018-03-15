@@ -15,6 +15,7 @@
 		8294508E1F9DE799004D066E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8294508C1F9DE799004D066E /* LaunchScreen.storyboard */; };
 		829450991F9DE799004D066E /* ARTechRadarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829450981F9DE799004D066E /* ARTechRadarTests.swift */; };
 		829450A41F9DE799004D066E /* ARTechRadarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829450A31F9DE799004D066E /* ARTechRadarUITests.swift */; };
+		F81F7A3B205A77E4003D2046 /* TextNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81F7A3A205A77E4003D2046 /* TextNode.swift */; };
 		F8CD8CFC20513A0400222B39 /* CylinderNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8CD8CFB20513A0400222B39 /* CylinderNode.swift */; };
 		F8CD8CFE20513BC700222B39 /* TubeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8CD8CFD20513BC700222B39 /* TubeNode.swift */; };
 		F8CD8D0020513F8E00222B39 /* CubeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8CD8CFF20513F8E00222B39 /* CubeNode.swift */; };
@@ -52,6 +53,7 @@
 		8294509F1F9DE799004D066E /* ARTechRadarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ARTechRadarUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		829450A31F9DE799004D066E /* ARTechRadarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARTechRadarUITests.swift; sourceTree = "<group>"; };
 		829450A51F9DE799004D066E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F81F7A3A205A77E4003D2046 /* TextNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextNode.swift; sourceTree = "<group>"; };
 		F8CD8CFB20513A0400222B39 /* CylinderNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CylinderNode.swift; sourceTree = "<group>"; };
 		F8CD8CFD20513BC700222B39 /* TubeNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TubeNode.swift; sourceTree = "<group>"; };
 		F8CD8CFF20513F8E00222B39 /* CubeNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CubeNode.swift; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 				F8CD8CFB20513A0400222B39 /* CylinderNode.swift */,
 				F8CD8CFD20513BC700222B39 /* TubeNode.swift */,
 				F8CD8CFF20513F8E00222B39 /* CubeNode.swift */,
+				F81F7A3A205A77E4003D2046 /* TextNode.swift */,
 			);
 			path = Nodes;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F81F7A3B205A77E4003D2046 /* TextNode.swift in Sources */,
 				F8CD8CFC20513A0400222B39 /* CylinderNode.swift in Sources */,
 				F8CD8D0020513F8E00222B39 /* CubeNode.swift in Sources */,
 				829450861F9DE799004D066E /* ViewController.swift in Sources */,
