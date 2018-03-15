@@ -10,16 +10,16 @@ import Foundation
 import SceneKit
 import ARKit
 
-class ConeNode: SCNNode {
+class CubeNode: SCNNode {
     let bottomRadius: Float = 0.01
-    let height: Float = 0.02
+    let height: Float = 0.01
     init(_ color:UIColor) {
         super.init()
-        let cone = SCNCone(topRadius: 0, bottomRadius: CGFloat(bottomRadius), height: CGFloat(height))
-        cone.firstMaterial?.diffuse.contents = color
+        let cube = SCNBox.init(width: CGFloat(height), height: CGFloat(height), length: CGFloat(height), chamferRadius: 0.0)
+        cube.firstMaterial?.diffuse.contents = color
         
-        self.geometry = cone
-        self.physicsBody = SCNPhysicsBody(type: SCNPhysicsBodyType.kinematic, shape: SCNPhysicsShape(geometry: cone, options: nil))
+        self.geometry = cube
+        self.physicsBody = SCNPhysicsBody(type: SCNPhysicsBodyType.kinematic, shape: SCNPhysicsShape(geometry: cube, options: nil))
     }
     
     required init?(coder aDecoder: NSCoder) {

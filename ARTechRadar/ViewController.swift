@@ -69,9 +69,11 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             node.addChildNode(assessNode)
             node.addChildNode(holdNode)
             
-            let firstConeNode = ConeNode.init(UIColor(red: 232/255, green: 135/255, blue: 68/255, alpha: 1))
-            firstConeNode.position = SCNVector3.init(planeAnchor.center.x + basicRadius/2, baseHeight, planeAnchor.center.z + basicRadius/2)
-            node.addChildNode(firstConeNode)
+            let firstCubeNode = CubeNode.init(UIColor(red: 232/255, green: 135/255, blue: 68/255, alpha: 1))
+            firstCubeNode.position = SCNVector3.init(planeAnchor.center.x + basicRadius/2, baseHeight, planeAnchor.center.z + basicRadius/2)
+//            firstConeNode.transform = SCNMatrix4MakeRotation(0.25, 0, 0.25, 0)
+            firstCubeNode.rotation = SCNVector4Make(1, 0, 1, Float(.pi/4.0))
+            node.addChildNode(firstCubeNode)
         }
     }
     
