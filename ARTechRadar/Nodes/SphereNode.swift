@@ -11,7 +11,7 @@ import SceneKit
 import ARKit
 
 class SphereNode: SCNNode {
-    let bottomRadius: Float = 0.01
+    let bottomRadius: Float = 0.02
     init(_ color:UIColor) {
         super.init()
         let sphere = SCNSphere.init(radius: CGFloat(bottomRadius))

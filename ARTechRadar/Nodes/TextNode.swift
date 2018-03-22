@@ -16,11 +16,13 @@ class TextNode: SCNNode {
     init(_ text: String) {
         super.init()
         let text = SCNText(string: text, extrusionDepth: CGFloat(depth))
-        text.font = UIFont.init(name: "Arial", size: 0.03)
+        text.font = UIFont.init(name: "Arial", size: 5)
         text.firstMaterial?.diffuse.contents = color
-       
+        text.alignmentMode = kCAAlignmentCenter
+        
         self.geometry = text
         self.physicsBody = SCNPhysicsBody(type: SCNPhysicsBodyType.kinematic, shape: SCNPhysicsShape(geometry: text, options: nil))
+        self.scale = SCNVector3(0.01, 0.01, 0.01)
     }
     
     required init?(coder aDecoder: NSCoder) {
