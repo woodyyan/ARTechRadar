@@ -11,14 +11,14 @@ import SceneKit
 import ARKit
 
 class TextNode: SCNNode {
-    let depth = 0.01
+    let depth = 0.005
     let color = UIColor.darkGray
     init(_ text: String) {
         super.init()
         let text = SCNText(string: text, extrusionDepth: CGFloat(depth))
-        text.font = UIFont.systemFont(ofSize: 0.03)
-//        text.firstMaterial?.diffuse.contents = color
-        
+        text.font = UIFont.init(name: "Arial", size: 0.03)
+        text.firstMaterial?.diffuse.contents = color
+       
         self.geometry = text
         self.physicsBody = SCNPhysicsBody(type: SCNPhysicsBodyType.kinematic, shape: SCNPhysicsShape(geometry: text, options: nil))
     }
