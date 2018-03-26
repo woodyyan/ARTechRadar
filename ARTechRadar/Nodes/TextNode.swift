@@ -12,11 +12,10 @@ import ARKit
 
 class TextNode: SCNNode {
     let depth = 0.005
-    let color = UIColor.darkGray
-    init(_ text: String) {
+    init(_ text: String, _ color:UIColor) {
         super.init()
         let text = SCNText(string: text, extrusionDepth: CGFloat(depth))
-        text.font = UIFont.init(name: "Arial", size: 5)
+        text.font = UIFont.init(name: "OpenSans-Regular", size: 4)
         text.firstMaterial?.diffuse.contents = color
         text.alignmentMode = kCAAlignmentCenter
         

@@ -69,12 +69,13 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             node.addChildNode(assessNode)
             node.addChildNode(holdNode)
             
-            let firstCubeNode = SphereNode.init(UIColor(red: 232/255, green: 135/255, blue: 68/255, alpha: 1))
+            let firstColor  = UIColor(red: 232/255, green: 135/255, blue: 68/255, alpha: 1)
+            let firstCubeNode = SphereNode.init(firstColor)
             firstCubeNode.position = SCNVector3.init(planeAnchor.center.x + basicRadius/2, 0.08, planeAnchor.center.z + basicRadius/2)
             firstCubeNode.rotation = SCNVector4Make(1, 0, 1, Float(.pi/4.0))
             node.addChildNode(firstCubeNode)
 
-            let firstTextNode = TextNode.init("Swift")
+            let firstTextNode = TextNode.init("Swift", firstColor)
             firstTextNode.position = SCNVector3.init(planeAnchor.center.x + basicRadius/2, 0.08, planeAnchor.center.z + basicRadius/2)
 //            firstTextNode.rotation = SCNVector4Make(1, 0, 1, Float(.pi/4.0))
             node.addChildNode(firstTextNode)
