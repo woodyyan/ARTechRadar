@@ -15,6 +15,7 @@
 		8294508E1F9DE799004D066E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8294508C1F9DE799004D066E /* LaunchScreen.storyboard */; };
 		829450991F9DE799004D066E /* ARTechRadarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829450981F9DE799004D066E /* ARTechRadarTests.swift */; };
 		829450A41F9DE799004D066E /* ARTechRadarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829450A31F9DE799004D066E /* ARTechRadarUITests.swift */; };
+		F80DDDF1207CB1FB004519B3 /* RadarNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80DDDF0207CB1FB004519B3 /* RadarNode.swift */; };
 		F81F7A3B205A77E4003D2046 /* TextNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81F7A3A205A77E4003D2046 /* TextNode.swift */; };
 		F81F7A3D2063A325003D2046 /* SphereNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81F7A3C2063A325003D2046 /* SphereNode.swift */; };
 		F81F7A4B2068F3EE003D2046 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F81F7A442068F38E003D2046 /* OpenSans-Regular.ttf */; };
@@ -56,6 +57,7 @@
 		8294509F1F9DE799004D066E /* ARTechRadarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ARTechRadarUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		829450A31F9DE799004D066E /* ARTechRadarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARTechRadarUITests.swift; sourceTree = "<group>"; };
 		829450A51F9DE799004D066E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F80DDDF0207CB1FB004519B3 /* RadarNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadarNode.swift; sourceTree = "<group>"; };
 		F81F7A3A205A77E4003D2046 /* TextNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextNode.swift; sourceTree = "<group>"; };
 		F81F7A3C2063A325003D2046 /* SphereNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SphereNode.swift; sourceTree = "<group>"; };
 		F81F7A402068F38C003D2046 /* OpenSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiBold.ttf"; sourceTree = "<group>"; };
@@ -113,7 +115,8 @@
 		829450801F9DE799004D066E /* ARTechRadar */ = {
 			isa = PBXGroup;
 			children = (
-				F81F7A3E2068F347003D2046 /* fonts */,
+				F81F7A4D207A12EC003D2046 /* Data */,
+				F81F7A3E2068F347003D2046 /* Fonts */,
 				F8CD8CFA2051397A00222B39 /* Nodes */,
 				829450811F9DE799004D066E /* AppDelegate.swift */,
 				829450831F9DE799004D066E /* art.scnassets */,
@@ -144,13 +147,20 @@
 			path = ARTechRadarUITests;
 			sourceTree = "<group>";
 		};
-		F81F7A3E2068F347003D2046 /* fonts */ = {
+		F81F7A3E2068F347003D2046 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
 				F81F7A442068F38E003D2046 /* OpenSans-Regular.ttf */,
 				F81F7A402068F38C003D2046 /* OpenSans-SemiBold.ttf */,
 			);
-			path = fonts;
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		F81F7A4D207A12EC003D2046 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 		F8CD8CFA2051397A00222B39 /* Nodes */ = {
@@ -161,6 +171,7 @@
 				F8CD8CFF20513F8E00222B39 /* CubeNode.swift */,
 				F81F7A3A205A77E4003D2046 /* TextNode.swift */,
 				F81F7A3C2063A325003D2046 /* SphereNode.swift */,
+				F80DDDF0207CB1FB004519B3 /* RadarNode.swift */,
 			);
 			path = Nodes;
 			sourceTree = "<group>";
@@ -304,6 +315,7 @@
 			files = (
 				F81F7A3B205A77E4003D2046 /* TextNode.swift in Sources */,
 				F8CD8CFC20513A0400222B39 /* CylinderNode.swift in Sources */,
+				F80DDDF1207CB1FB004519B3 /* RadarNode.swift in Sources */,
 				F81F7A3D2063A325003D2046 /* SphereNode.swift in Sources */,
 				F8CD8D0020513F8E00222B39 /* CubeNode.swift in Sources */,
 				829450861F9DE799004D066E /* ViewController.swift in Sources */,
