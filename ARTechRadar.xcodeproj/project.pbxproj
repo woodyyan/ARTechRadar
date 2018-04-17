@@ -21,6 +21,7 @@
 		8280CDC12085E65D00C7A1F5 /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8280CDAD2085CF6400C7A1F5 /* Level.swift */; };
 		8280CDC22085E66000C7A1F5 /* Quadrant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8280CDA82085C8A700C7A1F5 /* Quadrant.swift */; };
 		8280CDC32085F33900C7A1F5 /* Vector2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8280CDB42085DC0800C7A1F5 /* Vector2D.swift */; };
+		8280CDC820861A3400C7A1F5 /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = 8280CDC720861A3400C7A1F5 /* .travis.yml */; };
 		829450821F9DE799004D066E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829450811F9DE799004D066E /* AppDelegate.swift */; };
 		829450841F9DE799004D066E /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 829450831F9DE799004D066E /* art.scnassets */; };
 		829450861F9DE799004D066E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829450851F9DE799004D066E /* ViewController.swift */; };
@@ -66,6 +67,7 @@
 		8280CDB82085DC6900C7A1F5 /* RadarData.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = RadarData.plist; sourceTree = "<group>"; };
 		8280CDBB2085DD1E00C7A1F5 /* RadarDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadarDataService.swift; sourceTree = "<group>"; };
 		8280CDBD2085E64B00C7A1F5 /* RadarDataServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadarDataServiceTests.swift; sourceTree = "<group>"; };
+		8280CDC720861A3400C7A1F5 /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
 		8294507E1F9DE799004D066E /* ARTechRadar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARTechRadar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		829450811F9DE799004D066E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		829450831F9DE799004D066E /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 		829450751F9DE799004D066E = {
 			isa = PBXGroup;
 			children = (
+				8280CDC720861A3400C7A1F5 /* .travis.yml */,
 				8280CDB02085D9F800C7A1F5 /* .swiftlint.yml */,
 				829450801F9DE799004D066E /* ARTechRadar */,
 				829450971F9DE799004D066E /* ARTechRadarTests */,
@@ -343,6 +346,7 @@
 				F81F7A4B2068F3EE003D2046 /* OpenSans-Regular.ttf in Resources */,
 				829450841F9DE799004D066E /* art.scnassets in Resources */,
 				8294508E1F9DE799004D066E /* LaunchScreen.storyboard in Resources */,
+				8280CDC820861A3400C7A1F5 /* .travis.yml in Resources */,
 				8280CDB12085D9F800C7A1F5 /* .swiftlint.yml in Resources */,
 				8294508B1F9DE799004D066E /* Assets.xcassets in Resources */,
 				F81F7A4C2068F3F0003D2046 /* OpenSans-SemiBold.ttf in Resources */,
