@@ -12,7 +12,7 @@ import ARKit
 
 class TextNode: SCNNode {
     let depth = 0.005
-    init(_ text: String, _ color:UIColor) {
+    init(_ text: String, _ color: UIColor) {
         super.init()
         let text = SCNText(string: text, extrusionDepth: CGFloat(depth))
         text.font = UIFont.init(name: "OpenSans-Regular", size: 4)
@@ -28,4 +28,3 @@ class TextNode: SCNNode {
         fatalError("init(coder:) has not been implemented")
     }
 }
-

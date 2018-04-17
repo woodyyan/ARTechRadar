@@ -10,8 +10,8 @@ import Foundation
 import SceneKit
 import ARKit
 
-class TubeNode : SCNNode {
-    init(_ innerRadius: Float, _ outterRadius: Float, _ planeAnchor: ARPlaneAnchor, _ baseHeight:Float, _ color:UIColor) {
+class TubeNode: SCNNode {
+    init(_ innerRadius: Float, _ outterRadius: Float, _ planeAnchor: ARPlaneAnchor, _ baseHeight: Float, _ color: UIColor) {
         super.init()
         let tube = buildTube(innerRadius, outterRadius, baseHeight, color)
         self.geometry = tube
@@ -23,7 +23,7 @@ class TubeNode : SCNNode {
         fatalError("init(coder:) has not been implemented")
     }
     
-    fileprivate func buildTube(_ innerRadius: Float, _ outterRadius: Float, _ baseHeight:Float, _ color:UIColor) -> SCNTube{
+    fileprivate func buildTube(_ innerRadius: Float, _ outterRadius: Float, _ baseHeight: Float, _ color: UIColor) -> SCNTube {
         let tube = SCNTube.init(innerRadius: CGFloat(innerRadius), outerRadius: CGFloat(outterRadius), height: CGFloat(baseHeight))
         tube.firstMaterial?.diffuse.contents = color
         return tube

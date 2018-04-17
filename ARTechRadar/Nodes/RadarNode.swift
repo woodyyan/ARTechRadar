@@ -13,13 +13,13 @@ class RadarNode: SCNNode {
     var sphere: SphereNode
     var title: TextNode
     
-    init(_color: UIColor, _text: String, _x: Float, _y: Float, _z: Float) {
-        self.sphere = SphereNode.init(_color)
-        self.sphere.position = SCNVector3.init(_x, _y, _z)
+    init(_ color: UIColor, _ text: String, _ x: Float, _ y: Float, _ z: Float) {
+        self.sphere = SphereNode.init(color)
+        self.sphere.position = SCNVector3.init(x, y, z)
         self.sphere.rotation = SCNVector4Make(1, 0, 1, Float(.pi/4.0))
         
-        self.title = TextNode.init(_text, _color)
-        title.position = SCNVector3.init(_x, _y, _z)
+        self.title = TextNode.init(text, color)
+        title.position = SCNVector3.init(x, y, z)
     
         super.init()
     }

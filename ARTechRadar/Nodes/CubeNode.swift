@@ -13,7 +13,7 @@ import ARKit
 class CubeNode: SCNNode {
     let bottomRadius: Float = 0.01
     let height: Float = 0.01
-    init(_ color:UIColor) {
+    init(_ color: UIColor) {
         super.init()
         let cube = SCNBox.init(width: CGFloat(height), height: CGFloat(height), length: CGFloat(height), chamferRadius: 0.0)
         cube.firstMaterial?.diffuse.contents = color

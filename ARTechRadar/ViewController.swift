@@ -12,7 +12,7 @@ import ARKit
 
 class ViewController: UIViewController, ARSCNViewDelegate {
 
-    private let baseHeight:Float = 0.05
+    private let baseHeight: Float = 0.05
     @IBOutlet var sceneView: ARSCNView!
     
     override func viewDidLoad() {
@@ -81,8 +81,6 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             node.addChildNode(firstTextNode)
         }
     }
-    
-    
     
 /*
     // Override to create and configure nodes for anchors added to the view's session.

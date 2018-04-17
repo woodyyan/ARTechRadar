@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8280CDA92085C8A700C7A1F5 /* Quadrant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8280CDA82085C8A700C7A1F5 /* Quadrant.swift */; };
+		8280CDAC2085CB9200C7A1F5 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8280CDAB2085CB9200C7A1F5 /* UIColor+Extensions.swift */; };
+		8280CDAE2085CF6400C7A1F5 /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8280CDAD2085CF6400C7A1F5 /* Level.swift */; };
+		8280CDB12085D9F800C7A1F5 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 8280CDB02085D9F800C7A1F5 /* .swiftlint.yml */; };
+		8280CDB32085DB6100C7A1F5 /* RadarDot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8280CDB22085DB6100C7A1F5 /* RadarDot.swift */; };
+		8280CDB52085DC0800C7A1F5 /* Vector2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8280CDB42085DC0800C7A1F5 /* Vector2D.swift */; };
+		8280CDB92085DC6900C7A1F5 /* RadarData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8280CDB82085DC6900C7A1F5 /* RadarData.plist */; };
+		8280CDBC2085DD1E00C7A1F5 /* RadarDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8280CDBB2085DD1E00C7A1F5 /* RadarDataService.swift */; };
 		829450821F9DE799004D066E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829450811F9DE799004D066E /* AppDelegate.swift */; };
 		829450841F9DE799004D066E /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 829450831F9DE799004D066E /* art.scnassets */; };
 		829450861F9DE799004D066E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829450851F9DE799004D066E /* ViewController.swift */; };
@@ -43,6 +51,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8280CDA82085C8A700C7A1F5 /* Quadrant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quadrant.swift; sourceTree = "<group>"; };
+		8280CDAB2085CB9200C7A1F5 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		8280CDAD2085CF6400C7A1F5 /* Level.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
+		8280CDB02085D9F800C7A1F5 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
+		8280CDB22085DB6100C7A1F5 /* RadarDot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadarDot.swift; sourceTree = "<group>"; };
+		8280CDB42085DC0800C7A1F5 /* Vector2D.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vector2D.swift; sourceTree = "<group>"; };
+		8280CDB82085DC6900C7A1F5 /* RadarData.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = RadarData.plist; sourceTree = "<group>"; };
+		8280CDBB2085DD1E00C7A1F5 /* RadarDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadarDataService.swift; sourceTree = "<group>"; };
 		8294507E1F9DE799004D066E /* ARTechRadar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARTechRadar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		829450811F9DE799004D066E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		829450831F9DE799004D066E /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -92,9 +108,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8280CDA72085C87300C7A1F5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8280CDA82085C8A700C7A1F5 /* Quadrant.swift */,
+				8280CDAD2085CF6400C7A1F5 /* Level.swift */,
+				8280CDB22085DB6100C7A1F5 /* RadarDot.swift */,
+				8280CDB42085DC0800C7A1F5 /* Vector2D.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8280CDAA2085CB8200C7A1F5 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				8280CDAB2085CB9200C7A1F5 /* UIColor+Extensions.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		8280CDB72085DC6000C7A1F5 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				8280CDB82085DC6900C7A1F5 /* RadarData.plist */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		8280CDBA2085DD0100C7A1F5 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				8280CDBB2085DD1E00C7A1F5 /* RadarDataService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		829450751F9DE799004D066E = {
 			isa = PBXGroup;
 			children = (
+				8280CDB02085D9F800C7A1F5 /* .swiftlint.yml */,
 				829450801F9DE799004D066E /* ARTechRadar */,
 				829450971F9DE799004D066E /* ARTechRadarTests */,
 				829450A21F9DE799004D066E /* ARTechRadarUITests */,
@@ -115,7 +167,10 @@
 		829450801F9DE799004D066E /* ARTechRadar */ = {
 			isa = PBXGroup;
 			children = (
-				F81F7A4D207A12EC003D2046 /* Data */,
+				8280CDBA2085DD0100C7A1F5 /* Service */,
+				8280CDB72085DC6000C7A1F5 /* Resource */,
+				8280CDAA2085CB8200C7A1F5 /* Extension */,
+				8280CDA72085C87300C7A1F5 /* Model */,
 				F81F7A3E2068F347003D2046 /* Fonts */,
 				F8CD8CFA2051397A00222B39 /* Nodes */,
 				829450811F9DE799004D066E /* AppDelegate.swift */,
@@ -156,13 +211,6 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
-		F81F7A4D207A12EC003D2046 /* Data */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Data;
-			sourceTree = "<group>";
-		};
 		F8CD8CFA2051397A00222B39 /* Nodes */ = {
 			isa = PBXGroup;
 			children = (
@@ -186,6 +234,7 @@
 				8294507A1F9DE799004D066E /* Sources */,
 				8294507B1F9DE799004D066E /* Frameworks */,
 				8294507C1F9DE799004D066E /* Resources */,
+				8280CDAF2085D96600C7A1F5 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -239,7 +288,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0900;
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Songbai Yan";
 				TargetAttributes = {
 					8294507D1F9DE799004D066E = {
@@ -286,8 +335,10 @@
 				F81F7A4B2068F3EE003D2046 /* OpenSans-Regular.ttf in Resources */,
 				829450841F9DE799004D066E /* art.scnassets in Resources */,
 				8294508E1F9DE799004D066E /* LaunchScreen.storyboard in Resources */,
+				8280CDB12085D9F800C7A1F5 /* .swiftlint.yml in Resources */,
 				8294508B1F9DE799004D066E /* Assets.xcassets in Resources */,
 				F81F7A4C2068F3F0003D2046 /* OpenSans-SemiBold.ttf in Resources */,
+				8280CDB92085DC6900C7A1F5 /* RadarData.plist in Resources */,
 				829450891F9DE799004D066E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -308,18 +359,40 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		8280CDAF2085D96600C7A1F5 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8294507A1F9DE799004D066E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				F81F7A3B205A77E4003D2046 /* TextNode.swift in Sources */,
+				8280CDAE2085CF6400C7A1F5 /* Level.swift in Sources */,
+				8280CDAC2085CB9200C7A1F5 /* UIColor+Extensions.swift in Sources */,
 				F8CD8CFC20513A0400222B39 /* CylinderNode.swift in Sources */,
 				F80DDDF1207CB1FB004519B3 /* RadarNode.swift in Sources */,
+				8280CDA92085C8A700C7A1F5 /* Quadrant.swift in Sources */,
+				8280CDB52085DC0800C7A1F5 /* Vector2D.swift in Sources */,
 				F81F7A3D2063A325003D2046 /* SphereNode.swift in Sources */,
 				F8CD8D0020513F8E00222B39 /* CubeNode.swift in Sources */,
 				829450861F9DE799004D066E /* ViewController.swift in Sources */,
+				8280CDBC2085DD1E00C7A1F5 /* RadarDataService.swift in Sources */,
 				829450821F9DE799004D066E /* AppDelegate.swift in Sources */,
+				8280CDB32085DB6100C7A1F5 /* RadarDot.swift in Sources */,
 				F8CD8CFE20513BC700222B39 /* TubeNode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -389,6 +462,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -396,6 +470,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -446,6 +521,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -453,6 +529,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;

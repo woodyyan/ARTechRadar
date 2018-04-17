@@ -10,8 +10,8 @@ import Foundation
 import SceneKit
 import ARKit
 
-class CylinderNode : SCNNode {
-    init(_ basicRadius: Float, _ planeAnchor: ARPlaneAnchor, _ baseHeight:Float) {
+class CylinderNode: SCNNode {
+    init(_ basicRadius: Float, _ planeAnchor: ARPlaneAnchor, _ baseHeight: Float) {
         super.init()
         let cylinder = buildCylinder(basicRadius, baseHeight)
         self.geometry = cylinder
@@ -23,7 +23,7 @@ class CylinderNode : SCNNode {
         fatalError("init(coder:) has not been implemented")
     }
     
-    fileprivate func buildCylinder(_ basicRadius: Float, _ baseHeight:Float) -> SCNCylinder {
+    fileprivate func buildCylinder(_ basicRadius: Float, _ baseHeight: Float) -> SCNCylinder {
         let cylinder = SCNCylinder(radius: CGFloat(basicRadius), height: CGFloat(baseHeight))
         cylinder.firstMaterial?.diffuse.contents = UIColor(red: 205/255, green: 204/255, blue: 200/255, alpha: 1)
         return cylinder
