@@ -15,6 +15,12 @@
 		8280CDB52085DC0800C7A1F5 /* Vector2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8280CDB42085DC0800C7A1F5 /* Vector2D.swift */; };
 		8280CDB92085DC6900C7A1F5 /* RadarData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8280CDB82085DC6900C7A1F5 /* RadarData.plist */; };
 		8280CDBC2085DD1E00C7A1F5 /* RadarDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8280CDBB2085DD1E00C7A1F5 /* RadarDataService.swift */; };
+		8280CDBE2085E64B00C7A1F5 /* RadarDataServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8280CDBD2085E64B00C7A1F5 /* RadarDataServiceTests.swift */; };
+		8280CDBF2085E65100C7A1F5 /* RadarDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8280CDBB2085DD1E00C7A1F5 /* RadarDataService.swift */; };
+		8280CDC02085E65A00C7A1F5 /* RadarDot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8280CDB22085DB6100C7A1F5 /* RadarDot.swift */; };
+		8280CDC12085E65D00C7A1F5 /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8280CDAD2085CF6400C7A1F5 /* Level.swift */; };
+		8280CDC22085E66000C7A1F5 /* Quadrant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8280CDA82085C8A700C7A1F5 /* Quadrant.swift */; };
+		8280CDC32085F33900C7A1F5 /* Vector2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8280CDB42085DC0800C7A1F5 /* Vector2D.swift */; };
 		829450821F9DE799004D066E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829450811F9DE799004D066E /* AppDelegate.swift */; };
 		829450841F9DE799004D066E /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 829450831F9DE799004D066E /* art.scnassets */; };
 		829450861F9DE799004D066E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829450851F9DE799004D066E /* ViewController.swift */; };
@@ -23,7 +29,7 @@
 		8294508E1F9DE799004D066E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8294508C1F9DE799004D066E /* LaunchScreen.storyboard */; };
 		829450991F9DE799004D066E /* ARTechRadarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829450981F9DE799004D066E /* ARTechRadarTests.swift */; };
 		829450A41F9DE799004D066E /* ARTechRadarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829450A31F9DE799004D066E /* ARTechRadarUITests.swift */; };
-		F80DDDF1207CB1FB004519B3 /* RadarNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80DDDF0207CB1FB004519B3 /* RadarNode.swift */; };
+		F80DDDF1207CB1FB004519B3 /* RadarDotNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80DDDF0207CB1FB004519B3 /* RadarDotNode.swift */; };
 		F81F7A3B205A77E4003D2046 /* TextNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81F7A3A205A77E4003D2046 /* TextNode.swift */; };
 		F81F7A3D2063A325003D2046 /* SphereNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81F7A3C2063A325003D2046 /* SphereNode.swift */; };
 		F81F7A4B2068F3EE003D2046 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F81F7A442068F38E003D2046 /* OpenSans-Regular.ttf */; };
@@ -59,6 +65,7 @@
 		8280CDB42085DC0800C7A1F5 /* Vector2D.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vector2D.swift; sourceTree = "<group>"; };
 		8280CDB82085DC6900C7A1F5 /* RadarData.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = RadarData.plist; sourceTree = "<group>"; };
 		8280CDBB2085DD1E00C7A1F5 /* RadarDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadarDataService.swift; sourceTree = "<group>"; };
+		8280CDBD2085E64B00C7A1F5 /* RadarDataServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadarDataServiceTests.swift; sourceTree = "<group>"; };
 		8294507E1F9DE799004D066E /* ARTechRadar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARTechRadar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		829450811F9DE799004D066E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		829450831F9DE799004D066E /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -73,7 +80,7 @@
 		8294509F1F9DE799004D066E /* ARTechRadarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ARTechRadarUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		829450A31F9DE799004D066E /* ARTechRadarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARTechRadarUITests.swift; sourceTree = "<group>"; };
 		829450A51F9DE799004D066E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F80DDDF0207CB1FB004519B3 /* RadarNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadarNode.swift; sourceTree = "<group>"; };
+		F80DDDF0207CB1FB004519B3 /* RadarDotNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadarDotNode.swift; sourceTree = "<group>"; };
 		F81F7A3A205A77E4003D2046 /* TextNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextNode.swift; sourceTree = "<group>"; };
 		F81F7A3C2063A325003D2046 /* SphereNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SphereNode.swift; sourceTree = "<group>"; };
 		F81F7A402068F38C003D2046 /* OpenSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiBold.ttf"; sourceTree = "<group>"; };
@@ -189,6 +196,7 @@
 			children = (
 				829450981F9DE799004D066E /* ARTechRadarTests.swift */,
 				8294509A1F9DE799004D066E /* Info.plist */,
+				8280CDBD2085E64B00C7A1F5 /* RadarDataServiceTests.swift */,
 			);
 			path = ARTechRadarTests;
 			sourceTree = "<group>";
@@ -219,7 +227,7 @@
 				F8CD8CFF20513F8E00222B39 /* CubeNode.swift */,
 				F81F7A3A205A77E4003D2046 /* TextNode.swift */,
 				F81F7A3C2063A325003D2046 /* SphereNode.swift */,
-				F80DDDF0207CB1FB004519B3 /* RadarNode.swift */,
+				F80DDDF0207CB1FB004519B3 /* RadarDotNode.swift */,
 			);
 			path = Nodes;
 			sourceTree = "<group>";
@@ -384,7 +392,7 @@
 				8280CDAE2085CF6400C7A1F5 /* Level.swift in Sources */,
 				8280CDAC2085CB9200C7A1F5 /* UIColor+Extensions.swift in Sources */,
 				F8CD8CFC20513A0400222B39 /* CylinderNode.swift in Sources */,
-				F80DDDF1207CB1FB004519B3 /* RadarNode.swift in Sources */,
+				F80DDDF1207CB1FB004519B3 /* RadarDotNode.swift in Sources */,
 				8280CDA92085C8A700C7A1F5 /* Quadrant.swift in Sources */,
 				8280CDB52085DC0800C7A1F5 /* Vector2D.swift in Sources */,
 				F81F7A3D2063A325003D2046 /* SphereNode.swift in Sources */,
@@ -401,6 +409,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8280CDBF2085E65100C7A1F5 /* RadarDataService.swift in Sources */,
+				8280CDBE2085E64B00C7A1F5 /* RadarDataServiceTests.swift in Sources */,
+				8280CDC02085E65A00C7A1F5 /* RadarDot.swift in Sources */,
+				8280CDC22085E66000C7A1F5 /* Quadrant.swift in Sources */,
+				8280CDC12085E65D00C7A1F5 /* Level.swift in Sources */,
+				8280CDC32085F33900C7A1F5 /* Vector2D.swift in Sources */,
 				829450991F9DE799004D066E /* ARTechRadarTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

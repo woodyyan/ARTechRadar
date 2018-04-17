@@ -9,9 +9,9 @@
 import Foundation
 import UIKit
 
-enum Quadrant {
-    case techniques(name: String, color: UIColor)
-    case tools(name: String, color: UIColor)
-    case platforms(name: String, color: UIColor)
-    case languageAndFrameworks(name: String, color: UIColor)
+enum Quadrant: String {
+    case techniques = "Techniques"
+    case tools = "Tools"
+    case platforms = "Platforms"
+    case languageAndFrameworks = "Language&Frameworks"
 }

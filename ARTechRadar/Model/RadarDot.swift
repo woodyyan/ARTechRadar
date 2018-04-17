@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 struct RadarDot {
     var level: Level
@@ -15,4 +16,19 @@ struct RadarDot {
     var name: String
     var description: String
     var position: Vector2D
+}
+
+extension RadarDot {
+    var color: UIColor {
+        switch quadrant {
+        case .techniques:
+            return UIColor.techniques
+        case .tools:
+            return UIColor.tools
+        case .platforms:
+            return UIColor.platforms
+        case .languageAndFrameworks:
+            return UIColor.languageAndFrameworks
+        }
+    }
 }

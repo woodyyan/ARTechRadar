@@ -8,9 +8,9 @@
 
 import Foundation
 
-enum Level {
-    case hold
-    case assess
-    case trial
-    case adopt
+enum Level: String {
+    case hold = "HOLD"
+    case assess = "ASSESS"
+    case trial = "TRIAL"
+    case adopt = "ADOPT"
 }

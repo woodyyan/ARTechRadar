@@ -1,14 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<!--
-   data.plist
-   ARTechRadar
-
-   Created by Songbai Yan on 2018/4/17.
-   Copyright (c) 2018 Songbai Yan. All rights reserved.
--->
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-    <dict>
-    
-    </dict>
+<array>
+	<dict>
+		<key>Name</key>
+		<string>Swift</string>
+		<key>Number</key>
+		<integer>0</integer>
+		<key>Description</key>
+		<string>abc</string>
+		<key>Level</key>
+		<string>HOLD</string>
+		<key>Quadrant</key>
+		<string>Techniques</string>
+		<key>Position</key>
+		<dict>
+			<key>X</key>
+			<integer>0</integer>
+			<key>Z</key>
+			<integer>0</integer>
+		</dict>
+	</dict>
+</array>
 </plist>
