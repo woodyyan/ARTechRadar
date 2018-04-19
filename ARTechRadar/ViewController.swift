@@ -57,43 +57,38 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     
     func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
         if let planeAnchor = anchor as? ARPlaneAnchor {
-            let basicRadius = planeAnchor.extent.x/3
-            let trialColor = UIColor(red: 216/255, green: 217/255, blue: 211/255, alpha: 1)
-            let assessColor = UIColor(red: 230/255, green: 229/255, blue: 224/255, alpha: 1)
-            let holdColor = UIColor(red: 243/255, green: 242/255, blue: 238/255, alpha: 1)
-            let trialNode = TubeNode(basicRadius, basicRadius*2, planeAnchor, baseHeight, trialColor)
-            let assessNode = TubeNode(basicRadius*2, basicRadius*8/3, planeAnchor, baseHeight, assessColor)
-            let holdNode = TubeNode(basicRadius*8/3, basicRadius*3, planeAnchor, baseHeight, holdColor)
-            node.addChildNode(CylinderNode.init(basicRadius, planeAnchor, baseHeight))
-            node.addChildNode(trialNode)
-            node.addChildNode(assessNode)
-            node.addChildNode(holdNode)
-            
-            let firstColor  = UIColor(red: 232/255, green: 135/255, blue: 68/255, alpha: 1)
-            let firstCubeNode = SphereNode.init(firstColor)
-            firstCubeNode.position = SCNVector3.init(planeAnchor.center.x + basicRadius/2, 0.08, planeAnchor.center.z + basicRadius/2)
-            firstCubeNode.rotation = SCNVector4Make(1, 0, 1, Float(.pi/4.0))
-            node.addChildNode(firstCubeNode)
-
-            let firstTextNode = TextNode.init("Swift", firstColor)
-            firstTextNode.position = SCNVector3.init(planeAnchor.center.x + basicRadius/2, 0.08, planeAnchor.center.z + basicRadius/2)
-//            firstTextNode.rotation = SCNVector4Make(1, 0, 1, Float(.pi/4.0))
-            node.addChildNode(firstTextNode)
+            renderRadar(node: node, planeAnchor: planeAnchor)
         }
     }
     
-/*
-    // Override to create and configure nodes for anchors added to the view's session.
-    func renderer(_ renderer: SCNSceneRenderer, nodeFor anchor: ARAnchor) -> SCNNode? {
-        let node = SCNNode()
-     
-        return node
+    private func renderRadar(node: SCNNode, planeAnchor: ARPlaneAnchor) {
+        let basicRadius = planeAnchor.extent.x/3
+        let trialColor = UIColor(red: 216/255, green: 217/255, blue: 211/255, alpha: 1)
+        let assessColor = UIColor(red: 230/255, green: 229/255, blue: 224/255, alpha: 1)
+        let holdColor = UIColor(red: 243/255, green: 242/255, blue: 238/255, alpha: 1)
+        let trialNode = TubeNode(basicRadius, basicRadius*2, planeAnchor, baseHeight, trialColor)
+        let assessNode = TubeNode(basicRadius*2, basicRadius*8/3, planeAnchor, baseHeight, assessColor)
+        let holdNode = TubeNode(basicRadius*8/3, basicRadius*3, planeAnchor, baseHeight, holdColor)
+        node.addChildNode(CylinderNode.init(basicRadius, planeAnchor, baseHeight))
+        node.addChildNode(trialNode)
+        node.addChildNode(assessNode)
+        node.addChildNode(holdNode)
+        
+        let firstColor  = UIColor(red: 232/255, green: 135/255, blue: 68/255, alpha: 1)
+        let firstCubeNode = SphereNode.init(firstColor)
+        firstCubeNode.position = SCNVector3.init(planeAnchor.center.x + basicRadius/2, 0.08, planeAnchor.center.z + basicRadius/2)
+        firstCubeNode.rotation = SCNVector4Make(1, 0, 1, Float(.pi/4.0))
+        node.addChildNode(firstCubeNode)
+        
+        let firstTextNode = TextNode.init("Swift", firstColor)
+        firstTextNode.position = SCNVector3.init(planeAnchor.center.x + basicRadius/2, 0.08, planeAnchor.center.z + basicRadius/2)
+        //            firstTextNode.rotation = SCNVector4Make(1, 0, 1, Float(.pi/4.0))
+        node.addChildNode(firstTextNode)
     }
-*/
     
     func session(_ session: ARSession, didFailWithError error: Error) {
         // Present an error message to the user
-        
+        print(error.localizedDescription)
     }
     
     func sessionWasInterrupted(_ session: ARSession) {
