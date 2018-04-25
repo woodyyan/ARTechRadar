@@ -9,5 +9,5 @@
 import Foundation
 
 struct Vector2D {
-    var x = 0.0, z = 0.0
+    var x: Float = 0.0, z: Float = 0.0
 }

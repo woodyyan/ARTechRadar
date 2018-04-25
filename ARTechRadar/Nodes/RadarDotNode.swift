@@ -10,20 +10,22 @@ import Foundation
 import SceneKit
 
 class RadarDotNode: SCNNode {
-    private let y = 0.08
+    private let y: Float = 0.08
     
-    var sphere: SphereNode
-    var title: TextNode
+    var sphere: SphereNode!
+    var title: TextNode!
     
     init(radarDot: RadarDot) {
+        super.init()
+        
         self.sphere = SphereNode.init(radarDot.color)
         self.sphere.position = SCNVector3.init(radarDot.position.x, y, radarDot.position.z)
-        self.sphere.rotation = SCNVector4Make(1, 0, 1, Float(.pi/4.0))
         
         self.title = TextNode.init(radarDot.name, radarDot.color)
         title.position = SCNVector3.init(radarDot.position.x, y, radarDot.position.z)
-    
-        super.init()
+        
+        self.addChildNode(sphere)
+        self.addChildNode(title)
     }
     
     required init?(coder aDecoder: NSCoder) {
