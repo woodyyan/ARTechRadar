@@ -11,11 +11,11 @@ import SceneKit
 import ARKit
 
 class TubeNode: SCNNode {
-    init(_ innerRadius: Float, _ outterRadius: Float, _ planeAnchor: ARPlaneAnchor, _ baseHeight: Float, _ color: UIColor) {
+    init(_ innerRadius: Float, _ outterRadius: Float, _ radarAnchor: SCNVector3, _ baseHeight: Float, _ color: UIColor) {
         super.init()
         let tube = buildTube(innerRadius, outterRadius, baseHeight, color)
         self.geometry = tube
-        self.position = SCNVector3.init(planeAnchor.center.x, 0, planeAnchor.center.z)
+        self.position = SCNVector3.init(radarAnchor.x, 0, radarAnchor.z)
         self.physicsBody = SCNPhysicsBody(type: SCNPhysicsBodyType.kinematic, shape: SCNPhysicsShape(geometry: tube, options: nil))
     }
     

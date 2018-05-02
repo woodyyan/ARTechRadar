@@ -11,11 +11,11 @@ import SceneKit
 import ARKit
 
 class CylinderNode: SCNNode {
-    init(_ basicRadius: Float, _ planeAnchor: ARPlaneAnchor, _ baseHeight: Float) {
+    init(_ basicRadius: Float, _ radarAnchor: SCNVector3, _ baseHeight: Float) {
         super.init()
         let cylinder = buildCylinder(basicRadius, baseHeight)
         self.geometry = cylinder
-        self.position = SCNVector3.init(planeAnchor.center.x, 0, planeAnchor.center.z)
+        self.position = SCNVector3.init(radarAnchor.x, 0, radarAnchor.z)
         self.physicsBody = SCNPhysicsBody(type: SCNPhysicsBodyType.kinematic, shape: SCNPhysicsShape(geometry: cylinder, options: nil))
     }
     

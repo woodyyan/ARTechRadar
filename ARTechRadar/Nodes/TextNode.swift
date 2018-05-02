@@ -11,7 +11,7 @@ import SceneKit
 import ARKit
 
 class TextNode: SCNNode {
-    let depth = 0.005
+    let depth = 0.008
     init(_ text: String, _ color: UIColor) {
         super.init()
         let text = SCNText(string: text, extrusionDepth: CGFloat(depth))

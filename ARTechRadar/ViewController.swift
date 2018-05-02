@@ -56,25 +56,27 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     // MARK: - ARSCNViewDelegate
     
     func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
-        if let planeAnchor = anchor as? ARPlaneAnchor {
-            renderRadar(node: node, planeAnchor: planeAnchor)
-        }
+        renderRadar(node: node)
     }
     
-    private func renderRadar(node: SCNNode, planeAnchor: ARPlaneAnchor) {
-        let basicRadius = planeAnchor.extent.x/3
+    private func renderRadar(node: SCNNode) {
+        let basicRadius: Float = 0.2
+        let radarAnchor = SCNVector3(0, 0, 0)
+        addRadarPlane(node: node, basicRadius: basicRadius, radarAnchor: radarAnchor)
+        addRadarDots(node: node)
+    }
+    
+    func addRadarPlane(node: SCNNode, basicRadius: Float, radarAnchor: SCNVector3) {
         let trialColor = UIColor(red: 216/255, green: 217/255, blue: 211/255, alpha: 1)
         let assessColor = UIColor(red: 230/255, green: 229/255, blue: 224/255, alpha: 1)
         let holdColor = UIColor(red: 243/255, green: 242/255, blue: 238/255, alpha: 1)
-        let trialNode = TubeNode(basicRadius, basicRadius*2, planeAnchor, baseHeight, trialColor)
-        let assessNode = TubeNode(basicRadius*2, basicRadius*8/3, planeAnchor, baseHeight, assessColor)
-        let holdNode = TubeNode(basicRadius*8/3, basicRadius*3, planeAnchor, baseHeight, holdColor)
-        node.addChildNode(CylinderNode.init(basicRadius, planeAnchor, baseHeight))
+        let trialNode = TubeNode(basicRadius, basicRadius*2, radarAnchor, baseHeight, trialColor)
+        let assessNode = TubeNode(basicRadius*2, basicRadius*8/3, radarAnchor, baseHeight, assessColor)
+        let holdNode = TubeNode(basicRadius*8/3, basicRadius*3, radarAnchor, baseHeight, holdColor)
+        node.addChildNode(CylinderNode.init(basicRadius, radarAnchor, baseHeight))
         node.addChildNode(trialNode)
         node.addChildNode(assessNode)
         node.addChildNode(holdNode)
-       
-        addRadarDots(node: node)
     }
     
     func addRadarDots(node: SCNNode) {
