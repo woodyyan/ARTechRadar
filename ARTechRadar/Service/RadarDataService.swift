@@ -38,8 +38,8 @@ class RadarDataService {
     }
     
     private func parsePosition(postion: [String: Any]) -> Vector2D {
-        let x = postion["X"] as! Float
-        let z = postion["Z"] as! Float
-        return Vector2D(x: x, z: z)
+        let x = postion["X"] as! NSNumber
+        let z = postion["Z"] as! NSNumber
+        return Vector2D(x: x.floatValue, z: z.floatValue)
     }
 }

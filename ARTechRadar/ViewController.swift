@@ -73,20 +73,19 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         node.addChildNode(trialNode)
         node.addChildNode(assessNode)
         node.addChildNode(holdNode)
+       
+        addRadarDots(node: node)
+    }
+    
+    func addRadarDots(node: SCNNode) {
+        let radarService = RadarDataService()
+        let fileUrl = Bundle.main.url(forResource: "RadarData", withExtension: "plist")
+        let radarDots = radarService.getRadarDotsFromFile(url: fileUrl!)
         
-//        let firstColor  = UIColor(red: 232/255, green: 135/255, blue: 68/255, alpha: 1)
-//        let firstCubeNode = SphereNode.init(firstColor)
-//        firstCubeNode.position = SCNVector3.init(planeAnchor.center.x + basicRadius/2, 0.08, planeAnchor.center.z + basicRadius/2)
-//        firstCubeNode.rotation = SCNVector4Make(1, 0, 1, Float(.pi/4.0))
-//        node.addChildNode(firstCubeNode)
-//
-//        let firstTextNode = TextNode.init("Swift", firstColor)
-//        firstTextNode.position = SCNVector3.init(planeAnchor.center.x + basicRadius/2, 0.08, planeAnchor.center.z + basicRadius/2)
-//        //            firstTextNode.rotation = SCNVector4Make(1, 0, 1, Float(.pi/4.0))
-//        node.addChildNode(firstTextNode)
-        let radarDot = RadarDot(level: Level.adopt, quadrant: .languageAndFrameworks, number: 1, name: "Swift", description: "", position: Vector2D(x: planeAnchor.center.x, z: planeAnchor.center.z))
-        let radarDotNode = RadarDotNode(radarDot: radarDot)
-        node.addChildNode(radarDotNode)
+        for radarDot in radarDots {
+            let radarDotNode = RadarDotNode(radarDot: radarDot)
+            node.addChildNode(radarDotNode)
+        }
     }
     
     func session(_ session: ARSession, didFailWithError error: Error) {
