@@ -64,16 +64,32 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         let radarAnchor = SCNVector3(0, 0, 0)
         addRadarPlane(node: node, basicRadius: basicRadius, radarAnchor: radarAnchor)
         addRadarDots(node: node)
+        addRadarQuadrant(node: node, basicRadius: basicRadius, radarAnchor: radarAnchor)
+    }
+    
+    func addRadarQuadrant(node: SCNNode, basicRadius: Float, radarAnchor: SCNVector3) {
+        let horizon = PlaneNode(basicRadius * 3, radarAnchor)
+        let vertical = PlaneNode(basicRadius * 3, radarAnchor)
+        horizon.rotation = SCNVector4Make(1, 0, 0, -Float(.pi/2.0))
+        
+        let xAngle = SCNMatrix4MakeRotation(-Float(.pi/2.0), 1, 0, 0)
+        let yAngle = SCNMatrix4MakeRotation(Float(.pi/2.0), 0, 1, 0)
+        let zAngle = SCNMatrix4MakeRotation(0, 0, 0, 1)
+        let rotationMatrix = SCNMatrix4Mult(SCNMatrix4Mult(xAngle, yAngle), zAngle)
+        vertical.transform = SCNMatrix4Mult(rotationMatrix, vertical.transform)
+        node.addChildNode(horizon)
+        node.addChildNode(vertical)
     }
     
     func addRadarPlane(node: SCNNode, basicRadius: Float, radarAnchor: SCNVector3) {
         let trialColor = UIColor(red: 216/255, green: 217/255, blue: 211/255, alpha: 1)
         let assessColor = UIColor(red: 230/255, green: 229/255, blue: 224/255, alpha: 1)
         let holdColor = UIColor(red: 243/255, green: 242/255, blue: 238/255, alpha: 1)
+        let adoptNode = CylinderNode.init(basicRadius, radarAnchor, baseHeight)
         let trialNode = TubeNode(basicRadius, basicRadius*2, radarAnchor, baseHeight, trialColor)
         let assessNode = TubeNode(basicRadius*2, basicRadius*8/3, radarAnchor, baseHeight, assessColor)
         let holdNode = TubeNode(basicRadius*8/3, basicRadius*3, radarAnchor, baseHeight, holdColor)
-        node.addChildNode(CylinderNode.init(basicRadius, radarAnchor, baseHeight))
+        node.addChildNode(adoptNode)
         node.addChildNode(trialNode)
         node.addChildNode(assessNode)
         node.addChildNode(holdNode)
