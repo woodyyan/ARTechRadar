@@ -13,4 +13,6 @@ enum Level: String {
     case assess = "ASSESS"
     case trial = "TRIAL"
     case adopt = "ADOPT"
+    
+    static let allValues = ["ADOPT", "TRIAL", "ASSESS", "HOLD"]
 }

@@ -77,8 +77,42 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         let zAngle = SCNMatrix4MakeRotation(0, 0, 0, 1)
         let rotationMatrix = SCNMatrix4Mult(SCNMatrix4Mult(xAngle, yAngle), zAngle)
         vertical.transform = SCNMatrix4Mult(rotationMatrix, vertical.transform)
+        
+        let fontName = "OpenSans-SemiBold"
+        let color = UIColor.black
+        let yPos: Float = 0.027
+        let zPos: Float = radarAnchor.z + 0.02
+        
+        for (index, level) in Level.allValues.enumerated() {
+            let rightLevelTextNode = TextNode.init(level, color, fontName)
+            rightLevelTextNode.position = SCNVector3.init(radarAnchor.x + basicRadius * getRightX(index) , yPos, zPos)
+            rightLevelTextNode.rotation = SCNVector4Make(1, 0, 0, -Float(.pi/2.0))
+            node.addChildNode(rightLevelTextNode)
+            
+            let leftLevelTextNode = TextNode.init(level, color, fontName)
+            leftLevelTextNode.position = SCNVector3.init(radarAnchor.x + basicRadius * (-1/3 - getRightX(index)) , yPos, zPos)
+            leftLevelTextNode.rotation = SCNVector4Make(1, 0, 0, -Float(.pi/2.0))
+            node.addChildNode(leftLevelTextNode)
+        }
+        
         node.addChildNode(horizon)
         node.addChildNode(vertical)
+    }
+    
+    // TODO: Refactor these two methods
+    private func getRightX(_ index: Int) -> Float {
+        switch index {
+        case 0:
+            return 1/3
+        case 1:
+            return 4/3
+        case 2:
+            return 19/9
+        case 3:
+            return 8/3
+        default:
+            return 0
+        }
     }
     
     func addRadarPlane(node: SCNNode, basicRadius: Float, radarAnchor: SCNVector3) {

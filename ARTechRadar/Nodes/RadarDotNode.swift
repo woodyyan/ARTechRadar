@@ -22,7 +22,7 @@ class RadarDotNode: SCNNode {
         self.sphere.position = SCNVector3.init(radarDot.position.x, y, radarDot.position.z)
         
         self.title = TextNode.init(radarDot.name, radarDot.color)
-        title.position = SCNVector3.init(radarDot.position.x, y, radarDot.position.z)
+        title.position = SCNVector3.init(radarDot.position.x, y + 0.01, radarDot.position.z)
         
         self.addChildNode(sphere)
         self.addChildNode(title)
