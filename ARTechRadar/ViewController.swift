@@ -28,6 +28,27 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         sceneView.scene = scene
         sceneView.autoenablesDefaultLighting = true
         sceneView.debugOptions = [ARSCNDebugOptions.showFeaturePoints]
+        
+        addGesture()
+    }
+    
+    private func addGesture() {
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(ViewController.tap(sender:)))
+        gesture.numberOfTapsRequired = 1
+        sceneView.addGestureRecognizer(gesture)
+    }
+    
+    @objc func tap(sender: UITapGestureRecognizer) {
+        let location = sender.location(in: sceneView)
+        let hitResults = sceneView.hitTest(location, options: nil)
+        
+        if !hitResults.isEmpty {
+            if let hitNode = hitResults.first?.node.parent {
+                if RadarDotNode.self == type(of: hitNode) {
+                    print(hitNode)
+                }
+            }
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -55,8 +76,13 @@ class ViewController: UIViewController, ARSCNViewDelegate {
 
     // MARK: - ARSCNViewDelegate
     
+    var isLoaded = false
+    
     func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
-        renderRadar(node: node)
+        if !isLoaded {
+            renderRadar(node: node)
+            isLoaded = true
+        }
     }
     
     private func renderRadar(node: SCNNode) {
