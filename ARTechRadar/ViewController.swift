@@ -43,10 +43,9 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         let hitResults = sceneView.hitTest(location, options: nil)
         
         if !hitResults.isEmpty {
-            if let hitNode = hitResults.first?.node.parent {
-                if RadarDotNode.self == type(of: hitNode) {
-                    print(hitNode)
-                }
+            if let hitNode = hitResults.first?.node.parent as? RadarDotNode{
+                hitNode.displayDescription()
+                print(hitNode)
             }
         }
     }

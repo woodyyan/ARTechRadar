@@ -36,6 +36,7 @@
 		F81F7A4B2068F3EE003D2046 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F81F7A442068F38E003D2046 /* OpenSans-Regular.ttf */; };
 		F81F7A4C2068F3F0003D2046 /* OpenSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F81F7A402068F38C003D2046 /* OpenSans-SemiBold.ttf */; };
 		F851467D209B054D00877AEC /* PlaneNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F851467C209B054C00877AEC /* PlaneNode.swift */; };
+		F851467F20AC231500877AEC /* DescriptionNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F851467E20AC231500877AEC /* DescriptionNode.swift */; };
 		F8CD8CFC20513A0400222B39 /* CylinderNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8CD8CFB20513A0400222B39 /* CylinderNode.swift */; };
 		F8CD8CFE20513BC700222B39 /* TubeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8CD8CFD20513BC700222B39 /* TubeNode.swift */; };
 		F8CD8D0020513F8E00222B39 /* CubeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8CD8CFF20513F8E00222B39 /* CubeNode.swift */; };
@@ -89,6 +90,7 @@
 		F81F7A402068F38C003D2046 /* OpenSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiBold.ttf"; sourceTree = "<group>"; };
 		F81F7A442068F38E003D2046 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		F851467C209B054C00877AEC /* PlaneNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaneNode.swift; sourceTree = "<group>"; };
+		F851467E20AC231500877AEC /* DescriptionNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionNode.swift; sourceTree = "<group>"; };
 		F8CD8CFB20513A0400222B39 /* CylinderNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CylinderNode.swift; sourceTree = "<group>"; };
 		F8CD8CFD20513BC700222B39 /* TubeNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TubeNode.swift; sourceTree = "<group>"; };
 		F8CD8CFF20513F8E00222B39 /* CubeNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CubeNode.swift; sourceTree = "<group>"; };
@@ -234,6 +236,7 @@
 				F81F7A3C2063A325003D2046 /* SphereNode.swift */,
 				F80DDDF0207CB1FB004519B3 /* RadarDotNode.swift */,
 				F851467C209B054C00877AEC /* PlaneNode.swift */,
+				F851467E20AC231500877AEC /* DescriptionNode.swift */,
 			);
 			path = Nodes;
 			sourceTree = "<group>";
@@ -405,6 +408,7 @@
 				8280CDB52085DC0800C7A1F5 /* Vector2D.swift in Sources */,
 				F81F7A3D2063A325003D2046 /* SphereNode.swift in Sources */,
 				F8CD8D0020513F8E00222B39 /* CubeNode.swift in Sources */,
+				F851467F20AC231500877AEC /* DescriptionNode.swift in Sources */,
 				829450861F9DE799004D066E /* ViewController.swift in Sources */,
 				8280CDBC2085DD1E00C7A1F5 /* RadarDataService.swift in Sources */,
 				829450821F9DE799004D066E /* AppDelegate.swift in Sources */,

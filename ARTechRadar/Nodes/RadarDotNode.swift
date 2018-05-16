@@ -14,6 +14,7 @@ class RadarDotNode: SCNNode {
     
     var sphere: SphereNode!
     var title: TextNode!
+    var descript: DescriptionNode!
     
     init(radarDot: RadarDot) {
         super.init()
@@ -24,11 +25,23 @@ class RadarDotNode: SCNNode {
         self.title = TextNode.init(radarDot.name, radarDot.color)
         title.position = SCNVector3.init(radarDot.position.x, y + 0.01, radarDot.position.z)
         
+        self.descript = DescriptionNode.init()
+        descript.position = SCNVector3.init(radarDot.position.x, y + 0.2, radarDot.position.z)
+        
         self.addChildNode(sphere)
         self.addChildNode(title)
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    public func displayDescription() {
+        if !self.childNodes.contains(descript) {
+            self.addChildNode(descript)
+        } else {
+            descript.removeFromParentNode()
+        }
+        
     }
 }
