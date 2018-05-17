@@ -25,8 +25,8 @@ class RadarDotNode: SCNNode {
         self.title = TextNode.init(radarDot.name, radarDot.color)
         title.position = SCNVector3.init(radarDot.position.x, y + 0.01, radarDot.position.z)
         
-        self.descript = DescriptionNode.init()
-        descript.position = SCNVector3.init(radarDot.position.x, y + 0.2, radarDot.position.z)
+        self.descript = DescriptionNode.init(radarDot.description)
+        descript.position = SCNVector3.init(radarDot.position.x, y + 0.3, radarDot.position.z)
         
         self.addChildNode(sphere)
         self.addChildNode(title)
@@ -42,6 +42,5 @@ class RadarDotNode: SCNNode {
         } else {
             descript.removeFromParentNode()
         }
-        
     }
 }

@@ -45,10 +45,10 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         if !hitResults.isEmpty {
             if let hitNode = hitResults.first?.node.parent as? RadarDotNode{
                 hitNode.displayDescription()
-                print(hitNode)
             }
         }
     }
+    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
