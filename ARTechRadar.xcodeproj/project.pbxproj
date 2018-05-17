@@ -590,10 +590,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = RP2GRZPJKC;
+				DEVELOPMENT_TEAM = XD7JAMNS86;
 				INFOPLIST_FILE = ARTechRadar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.thoughtworks.ARTechRadar;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.thoughtworks.ARTechRadar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -605,10 +605,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = RP2GRZPJKC;
+				DEVELOPMENT_TEAM = XD7JAMNS86;
 				INFOPLIST_FILE = ARTechRadar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.thoughtworks.ARTechRadar;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.thoughtworks.ARTechRadar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
