@@ -29,7 +29,6 @@ class DescriptionNode: SCNNode {
         textLayer.display()
         layer.addSublayer(textLayer)
         
-        
         let box = SCNBox(width: 0.3, height: 0.4, length: 0.003, chamferRadius: 0.2)
         box.firstMaterial?.locksAmbientWithDiffuse = true
         box.firstMaterial?.diffuse.contents = layer

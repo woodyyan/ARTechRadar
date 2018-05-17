@@ -43,12 +43,11 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         let hitResults = sceneView.hitTest(location, options: nil)
         
         if !hitResults.isEmpty {
-            if let hitNode = hitResults.first?.node.parent as? RadarDotNode{
+            if let hitNode = hitResults.first?.node.parent as? RadarDotNode {
                 hitNode.displayDescription()
             }
         }
     }
-    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -110,12 +109,12 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
         for (index, level) in Level.allValues.enumerated() {
             let rightLevelTextNode = TextNode.init(level, color, fontName)
-            rightLevelTextNode.position = SCNVector3.init(radarAnchor.x + basicRadius * getRightX(index) , yPos, zPos)
+            rightLevelTextNode.position = SCNVector3.init(radarAnchor.x + basicRadius * getRightX(index), yPos, zPos)
             rightLevelTextNode.rotation = SCNVector4Make(1, 0, 0, -Float(.pi/2.0))
             node.addChildNode(rightLevelTextNode)
             
             let leftLevelTextNode = TextNode.init(level, color, fontName)
-            leftLevelTextNode.position = SCNVector3.init(radarAnchor.x + basicRadius * (-1/3 - getRightX(index)) , yPos, zPos)
+            leftLevelTextNode.position = SCNVector3.init(radarAnchor.x + basicRadius * (-1/3 - getRightX(index)), yPos, zPos)
             leftLevelTextNode.rotation = SCNVector4Make(1, 0, 0, -Float(.pi/2.0))
             node.addChildNode(leftLevelTextNode)
         }
