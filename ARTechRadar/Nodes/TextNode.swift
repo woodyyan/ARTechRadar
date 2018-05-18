@@ -20,10 +20,8 @@ class TextNode: SCNNode {
         text.alignmentMode = kCAAlignmentCenter
         text.truncationMode = kCATruncationNone
         text.isWrapped = true
-//        text.containerFrame = CGRect(origin: .zero, size: CGSize(width: 100.0, height: 200.0))
-        
+
         self.geometry = text
-//        self.physicsBody = SCNPhysicsBody(type: SCNPhysicsBodyType.kinematic, shape: SCNPhysicsShape(geometry: text, options: nil))
         self.scale = SCNVector3(0.005, 0.005, 0.005)
     }
     
