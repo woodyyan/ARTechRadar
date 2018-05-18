@@ -15,7 +15,7 @@ class TextNode: SCNNode {
     init(_ content: String, _ color: UIColor, _ fontName: String = "OpenSans-Regular") {
         super.init()
         let text = SCNText(string: content, extrusionDepth: CGFloat(depth))
-        text.font = UIFont.init(name: fontName, size: 5)!
+        text.font = UIFont(name: fontName, size: 5)!
         text.firstMaterial?.diffuse.contents = color
         text.alignmentMode = kCAAlignmentCenter
         text.truncationMode = kCATruncationNone

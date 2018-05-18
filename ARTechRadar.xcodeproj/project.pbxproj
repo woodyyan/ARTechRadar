@@ -30,6 +30,7 @@
 		8294508E1F9DE799004D066E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8294508C1F9DE799004D066E /* LaunchScreen.storyboard */; };
 		829450991F9DE799004D066E /* ARTechRadarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829450981F9DE799004D066E /* ARTechRadarTests.swift */; };
 		829450A41F9DE799004D066E /* ARTechRadarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829450A31F9DE799004D066E /* ARTechRadarUITests.swift */; };
+		F809C6AD20AEDAF000ECA143 /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F809C6AC20AED3DD00ECA143 /* OpenSans-Light.ttf */; };
 		F80DDDF1207CB1FB004519B3 /* RadarDotNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80DDDF0207CB1FB004519B3 /* RadarDotNode.swift */; };
 		F81F7A3B205A77E4003D2046 /* TextNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81F7A3A205A77E4003D2046 /* TextNode.swift */; };
 		F81F7A3D2063A325003D2046 /* SphereNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81F7A3C2063A325003D2046 /* SphereNode.swift */; };
@@ -84,6 +85,7 @@
 		8294509F1F9DE799004D066E /* ARTechRadarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ARTechRadarUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		829450A31F9DE799004D066E /* ARTechRadarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARTechRadarUITests.swift; sourceTree = "<group>"; };
 		829450A51F9DE799004D066E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F809C6AC20AED3DD00ECA143 /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
 		F80DDDF0207CB1FB004519B3 /* RadarDotNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadarDotNode.swift; sourceTree = "<group>"; };
 		F81F7A3A205A77E4003D2046 /* TextNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextNode.swift; sourceTree = "<group>"; };
 		F81F7A3C2063A325003D2046 /* SphereNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SphereNode.swift; sourceTree = "<group>"; };
@@ -221,6 +223,7 @@
 			isa = PBXGroup;
 			children = (
 				F81F7A442068F38E003D2046 /* OpenSans-Regular.ttf */,
+				F809C6AC20AED3DD00ECA143 /* OpenSans-Light.ttf */,
 				F81F7A402068F38C003D2046 /* OpenSans-SemiBold.ttf */,
 			);
 			path = Fonts;
@@ -357,6 +360,7 @@
 				8294508B1F9DE799004D066E /* Assets.xcassets in Resources */,
 				F81F7A4C2068F3F0003D2046 /* OpenSans-SemiBold.ttf in Resources */,
 				8280CDB92085DC6900C7A1F5 /* RadarData.plist in Resources */,
+				F809C6AD20AEDAF000ECA143 /* OpenSans-Light.ttf in Resources */,
 				829450891F9DE799004D066E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -594,7 +598,7 @@
 				DEVELOPMENT_TEAM = RP2GRZPJKC;
 				INFOPLIST_FILE = ARTechRadar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.thoughtworks.ARTechRadar;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.thoughtworks.ARTechRadar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
@@ -611,7 +615,7 @@
 				DEVELOPMENT_TEAM = RP2GRZPJKC;
 				INFOPLIST_FILE = ARTechRadar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.thoughtworks.ARTechRadar;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.thoughtworks.ARTechRadar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
