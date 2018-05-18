@@ -22,7 +22,7 @@ class RadarDotNode: SCNNode {
         self.sphere = SphereNode.init(radarDot.color)
         self.sphere.position = SCNVector3.init(radarDot.position.x, y, radarDot.position.z)
         
-        self.title = TextNode.init(radarDot.name, radarDot.color)
+        self.title = TextNode.init(truncateTitle(radarDot.name), radarDot.color)
         title.position = SCNVector3.init(radarDot.position.x, y + 0.01, radarDot.position.z)
         
         self.descript = DescriptionNode.init(radarDot.description)
@@ -36,9 +36,17 @@ class RadarDotNode: SCNNode {
         fatalError("init(coder:) has not been implemented")
     }
     
+    private func truncateTitle(_ title: String) -> String {
+        if title.count > 11 {
+            return title.prefix(12) + "..."
+        }
+        return title
+    }
+    
     public func displayDescription() {
         if !self.childNodes.contains(descript) {
             self.addChildNode(descript)
+
         } else {
             descript.removeFromParentNode()
         }

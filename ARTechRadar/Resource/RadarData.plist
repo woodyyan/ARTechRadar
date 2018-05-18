@@ -18,7 +18,7 @@
 			<key>X</key>
 			<real>-0.08</real>
 			<key>Z</key>
-			<real>-0.1</real>
+			<real>-0.08</real>
 		</dict>
 	</dict>
 	<dict>
@@ -37,16 +37,282 @@
 			<key>X</key>
 			<real>-0.1</real>
 			<key>Z</key>
-			<real>-0.22</real>
+			<real>-0.02</real>
 		</dict>
 	</dict>
 	<dict>
 		<key>Name</key>
-		<string>DesignOps</string>
+		<string>Architectural fitness function</string>
+		<key>Number</key>
+		<integer>3</integer>
+		<key>Description</key>
+		<string>Borrowed from evolutionary computing, a fitness function is used to summarize how close a given design solution is to achieving the set aims. When defining an evolutionary algorithm, the designer seeks a ‘better’ algorithm; the fitness function defines what ‘better’ means in this context. An architectural fitness function, as defined in Building Evolutionary Architectures, provides an objective integrity assessment of some architectural characteristics, which may encompass existing verification criteria, such as unit testing, metrics, monitors, and so on. We believe architects can communicate, validate and preserve architectural characteristics in an automated, continual manner, which is the key to building evolutionary architectures.</string>
+		<key>Level</key>
+		<string>TRIAL</string>
+		<key>Quadrant</key>
+		<string>Techniques</string>
+		<key>Position</key>
+		<dict>
+			<key>X</key>
+			<real>-0.12</real>
+			<key>Z</key>
+			<real>-0.02</real>
+		</dict>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>Autonomous bubble pattern</string>
+		<key>Number</key>
+		<integer>4</integer>
+		<key>Description</key>
+		<string>Many organizations we work with are trying hard to use modern engineering approaches to build new capabilities and features, while also having to coexist with a long tail of legacy systems. An old strategy that, based on our experience, has turned out to be increasingly helpful in these scenarios is Eric Evans&apos;s Autonomous bubble pattern. This approach involves creating a fresh context for new application development that is shielded from the entanglements of the legacy world. This is a step beyond just using an anticorruption layer. It gives the new bubble context full control over its backing data, which is then asynchronously kept up-to-date with the legacy systems. It requires some work to protect the boundaries of the bubble and keep both worlds consistent, but the resulting autonomy and reduction in development friction is a first bold step toward a modernized future architecture.</string>
+		<key>Level</key>
+		<string>TRIAL</string>
+		<key>Quadrant</key>
+		<string>Techniques</string>
+		<key>Position</key>
+		<dict>
+			<key>X</key>
+			<real>-0.15</real>
+			<key>Z</key>
+			<real>-0.02</real>
+		</dict>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>Chaos Engineering</string>
+		<key>Number</key>
+		<integer>5</integer>
+		<key>Description</key>
+		<string>In previous editions of the Radar, we&apos;ve talked about using Chaos Monkey from Netflix to test how a running system is able to cope with outages in production by randomly disabling instances and measuring the results. Chaos Engineering is the nascent term for the wider application of this technique. By running experiments on distributed systems in production, we&apos;re able to build confidence that those systems work as expected under turbulent conditions. A good place to start understanding this technique is the Principles of Chaos Engineering website.</string>
+		<key>Level</key>
+		<string>TRIAL</string>
+		<key>Quadrant</key>
+		<string>Techniques</string>
+		<key>Position</key>
+		<dict>
+			<key>X</key>
+			<real>-0.17</real>
+			<key>Z</key>
+			<real>-0.05</real>
+		</dict>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>Domain-scoped events</string>
+		<key>Number</key>
+		<integer>6</integer>
+		<key>Description</key>
+		<string>It’s important to remember that encapsulation applies to events and event-driven architectures just as it applies to other areas of software. In particular, think about the scope of an event and whether we expect it to be consumed within the same application, the same domain or across an entire organization. A domain-scoped event will be consumed within the same domain as it’s published, as such we expect the consumer to have access to a certain context, resources or references in order to act on the event. If the consumption is happening more widely within an organization, the contents of the event might well need to be different, and we need to take care not to &quot;leak&quot; implementation details that other domains then come to depend upon.</string>
+		<key>Level</key>
+		<string>TRIAL</string>
+		<key>Quadrant</key>
+		<string>Techniques</string>
+		<key>Position</key>
+		<dict>
+			<key>X</key>
+			<real>-0.19</real>
+			<key>Z</key>
+			<real>-0.08</real>
+		</dict>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>Hosted identity management as a service</string>
 		<key>Number</key>
 		<integer>7</integer>
 		<key>Description</key>
-		<string>Inspired by the DevOps movement, DesignOps is a cultural shift and a set of practices that allows people across an organization to continuously redesign products without compromising quality, service coherency or team autonomy. DesignOps advocates for the creation and evolution of a design infrastructure that minimizes the effort necessary to create new UI concepts and variations, and to establish a rapid and reliable feedback loop with end users. With tools such as Storybook promoting close collaboration, the need for upfront analysis and specification handoffs is reduced to the absolute minimum. With DesignOps, design is shifting from being a specific practice to being a part of everyone&apos;s job.</string>
+		<string>Identity management is a critical platform component. External users on mobile apps need to be authenticated, developers need to be given access to delivery infrastructure components, and microservices may need to identify themselves to other microservices. You should ask yourself whether identity management should be “self-hosted”. In our experience, a hosted identity management as a service (SaaS) solution is preferable. We believe that top-tier hosted providers such as Auth0 and Okta can provide better uptime and security SLAs. That said, sometimes self-hosting the solution is a realistic decision, especially for enterprises that have the operational discipline and resources to do so safely. Large enterprise identity solutions typically offer a much more expansive range of capabilities such as centralized entitlements, governance reporting and separation of duties management among others. However, these concerns are typically more relevant for employee identities, especially in regulated enterprises with legacy systems.</string>
+		<key>Level</key>
+		<string>TRIAL</string>
+		<key>Quadrant</key>
+		<string>Techniques</string>
+		<key>Position</key>
+		<dict>
+			<key>X</key>
+			<real>-0.23</real>
+			<key>Z</key>
+			<real>-0.2</real>
+		</dict>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>Micro frontends</string>
+		<key>Number</key>
+		<integer>8</integer>
+		<key>Description</key>
+		<string>We&apos;ve seen significant benefits from introducing microservices architectures, which have allowed teams to scale the delivery of independently deployed and maintained services. Unfortunately, we&apos;ve also seen many teams create front-end monoliths — a single, large and sprawling browser application — on top of their back-end services. Our preferred (and proven) approach is to split the browser-based code into micro frontends. In this approach, the web application is broken down into its features, and each feature is owned, frontend to backend, by a different team. This ensures that every feature is developed, tested and deployed independently from other features. Multiple techniques exist to recombine the features — sometimes as pages, sometimes as components — into a cohesive user experience.</string>
+		<key>Level</key>
+		<string>TRIAL</string>
+		<key>Quadrant</key>
+		<string>Techniques</string>
+		<key>Position</key>
+		<dict>
+			<key>X</key>
+			<real>-0.23</real>
+			<key>Z</key>
+			<real>-0.2</real>
+		</dict>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>Pipelines for infrastructure as code</string>
+		<key>Number</key>
+		<integer>9</integer>
+		<key>Description</key>
+		<string>The use of continuous delivery pipelines to orchestrate the release process for software has become a mainstream concept. However, automatically testing changes to infrastructure code isn’t as widely understood. Continuous integration (CI) and continuous delivery (CD) tools can be used to test server configuration (e.g., Chef cookbooks, Puppet modules, Ansible playbooks), server image building (e.g., Packer), environment provisioning (e.g., Terraform, CloudFormation) and integration of environments. The use of pipelines for infrastructure as code enables errors to be found before changes are applied to operational environments — including environments used for development and testing. They also offer a way to ensure that infrastructure tooling is run consistently, from CI/CD agents, as opposed to being run from individual workstations. Some challenges remain, however, such as the longer feedback loops associated with standing up containers and virtual machines. Still, we&apos;ve found this to be a valuable technique.</string>
+		<key>Level</key>
+		<string>TRIAL</string>
+		<key>Quadrant</key>
+		<string>Techniques</string>
+		<key>Position</key>
+		<dict>
+			<key>X</key>
+			<real>-0.23</real>
+			<key>Z</key>
+			<real>-0.2</real>
+		</dict>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>Polycloud</string>
+		<key>Number</key>
+		<integer>10</integer>
+		<key>Description</key>
+		<string>Organizations are becoming more comfortable with the Polycloud strategy — rather than going &quot;all-in&quot; with one provider, they are passing different types of workloads to different providers based on their own strategy. Some of them apply the best-of-breed approach, for example: putting standard services on AWS, but using Google for machine learning and data-oriented applications and Azure for Microsoft Windows applications. For some organizations this is a cultural and business decision. Retail businesses, for example, often refuse to store their data on Amazon and they distribute load to different providers based on their data. This is different to a cloud-agnostic strategy of aiming for portability across providers, which is costly and forces lowest-common-denominator thinking. Polycloud instead focuses on using the best match that each cloud provider offers.</string>
+		<key>Level</key>
+		<string>TRIAL</string>
+		<key>Quadrant</key>
+		<string>Techniques</string>
+		<key>Position</key>
+		<dict>
+			<key>X</key>
+			<real>-0.23</real>
+			<key>Z</key>
+			<real>-0.2</real>
+		</dict>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>Hosted identity management as a service</string>
+		<key>Number</key>
+		<integer>7</integer>
+		<key>Description</key>
+		<string>Identity management is a critical platform component. External users on mobile apps need to be authenticated, developers need to be given access to delivery infrastructure components, and microservices may need to identify themselves to other microservices. You should ask yourself whether identity management should be “self-hosted”. In our experience, a hosted identity management as a service (SaaS) solution is preferable. We believe that top-tier hosted providers such as Auth0 and Okta can provide better uptime and security SLAs. That said, sometimes self-hosting the solution is a realistic decision, especially for enterprises that have the operational discipline and resources to do so safely. Large enterprise identity solutions typically offer a much more expansive range of capabilities such as centralized entitlements, governance reporting and separation of duties management among others. However, these concerns are typically more relevant for employee identities, especially in regulated enterprises with legacy systems.</string>
+		<key>Level</key>
+		<string>TRIAL</string>
+		<key>Quadrant</key>
+		<string>Techniques</string>
+		<key>Position</key>
+		<dict>
+			<key>X</key>
+			<real>-0.23</real>
+			<key>Z</key>
+			<real>-0.2</real>
+		</dict>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>Hosted identity management as a service</string>
+		<key>Number</key>
+		<integer>7</integer>
+		<key>Description</key>
+		<string>Identity management is a critical platform component. External users on mobile apps need to be authenticated, developers need to be given access to delivery infrastructure components, and microservices may need to identify themselves to other microservices. You should ask yourself whether identity management should be “self-hosted”. In our experience, a hosted identity management as a service (SaaS) solution is preferable. We believe that top-tier hosted providers such as Auth0 and Okta can provide better uptime and security SLAs. That said, sometimes self-hosting the solution is a realistic decision, especially for enterprises that have the operational discipline and resources to do so safely. Large enterprise identity solutions typically offer a much more expansive range of capabilities such as centralized entitlements, governance reporting and separation of duties management among others. However, these concerns are typically more relevant for employee identities, especially in regulated enterprises with legacy systems.</string>
+		<key>Level</key>
+		<string>TRIAL</string>
+		<key>Quadrant</key>
+		<string>Techniques</string>
+		<key>Position</key>
+		<dict>
+			<key>X</key>
+			<real>-0.23</real>
+			<key>Z</key>
+			<real>-0.2</real>
+		</dict>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>Hosted identity management as a service</string>
+		<key>Number</key>
+		<integer>7</integer>
+		<key>Description</key>
+		<string>Identity management is a critical platform component. External users on mobile apps need to be authenticated, developers need to be given access to delivery infrastructure components, and microservices may need to identify themselves to other microservices. You should ask yourself whether identity management should be “self-hosted”. In our experience, a hosted identity management as a service (SaaS) solution is preferable. We believe that top-tier hosted providers such as Auth0 and Okta can provide better uptime and security SLAs. That said, sometimes self-hosting the solution is a realistic decision, especially for enterprises that have the operational discipline and resources to do so safely. Large enterprise identity solutions typically offer a much more expansive range of capabilities such as centralized entitlements, governance reporting and separation of duties management among others. However, these concerns are typically more relevant for employee identities, especially in regulated enterprises with legacy systems.</string>
+		<key>Level</key>
+		<string>TRIAL</string>
+		<key>Quadrant</key>
+		<string>Techniques</string>
+		<key>Position</key>
+		<dict>
+			<key>X</key>
+			<real>-0.23</real>
+			<key>Z</key>
+			<real>-0.2</real>
+		</dict>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>Hosted identity management as a service</string>
+		<key>Number</key>
+		<integer>7</integer>
+		<key>Description</key>
+		<string>Identity management is a critical platform component. External users on mobile apps need to be authenticated, developers need to be given access to delivery infrastructure components, and microservices may need to identify themselves to other microservices. You should ask yourself whether identity management should be “self-hosted”. In our experience, a hosted identity management as a service (SaaS) solution is preferable. We believe that top-tier hosted providers such as Auth0 and Okta can provide better uptime and security SLAs. That said, sometimes self-hosting the solution is a realistic decision, especially for enterprises that have the operational discipline and resources to do so safely. Large enterprise identity solutions typically offer a much more expansive range of capabilities such as centralized entitlements, governance reporting and separation of duties management among others. However, these concerns are typically more relevant for employee identities, especially in regulated enterprises with legacy systems.</string>
+		<key>Level</key>
+		<string>TRIAL</string>
+		<key>Quadrant</key>
+		<string>Techniques</string>
+		<key>Position</key>
+		<dict>
+			<key>X</key>
+			<real>-0.23</real>
+			<key>Z</key>
+			<real>-0.2</real>
+		</dict>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>Hosted identity management as a service</string>
+		<key>Number</key>
+		<integer>7</integer>
+		<key>Description</key>
+		<string>Identity management is a critical platform component. External users on mobile apps need to be authenticated, developers need to be given access to delivery infrastructure components, and microservices may need to identify themselves to other microservices. You should ask yourself whether identity management should be “self-hosted”. In our experience, a hosted identity management as a service (SaaS) solution is preferable. We believe that top-tier hosted providers such as Auth0 and Okta can provide better uptime and security SLAs. That said, sometimes self-hosting the solution is a realistic decision, especially for enterprises that have the operational discipline and resources to do so safely. Large enterprise identity solutions typically offer a much more expansive range of capabilities such as centralized entitlements, governance reporting and separation of duties management among others. However, these concerns are typically more relevant for employee identities, especially in regulated enterprises with legacy systems.</string>
+		<key>Level</key>
+		<string>TRIAL</string>
+		<key>Quadrant</key>
+		<string>Techniques</string>
+		<key>Position</key>
+		<dict>
+			<key>X</key>
+			<real>-0.23</real>
+			<key>Z</key>
+			<real>-0.2</real>
+		</dict>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>Hosted identity management as a service</string>
+		<key>Number</key>
+		<integer>7</integer>
+		<key>Description</key>
+		<string>Identity management is a critical platform component. External users on mobile apps need to be authenticated, developers need to be given access to delivery infrastructure components, and microservices may need to identify themselves to other microservices. You should ask yourself whether identity management should be “self-hosted”. In our experience, a hosted identity management as a service (SaaS) solution is preferable. We believe that top-tier hosted providers such as Auth0 and Okta can provide better uptime and security SLAs. That said, sometimes self-hosting the solution is a realistic decision, especially for enterprises that have the operational discipline and resources to do so safely. Large enterprise identity solutions typically offer a much more expansive range of capabilities such as centralized entitlements, governance reporting and separation of duties management among others. However, these concerns are typically more relevant for employee identities, especially in regulated enterprises with legacy systems.</string>
+		<key>Level</key>
+		<string>TRIAL</string>
+		<key>Quadrant</key>
+		<string>Techniques</string>
+		<key>Position</key>
+		<dict>
+			<key>X</key>
+			<real>-0.23</real>
+			<key>Z</key>
+			<real>-0.2</real>
+		</dict>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>Hosted identity management as a service</string>
+		<key>Number</key>
+		<integer>7</integer>
+		<key>Description</key>
+		<string>Identity management is a critical platform component. External users on mobile apps need to be authenticated, developers need to be given access to delivery infrastructure components, and microservices may need to identify themselves to other microservices. You should ask yourself whether identity management should be “self-hosted”. In our experience, a hosted identity management as a service (SaaS) solution is preferable. We believe that top-tier hosted providers such as Auth0 and Okta can provide better uptime and security SLAs. That said, sometimes self-hosting the solution is a realistic decision, especially for enterprises that have the operational discipline and resources to do so safely. Large enterprise identity solutions typically offer a much more expansive range of capabilities such as centralized entitlements, governance reporting and separation of duties management among others. However, these concerns are typically more relevant for employee identities, especially in regulated enterprises with legacy systems.</string>
 		<key>Level</key>
 		<string>TRIAL</string>
 		<key>Quadrant</key>

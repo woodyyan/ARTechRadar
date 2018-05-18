@@ -16,7 +16,7 @@ class DescriptionNode: SCNNode {
      
         let layer = CALayer()
         layer.frame = CGRect(x: 0, y: 0, width: 300, height: 400)
-        layer.backgroundColor = UIColor(white: 1, alpha: 1).cgColor
+        layer.backgroundColor = UIColor(white: 1, alpha: 0.7).cgColor
         
         let textLayer = CATextLayer()
         textLayer.frame = CGRect(x: 10, y: 10, width: 280, height: 380)
