@@ -15,10 +15,12 @@ class RadarDotNode: SCNNode {
     var sphere: SphereNode!
     var title: TextNode!
     var descript: DescriptionNode!
+    var radarDot: RadarDot!
     
     init(radarDot: RadarDot) {
         super.init()
         
+        self.radarDot = radarDot
         self.sphere = SphereNode.init(radarDot.color)
         self.sphere.position = SCNVector3.init(radarDot.position.x, y, radarDot.position.z)
         
@@ -49,9 +51,10 @@ class RadarDotNode: SCNNode {
     public func displayDescription() {
         if !self.childNodes.contains(descript) {
             self.addChildNode(descript)
-
+            self.sphere.geometry?.materials[0].emission.contents = self.radarDot.color
         } else {
             descript.removeFromParentNode()
+            self.sphere.geometry?.materials[0].emission.contents = UIColor.black
         }
     }
 }
