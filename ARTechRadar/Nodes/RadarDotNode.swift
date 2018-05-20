@@ -39,9 +39,12 @@ class RadarDotNode: SCNNode {
     private func generateDescription() -> NSAttributedString {
         let attributedString = NSMutableAttributedString(string: "")
         
-        attributedString.append(NSAttributedString(string: radarDot.name + "\n", attributes: [NSAttributedStringKey.foregroundColor : radarDot.color, NSAttributedStringKey.font: UIFont(name: "OpenSans-SemiBold", size: 22)!]))
+        let titleFont = UIFont(name: "OpenSans-SemiBold", size: 22)!
+        let titleAttributes = [NSAttributedStringKey.foregroundColor: radarDot.color, NSAttributedStringKey.font: titleFont]
+        attributedString.append(NSAttributedString(string: radarDot.name + "\n", attributes: titleAttributes))
         
-        attributedString.append(NSAttributedString(string: radarDot.description, attributes: [NSAttributedStringKey.font: UIFont(name: "OpenSans-Light", size: 14)!]))
+        let descriptionAttributes = [NSAttributedStringKey.font: UIFont(name: "OpenSans-Light", size: 14)!]
+        attributedString.append(NSAttributedString(string: radarDot.description, attributes: descriptionAttributes))
         
         return attributedString
     }

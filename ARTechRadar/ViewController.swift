@@ -13,6 +13,8 @@ import ARKit
 class ViewController: UIViewController, ARSCNViewDelegate {
 
     private let baseHeight: Float = 0.05
+    private var hasRadarLoaded = false
+    
     @IBOutlet var sceneView: ARSCNView!
     
     override func viewDidLoad() {
@@ -22,14 +24,38 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         sceneView.delegate = self
         
         // Show statistics such as fps and timing information
-        sceneView.showsStatistics = true
+//        sceneView.showsStatistics = true
         
         let scene = SCNScene()
         sceneView.scene = scene
-        sceneView.autoenablesDefaultLighting = true
-        sceneView.debugOptions = [ARSCNDebugOptions.showFeaturePoints]
+        sceneView.autoenablesDefaultLighting = false
+        //TODO add environment_blur.exr
+//        sceneView.debugOptions = [ARSCNDebugOptions.showFeaturePoints]
         
         addGesture()
+    }
+    
+    @IBAction private func restartExperience(_ sender: UIButton) {
+        if hasRadarLoaded {
+            hasRadarLoaded = false
+            
+//            statusViewController.cancelAllScheduledMessages()
+            
+            for node in sceneView.scene.rootNode.childNodes {
+                node.removeFromParentNode()
+            }
+            
+            resetTracking()
+        }
+    }
+    
+    /// Creates a new AR configuration to run on the `session`.
+    func resetTracking() {
+        let configuration = ARWorldTrackingConfiguration()
+        configuration.planeDetection = [.horizontal]
+        sceneView.session.run(configuration, options: [.resetTracking, .removeExistingAnchors])
+        
+//        statusViewController.scheduleMessage("FIND A SURFACE TO PLACE AN OBJECT", inSeconds: 7.5, messageType: .planeEstimation)
     }
     
     private func addGesture() {
@@ -74,12 +100,10 @@ class ViewController: UIViewController, ARSCNViewDelegate {
 
     // MARK: - ARSCNViewDelegate
     
-    var isLoaded = false
-    
     func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
-        if !isLoaded {
+        if !hasRadarLoaded {
             renderRadar(node: node)
-            isLoaded = true
+            hasRadarLoaded = true
         }
     }
     
