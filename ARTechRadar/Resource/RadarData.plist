@@ -1517,9 +1517,9 @@
 		<key>Position</key>
 		<dict>
 			<key>X</key>
-			<real>0.3</real>
+			<real>0.04</real>
 			<key>Z</key>
-			<real>0.1</real>
+			<real>0.13</real>
 		</dict>
 	</dict>
 	<dict>
@@ -1536,7 +1536,7 @@
 		<key>Position</key>
 		<dict>
 			<key>X</key>
-			<real>0.3</real>
+			<real>0.06</real>
 			<key>Z</key>
 			<real>0.1</real>
 		</dict>
@@ -1555,9 +1555,9 @@
 		<key>Position</key>
 		<dict>
 			<key>X</key>
-			<real>0.3</real>
-			<key>Z</key>
 			<real>0.1</real>
+			<key>Z</key>
+			<real>0.06</real>
 		</dict>
 	</dict>
 	<dict>
@@ -1574,9 +1574,9 @@
 		<key>Position</key>
 		<dict>
 			<key>X</key>
-			<real>0.3</real>
+			<real>0.05</real>
 			<key>Z</key>
-			<real>0.1</real>
+			<real>0.25</real>
 		</dict>
 	</dict>
 	<dict>
@@ -1593,9 +1593,9 @@
 		<key>Position</key>
 		<dict>
 			<key>X</key>
-			<real>0.3</real>
+			<real>0.07000000000000001</real>
 			<key>Z</key>
-			<real>0.1</real>
+			<real>0.18</real>
 		</dict>
 	</dict>
 	<dict>
@@ -1612,9 +1612,9 @@
 		<key>Position</key>
 		<dict>
 			<key>X</key>
-			<real>0.3</real>
-			<key>Z</key>
 			<real>0.1</real>
+			<key>Z</key>
+			<real>0.2</real>
 		</dict>
 	</dict>
 	<dict>
@@ -1631,9 +1631,9 @@
 		<key>Position</key>
 		<dict>
 			<key>X</key>
-			<real>0.3</real>
+			<real>0.14</real>
 			<key>Z</key>
-			<real>0.1</real>
+			<real>0.18</real>
 		</dict>
 	</dict>
 	<dict>
@@ -1650,9 +1650,9 @@
 		<key>Position</key>
 		<dict>
 			<key>X</key>
-			<real>0.3</real>
+			<real>0.17</real>
 			<key>Z</key>
-			<real>0.1</real>
+			<real>0.22</real>
 		</dict>
 	</dict>
 	<dict>
@@ -1669,9 +1669,9 @@
 		<key>Position</key>
 		<dict>
 			<key>X</key>
-			<real>0.1</real>
+			<real>0.2</real>
 			<key>Z</key>
-			<real>0.3</real>
+			<real>0.2</real>
 		</dict>
 	</dict>
 	<dict>
@@ -1688,9 +1688,9 @@
 		<key>Position</key>
 		<dict>
 			<key>X</key>
-			<real>0.1</real>
+			<real>0.22</real>
 			<key>Z</key>
-			<real>0.3</real>
+			<real>0.26</real>
 		</dict>
 	</dict>
 	<dict>
