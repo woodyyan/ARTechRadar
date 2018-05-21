@@ -10,27 +10,39 @@ import UIKit
 import SceneKit
 import ARKit
 
-class ViewController: UIViewController, ARSCNViewDelegate {
-
-    private let baseHeight: Float = 0.05
-    private var hasRadarLoaded = false
+class ViewController: UIViewController {
+    let baseHeight: Float = 0.05
+    var hasRadarLoaded = false
     
     @IBOutlet var sceneView: ARSCNView!
+    
+    var focusSquare = FocusSquare()
+    
+    let updateQueue = DispatchQueue(label: "com.example.apple-samplecode.arkitexample.serialSceneKitQueue")
+    
+    var screenCenter: CGPoint {
+        let bounds = sceneView.bounds
+        return CGPoint(x: bounds.midX, y: bounds.midY)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Set the view's delegate
         sceneView.delegate = self
+        sceneView.session.delegate = self
+        
+        sceneView.scene.rootNode.addChildNode(focusSquare)
         
         // Show statistics such as fps and timing information
 //        sceneView.showsStatistics = true
+//        sceneView.debugOptions = [ARSCNDebugOptions.showFeaturePoints]
         
         let scene = SCNScene()
         sceneView.scene = scene
         sceneView.autoenablesDefaultLighting = false
-        //TODO add environment_blur.exr
-//        sceneView.debugOptions = [ARSCNDebugOptions.showFeaturePoints]
+        if let environmentMap = UIImage(named: "art.scnassets/environment_blur.exr") {
+            sceneView.scene.lightingEnvironment.contents = environmentMap
+        }
         
         addGesture()
     }
@@ -56,6 +68,30 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         sceneView.session.run(configuration, options: [.resetTracking, .removeExistingAnchors])
         
 //        statusViewController.scheduleMessage("FIND A SURFACE TO PLACE AN OBJECT", inSeconds: 7.5, messageType: .planeEstimation)
+    }
+    
+    func updateFocusSquare() {
+        if hasRadarLoaded {
+            focusSquare.hide()
+        } else {
+            focusSquare.unhide()
+            //statusViewController.scheduleMessage("TRY MOVING LEFT OR RIGHT", inSeconds: 5.0, messageType: .focusSquare)
+        }
+        
+        // Perform hit testing only when ARKit tracking is in a good state.
+        if let camera = sceneView.session.currentFrame?.camera, case .normal = camera.trackingState,
+            let result = self.sceneView.smartHitTest(screenCenter) {
+            updateQueue.async {
+                self.sceneView.scene.rootNode.addChildNode(self.focusSquare)
+                self.focusSquare.state = .detecting(hitTestResult: result, camera: camera)
+            }
+//            statusViewController.cancelScheduledMessage(for: .focusSquare)
+        } else {
+            updateQueue.async {
+                self.focusSquare.state = .initializing
+                self.sceneView.pointOfView?.addChildNode(self.focusSquare)
+            }
+        }
     }
     
     private func addGesture() {
@@ -96,110 +132,5 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Release any cached data, images, etc that aren't in use.
-    }
-
-    // MARK: - ARSCNViewDelegate
-    
-    func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
-        if !hasRadarLoaded {
-            renderRadar(node: node)
-            hasRadarLoaded = true
-        }
-    }
-    
-    private func renderRadar(node: SCNNode) {
-        let basicRadius: Float = 0.2
-        let radarAnchor = SCNVector3(0, 0, 0)
-        addRadarPlane(node: node, basicRadius: basicRadius, radarAnchor: radarAnchor)
-        addRadarDots(node: node)
-        addRadarQuadrant(node: node, basicRadius: basicRadius, radarAnchor: radarAnchor)
-    }
-    
-    func addRadarQuadrant(node: SCNNode, basicRadius: Float, radarAnchor: SCNVector3) {
-        let horizon = PlaneNode(basicRadius * 3, radarAnchor)
-        let vertical = PlaneNode(basicRadius * 3, radarAnchor)
-        horizon.rotation = SCNVector4Make(1, 0, 0, -Float(.pi/2.0))
-        
-        let xAngle = SCNMatrix4MakeRotation(-Float(.pi/2.0), 1, 0, 0)
-        let yAngle = SCNMatrix4MakeRotation(Float(.pi/2.0), 0, 1, 0)
-        let zAngle = SCNMatrix4MakeRotation(0, 0, 0, 1)
-        let rotationMatrix = SCNMatrix4Mult(SCNMatrix4Mult(xAngle, yAngle), zAngle)
-        vertical.transform = SCNMatrix4Mult(rotationMatrix, vertical.transform)
-        
-        let fontName = "OpenSans-SemiBold"
-        let color = UIColor.black
-        let yPos: Float = 0.027
-        let zPos: Float = radarAnchor.z + 0.02
-        
-        for (index, level) in Level.allValues.enumerated() {
-            let rightLevelTextNode = TextNode.init(level, color, fontName)
-            rightLevelTextNode.position = SCNVector3.init(radarAnchor.x + basicRadius * getRightX(index), yPos, zPos)
-            rightLevelTextNode.rotation = SCNVector4Make(1, 0, 0, -Float(.pi/2.0))
-            node.addChildNode(rightLevelTextNode)
-            
-            let leftLevelTextNode = TextNode.init(level, color, fontName)
-            leftLevelTextNode.position = SCNVector3.init(radarAnchor.x + basicRadius * (-1/3 - getRightX(index)), yPos, zPos)
-            leftLevelTextNode.rotation = SCNVector4Make(1, 0, 0, -Float(.pi/2.0))
-            node.addChildNode(leftLevelTextNode)
-        }
-        
-        node.addChildNode(horizon)
-        node.addChildNode(vertical)
-    }
-    
-    // TODO: Refactor these two methods
-    private func getRightX(_ index: Int) -> Float {
-        switch index {
-        case 0:
-            return 1/3
-        case 1:
-            return 4/3
-        case 2:
-            return 19/9
-        case 3:
-            return 8/3
-        default:
-            return 0
-        }
-    }
-    
-    func addRadarPlane(node: SCNNode, basicRadius: Float, radarAnchor: SCNVector3) {
-        let trialColor = UIColor(red: 216/255, green: 217/255, blue: 211/255, alpha: 1)
-        let assessColor = UIColor(red: 230/255, green: 229/255, blue: 224/255, alpha: 1)
-        let holdColor = UIColor(red: 243/255, green: 242/255, blue: 238/255, alpha: 1)
-        let adoptNode = CylinderNode.init(basicRadius, radarAnchor, baseHeight)
-        let trialNode = TubeNode(basicRadius, basicRadius*2, radarAnchor, baseHeight, trialColor)
-        let assessNode = TubeNode(basicRadius*2, basicRadius*8/3, radarAnchor, baseHeight, assessColor)
-        let holdNode = TubeNode(basicRadius*8/3, basicRadius*3, radarAnchor, baseHeight, holdColor)
-        node.addChildNode(adoptNode)
-        node.addChildNode(trialNode)
-        node.addChildNode(assessNode)
-        node.addChildNode(holdNode)
-    }
-    
-    func addRadarDots(node: SCNNode) {
-        let radarService = RadarDataService()
-        let fileUrl = Bundle.main.url(forResource: "RadarData", withExtension: "plist")
-        let radarDots = radarService.getRadarDotsFromFile(url: fileUrl!)
-        
-        for radarDot in radarDots {
-            let radarDotNode = RadarDotNode(radarDot: radarDot)
-            node.addChildNode(radarDotNode)
-        }
-    }
-    
-    func session(_ session: ARSession, didFailWithError error: Error) {
-        // Present an error message to the user
-        print(error.localizedDescription)
-    }
-    
-    func sessionWasInterrupted(_ session: ARSession) {
-        // Inform the user that the session has been interrupted, for example, by presenting an overlay
-        
-    }
-    
-    func sessionInterruptionEnded(_ session: ARSession) {
-        // Reset tracking and/or remove existing anchors if consistent tracking is required
-        
     }
 }
