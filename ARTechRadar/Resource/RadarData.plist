@@ -194,13 +194,32 @@
 	</dict>
 	<dict>
 		<key>Name</key>
-		<string>Hosted identity management as a service</string>
+		<string>BeyondCorp</string>
 		<key>Number</key>
-		<integer>7</integer>
+		<integer>11</integer>
 		<key>Description</key>
-		<string>Identity management is a critical platform component. External users on mobile apps need to be authenticated, developers need to be given access to delivery infrastructure components, and microservices may need to identify themselves to other microservices. You should ask yourself whether identity management should be “self-hosted”. In our experience, a hosted identity management as a service (SaaS) solution is preferable. We believe that top-tier hosted providers such as Auth0 and Okta can provide better uptime and security SLAs. That said, sometimes self-hosting the solution is a realistic decision, especially for enterprises that have the operational discipline and resources to do so safely. Large enterprise identity solutions typically offer a much more expansive range of capabilities such as centralized entitlements, governance reporting and separation of duties management among others. However, these concerns are typically more relevant for employee identities, especially in regulated enterprises with legacy systems.</string>
+		<string>Previously in the Radar, we’ve discussed the rise of the perimeterless enterprise. Now, some organizations are doing away with implicitly trusted intranets altogether and treating all communication as if it was being transmitted through the public internet. A set of practices, collectively labeled BeyondCorp, have been described by Google engineers in a set of publications. Collectively, these practices — including managed devices, 802.1x networking and standard access proxies protecting individual services — make this a viable approach to network security in large enterprises.</string>
 		<key>Level</key>
-		<string>TRIAL</string>
+		<string>ASSESS</string>
+		<key>Quadrant</key>
+		<string>Techniques</string>
+		<key>Position</key>
+		<dict>
+			<key>X</key>
+			<real>-0.3</real>
+			<key>Z</key>
+			<real>-0.4</real>
+		</dict>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>Embedded mobile mocks</string>
+		<key>Number</key>
+		<integer>12</integer>
+		<key>Description</key>
+		<string>When developing mobile applications, our teams often find themselves without an external server for testing apps. Setting up an over-the-wire mock may be a good fit for this particular problem. Developing the HTTP mocks and compiling them into the mobile binary for testing — embedded mobile mocks — enables teams to test their mobile apps when disconnected and with no external dependencies. This technique may require creating an opinionated library based on both the networking library used by the mobile app and your usage of the underlying library.</string>
+		<key>Level</key>
+		<string>ASSESS</string>
 		<key>Quadrant</key>
 		<string>Techniques</string>
 		<key>Position</key>
@@ -213,13 +232,13 @@
 	</dict>
 	<dict>
 		<key>Name</key>
-		<string>Hosted identity management as a service</string>
+		<string>Ethereum for decentralized applications</string>
 		<key>Number</key>
-		<integer>7</integer>
+		<integer>13</integer>
 		<key>Description</key>
-		<string>Identity management is a critical platform component. External users on mobile apps need to be authenticated, developers need to be given access to delivery infrastructure components, and microservices may need to identify themselves to other microservices. You should ask yourself whether identity management should be “self-hosted”. In our experience, a hosted identity management as a service (SaaS) solution is preferable. We believe that top-tier hosted providers such as Auth0 and Okta can provide better uptime and security SLAs. That said, sometimes self-hosting the solution is a realistic decision, especially for enterprises that have the operational discipline and resources to do so safely. Large enterprise identity solutions typically offer a much more expansive range of capabilities such as centralized entitlements, governance reporting and separation of duties management among others. However, these concerns are typically more relevant for employee identities, especially in regulated enterprises with legacy systems.</string>
+		<string>Blockchains have been widely hyped as the panacea for all things fintech, from banking to digital currency to supply chain transparency. We’ve previously featured Ethereum because of its feature set, which includes smart contracts. Now, we&apos;re seeing more development using Ethereum for decentralized applications in other areas. Although this is still a very young technology, we&apos;re encouraged to see it being used to build decentralized applications beyond cryptocurrency and banking.</string>
 		<key>Level</key>
-		<string>TRIAL</string>
+		<string>ASSESS</string>
 		<key>Quadrant</key>
 		<string>Techniques</string>
 		<key>Position</key>
@@ -232,13 +251,13 @@
 	</dict>
 	<dict>
 		<key>Name</key>
-		<string>Hosted identity management as a service</string>
+		<string>Event streaming as the source of truth</string>
 		<key>Number</key>
-		<integer>7</integer>
+		<integer>14</integer>
 		<key>Description</key>
-		<string>Identity management is a critical platform component. External users on mobile apps need to be authenticated, developers need to be given access to delivery infrastructure components, and microservices may need to identify themselves to other microservices. You should ask yourself whether identity management should be “self-hosted”. In our experience, a hosted identity management as a service (SaaS) solution is preferable. We believe that top-tier hosted providers such as Auth0 and Okta can provide better uptime and security SLAs. That said, sometimes self-hosting the solution is a realistic decision, especially for enterprises that have the operational discipline and resources to do so safely. Large enterprise identity solutions typically offer a much more expansive range of capabilities such as centralized entitlements, governance reporting and separation of duties management among others. However, these concerns are typically more relevant for employee identities, especially in regulated enterprises with legacy systems.</string>
+		<string>As event streaming platforms, such as Apache Kafka, rise in popularity, many consider them as an advanced form of message queuing, used solely to transmit events. Even when used in this way, event streaming has its benefits over traditional message queuing. However, we&apos;re more interested in how people use event streaming as the source of truth with platforms (Kafka in particular) as the primary store for data as immutable events. A service with an Event Sourcing design, for example, can use Kafka as its event store; those events are then available for other services to consume. This technique has the potential to reduce duplicating efforts between local persistence and integration.</string>
 		<key>Level</key>
-		<string>TRIAL</string>
+		<string>ASSESS</string>
 		<key>Quadrant</key>
 		<string>Techniques</string>
 		<key>Position</key>
@@ -251,13 +270,13 @@
 	</dict>
 	<dict>
 		<key>Name</key>
-		<string>Hosted identity management as a service</string>
+		<string>GraphQL for server side resource aggregation</string>
 		<key>Number</key>
-		<integer>7</integer>
+		<integer>15</integer>
 		<key>Description</key>
-		<string>Identity management is a critical platform component. External users on mobile apps need to be authenticated, developers need to be given access to delivery infrastructure components, and microservices may need to identify themselves to other microservices. You should ask yourself whether identity management should be “self-hosted”. In our experience, a hosted identity management as a service (SaaS) solution is preferable. We believe that top-tier hosted providers such as Auth0 and Okta can provide better uptime and security SLAs. That said, sometimes self-hosting the solution is a realistic decision, especially for enterprises that have the operational discipline and resources to do so safely. Large enterprise identity solutions typically offer a much more expansive range of capabilities such as centralized entitlements, governance reporting and separation of duties management among others. However, these concerns are typically more relevant for employee identities, especially in regulated enterprises with legacy systems.</string>
+		<string>One pattern that comes up again and again when building microservice-style architectures is how to handle the aggregation of many resources server-side. In recent years, we&apos;ve seen the emergence of a number of patterns such as Backend for Frontend (BFF) and tools such as Falcor to address this. Our teams have started using GraphQL for server-side resource aggregation instead. This differs from the usual mode of using GraphQL where clients directly query a GraphQL server. When using this technique, the services continue to expose RESTful APIs but under-the-hood aggregate services use GraphQL resolvers as the implementation for stitching resources from other services. This technique simplifies the internal implementation of aggregate services or BFFs by using GraphQL.</string>
 		<key>Level</key>
-		<string>TRIAL</string>
+		<string>ASSESS</string>
 		<key>Quadrant</key>
 		<string>Techniques</string>
 		<key>Position</key>
@@ -270,13 +289,13 @@
 	</dict>
 	<dict>
 		<key>Name</key>
-		<string>Hosted identity management as a service</string>
+		<string>Infrastructure configuration scanner</string>
 		<key>Number</key>
-		<integer>7</integer>
+		<integer>16</integer>
 		<key>Description</key>
-		<string>Identity management is a critical platform component. External users on mobile apps need to be authenticated, developers need to be given access to delivery infrastructure components, and microservices may need to identify themselves to other microservices. You should ask yourself whether identity management should be “self-hosted”. In our experience, a hosted identity management as a service (SaaS) solution is preferable. We believe that top-tier hosted providers such as Auth0 and Okta can provide better uptime and security SLAs. That said, sometimes self-hosting the solution is a realistic decision, especially for enterprises that have the operational discipline and resources to do so safely. Large enterprise identity solutions typically offer a much more expansive range of capabilities such as centralized entitlements, governance reporting and separation of duties management among others. However, these concerns are typically more relevant for employee identities, especially in regulated enterprises with legacy systems.</string>
+		<string>For some time now we&apos;ve recommended increased delivery team ownership of their entire stack, including infrastructure. This means increased responsibility in the delivery team itself for configuring infrastructure in a safe, secure, and compliant way. When adopting cloud strategies, most organizations default to a tightly locked-down and centrally managed configuration to reduce risk, but this also creates substantial productivity bottlenecks. An alternative approach is to allow teams to manage their own configuration, and use an Infrastructure configuration scanner to ensure the configuration is set in a safe and secure way. Watchmen is an interesting tool, built to provide rule-driven assurance of AWS account configurations that are owned and operated independently by delivery teams. Scout2 is another example of configuration scanning to support secure compliance.</string>
 		<key>Level</key>
-		<string>TRIAL</string>
+		<string>ASSESS</string>
 		<key>Quadrant</key>
 		<string>Techniques</string>
 		<key>Position</key>
@@ -289,51 +308,30 @@
 	</dict>
 	<dict>
 		<key>Name</key>
-		<string>Hosted identity management as a service</string>
-		<key>Number</key>
-		<integer>7</integer>
-		<key>Description</key>
-		<string>Identity management is a critical platform component. External users on mobile apps need to be authenticated, developers need to be given access to delivery infrastructure components, and microservices may need to identify themselves to other microservices. You should ask yourself whether identity management should be “self-hosted”. In our experience, a hosted identity management as a service (SaaS) solution is preferable. We believe that top-tier hosted providers such as Auth0 and Okta can provide better uptime and security SLAs. That said, sometimes self-hosting the solution is a realistic decision, especially for enterprises that have the operational discipline and resources to do so safely. Large enterprise identity solutions typically offer a much more expansive range of capabilities such as centralized entitlements, governance reporting and separation of duties management among others. However, these concerns are typically more relevant for employee identities, especially in regulated enterprises with legacy systems.</string>
-		<key>Level</key>
-		<string>TRIAL</string>
-		<key>Quadrant</key>
-		<string>Techniques</string>
-		<key>Position</key>
-		<dict>
-			<key>X</key>
-			<real>-0.23</real>
-			<key>Z</key>
-			<real>-0.2</real>
-		</dict>
-	</dict>
-	<dict>
-		<key>Name</key>
-		<string>Hosted identity management as a service</string>
-		<key>Number</key>
-		<integer>7</integer>
-		<key>Description</key>
-		<string>Identity management is a critical platform component. External users on mobile apps need to be authenticated, developers need to be given access to delivery infrastructure components, and microservices may need to identify themselves to other microservices. You should ask yourself whether identity management should be “self-hosted”. In our experience, a hosted identity management as a service (SaaS) solution is preferable. We believe that top-tier hosted providers such as Auth0 and Okta can provide better uptime and security SLAs. That said, sometimes self-hosting the solution is a realistic decision, especially for enterprises that have the operational discipline and resources to do so safely. Large enterprise identity solutions typically offer a much more expansive range of capabilities such as centralized entitlements, governance reporting and separation of duties management among others. However, these concerns are typically more relevant for employee identities, especially in regulated enterprises with legacy systems.</string>
-		<key>Level</key>
-		<string>TRIAL</string>
-		<key>Quadrant</key>
-		<string>Techniques</string>
-		<key>Position</key>
-		<dict>
-			<key>X</key>
-			<real>-0.23</real>
-			<key>Z</key>
-			<real>-0.2</real>
-		</dict>
-	</dict>
-	<dict>
-		<key>Name</key>
-		<string>Polycloud</string>
+		<string>Jupyter for automated testing</string>
 		<key>Number</key>
 		<integer>17</integer>
 		<key>Description</key>
-		<string>The major cloud providers (Amazon, Microsoft and Google) are locked in an aggressive race to maintain parity on core capabilities while their products are differentiated only marginally. This is causing a few organizations to adopt a Polycloud strategy — rather than going ‘all-in’ with one provider, they are passing different types of workloads to different providers in a best-of-breed approach. This may involve, for example, putting standard services on AWS, but using Google for machine learning, Azure for .NET applications that use SQLServer, or potentially using the Ethereum Consortium Blockchain solution. This is different than a cloud-agnostic strategy of aiming for portability across providers, which is costly and forces lowest-common-denominator thinking. Polycloud instead focuses on using the best that each cloud offers.
-
-</string>
+		<string>We&apos;re seeing some interesting reports of using Jupyter for automated testing. The ability to mix code, comments and output in the same document reminds us of FIT, FitNesse and Concordion. This flexible approach is particularly useful if your tests are data heavy or rely on some statistical analysis such as performance testing. Python provides all the power you need, but as tests grow in complexity, a way to manage suites of notebooks would be helpful.</string>
+		<key>Level</key>
+		<string>ASSESS</string>
+		<key>Quadrant</key>
+		<string>Techniques</string>
+		<key>Position</key>
+		<dict>
+			<key>X</key>
+			<real>-0.23</real>
+			<key>Z</key>
+			<real>-0.2</real>
+		</dict>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>Log level per request</string>
+		<key>Number</key>
+		<integer>18</integer>
+		<key>Description</key>
+		<string>One problem with observability in a highly distributed microservices architecture is the choice between logging everything — and taking up huge amounts of storage space — or randomly sampling logs and potentially missing important events. Recently, we’ve noticed a technique that offers a compromise between these two solutions. Set the log level per request via a parameter passed in through the tracing header. Using a tracing framework, possibly based on the OpenTracing standard, you can pass a correlation id from service to service in a single transaction. You can even inject other data, such as the desired log level, at the initiating transaction and pass it along with the tracing information. This ensures that the additional data collected corresponds to a single user transaction as it flows through the system. This is also a useful technique for debugging, since services might be paused or otherwise modified on a transaction-by-transaction basis.</string>
 		<key>Level</key>
 		<string>ASSESS</string>
 		<key>Quadrant</key>
@@ -348,11 +346,87 @@
 	</dict>
 	<dict>
 		<key>Name</key>
-		<string>CI theatre</string>
+		<string>Security Chaos Engineering</string>
+		<key>Number</key>
+		<integer>19</integer>
+		<key>Description</key>
+		<string>We’ve previously talked about the technique of Chaos Engineering in the Radar and the Simian Army suite of tools from Netflix that we’ve used to run experiments to test the resilience of production infrastructure. Security Chaos Engineering broadens the scope of this technique to the realm of security. We deliberately introduce false positives into production networks and other infrastructure — build-time dependencies, for example — to check whether procedures in place are capable of identifying security failures under controlled conditions. Although useful, this technique should be used with care to avoid desensitizing teams to security problems.</string>
+		<key>Level</key>
+		<string>ASSESS</string>
+		<key>Quadrant</key>
+		<string>Techniques</string>
+		<key>Position</key>
+		<dict>
+			<key>X</key>
+			<real>-0.28</real>
+			<key>Z</key>
+			<real>-0.28</real>
+		</dict>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>Service mesh</string>
+		<key>Number</key>
+		<integer>20</integer>
+		<key>Description</key>
+		<string>As large organizations transition to more autonomous teams owning and operating their own microservices, how can they ensure the necessary consistency and compatibility between those services without relying on a centralized hosting infrastructure? To work together efficiently, even autonomous microservices need to align with some organizational standards. A service mesh offers consistent discovery, security, tracing, monitoring and failure handling without the need for a shared asset such as an API gateway or ESB. A typical implementation involves lightweight reverse-proxy processes deployed alongside each service process, perhaps in a separate container. These proxies communicate with service registries, identity providers, log aggregators, and so on. Service interoperability and observability are gained through a shared implementation of this proxy but not a shared runtime instance. We&apos;ve advocated for a decentralized approach to microservice management for some time and are happy to see this consistent pattern emerge. Open source projects such as linkerd and Istio will continue to mature and make service meshes even easier to implement.</string>
+		<key>Level</key>
+		<string>ASSESS</string>
+		<key>Quadrant</key>
+		<string>Techniques</string>
+		<key>Position</key>
+		<dict>
+			<key>X</key>
+			<real>-0.28</real>
+			<key>Z</key>
+			<real>-0.28</real>
+		</dict>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>Sidecars for endpoint security</string>
+		<key>Number</key>
+		<integer>21</integer>
+		<key>Description</key>
+		<string>Microservices architecture, with a large number of services exposing their assets and capabilities through APIs and an increased attack surface, demand a zero trust security architecture — ‘never trust, always verify’. However, enforcing security controls for communication between services is often neglected, due to increased service code complexity and lack of libraries and language support in a polyglot environment. To get around this complexity, some teams delegate security to an out-of-process sidecar — a process or a container that is deployed and scheduled with each service sharing the same execution context, host and identity. Sidecars implement security capabilities, such as transparent encryption of the communication and TLS (Transport Layer Security) termination, as well as authentication and authorization of the calling service or the end user. We recommend you look into using Istio, linkerd or Envoy before implementing your own sidecars for endpoint security.</string>
+		<key>Level</key>
+		<string>ASSESS</string>
+		<key>Quadrant</key>
+		<string>Techniques</string>
+		<key>Position</key>
+		<dict>
+			<key>X</key>
+			<real>-0.28</real>
+			<key>Z</key>
+			<real>-0.28</real>
+		</dict>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>The three Rs of security</string>
 		<key>Number</key>
 		<integer>22</integer>
 		<key>Description</key>
-		<string>We&apos;ve long been advocates of continuous integration (CI), and we were pioneers in building CI server programs to automatically build projects on check-ins. Used well, these programs run as a daemon process on a shared project mainline that developers commit to daily. The CI server builds the project and runs comprehensive tests to ensure the whole software system is integrated and is in an always-releasable state, thus satisfying the principles of continuous delivery. Sadly, many developers simply set up a CI server and falsely assume they are &quot;doing CI&quot; when in reality they miss out on all the benefits. Common failure modes include: running CI against a shared mainline but with infrequent commits, so integration isn&apos;t really continuous; running a build with poor test coverage; allowing the build to stay red for long periods; or running CI against feature branches which results in continuous isolation. The ensuing &quot;CI theatre&quot; might make people feel good, but would fail any credible CI certification test.</string>
+		<string>Traditional approaches to enterprise security often emphasize locking things down and slowing the pace of change. However, we know that the more time an attacker has to compromise a system, the greater the potential damage. The three Rs of enterprise security — rotate, repair and repave — take advantage of infrastructure automation and continuous delivery to eliminate opportunities for attack. Rotating credentials, applying patches as soon as they&apos;re available and rebuilding systems from a known, secure state — all within a matter of minutes or hours — makes it harder for attackers to succeed. The three Rs of security technique is made feasible with the advent of modern cloud-native architectures. When applications are deployed as containers, and built and tested via a completely automated pipeline, a security patch is just another small release that can be sent through the pipeline with one click. Of course, in keeping with best distributed systems practices, developers need to design their applications to be resilient to unexpected server outages. This is similar to the impact of implementing Chaos Monkey within your environment.</string>
+		<key>Level</key>
+		<string>ASSESS</string>
+		<key>Quadrant</key>
+		<string>Techniques</string>
+		<key>Position</key>
+		<dict>
+			<key>X</key>
+			<real>-0.35</real>
+			<key>Z</key>
+			<real>-0.35</real>
+		</dict>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>Generic cloud usage</string>
+		<key>Number</key>
+		<integer>23</integer>
+		<key>Description</key>
+		<string>The major cloud providers continue to add new features to their clouds at a rapid pace, and under the banner of Polycloud we&apos;ve suggested using multiple clouds in parallel, to mix and match services based on the strengths of each provider’s offerings. Increasingly, we&apos;re seeing organizations prepare to use multiple clouds — not to benefit from individual provider’s strengths, though, but to avoid vendor &quot;lock-in&quot; at all costs. This, of course, leads to generic cloud usage, only using features that are present across all providers, which reminds us of the lowest common denominator scenario we saw 10 years ago when companies avoided many advanced features in relational databases in an effort to remain vendor neutral. The problem of lock-in is real. However, instead of treating it with a sledgehammer approach, we recommend looking at this problem from the perspective of exit costs and relate those to the benefits of using cloud-specific features.</string>
 		<key>Level</key>
 		<string>HOLD</string>
 		<key>Quadrant</key>
@@ -367,11 +441,68 @@
 	</dict>
 	<dict>
 		<key>Name</key>
-		<string>Google Cloud Platform</string>
+		<string>Recreating ESB antipatterns with Kafka</string>
+		<key>Number</key>
+		<integer>24</integer>
+		<key>Description</key>
+		<string>Kafka is becoming very popular as a messaging solution, and along with it, Kafka Streams is at the forefront of the wave of interest in streaming architectures. Unfortunately, as they start to embed Kafka at the heart of their data and application platforms, we&apos;re seeing some organizations recreating ESB antipatterns with Kafka by centralizing the Kafka ecosystem components — such as connectors and stream processors — instead of allowing these components to live with product or service teams. This reminds us of seriously problematic ESB antipatterns, where more and more logic, orchestration and transformation were thrust into a centrally managed ESB, creating a significant dependency on a centralized team. We&apos;re calling this out to dissuade further implementations of this flawed pattern.</string>
+		<key>Level</key>
+		<string>HOLD</string>
+		<key>Quadrant</key>
+		<string>Techniques</string>
+		<key>Position</key>
+		<dict>
+			<key>X</key>
+			<real>-0.35</real>
+			<key>Z</key>
+			<real>-0.35</real>
+		</dict>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>.NET Core</string>
+		<key>Number</key>
+		<integer>25</integer>
+		<key>Description</key>
+		<string>Our teams have confirmed that .NET Core has reached a level of maturity that makes it the default for .NET server applications. The open source .NET Core framework enables the development and deployment of .NET applications on Windows, macOS and Linux with first-class cross-platform tooling. Microsoft provides blessed Docker images which make it easy to deploy .NET Core applications in a containerized environment. Positive directions in the community and feedback from our projects indicate that .NET Core is the future for .NET development.</string>
+		<key>Level</key>
+		<string>ADOPT</string>
+		<key>Quadrant</key>
+		<string>Platforms</string>
+		<key>Position</key>
+		<dict>
+			<key>X</key>
+			<real>-0.2</real>
+			<key>Z</key>
+			<real>0.1</real>
+		</dict>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>Kubernetes</string>
 		<key>Number</key>
 		<integer>26</integer>
 		<key>Description</key>
-		<string>As Google Cloud Platform (GCP) has expanded in terms of available geographic regions and maturity of services, customers globally can now seriously consider it for their cloud strategy. In some areas, GCP has reached feature parity with its main competitor, Amazon Web Services, while in other areas it has differentiated itself — notably with accessible machine learning platforms, data engineering tools, and a workable Kubernetes as a service solution (GKE). In practice, our teams have nothing but praise for the developer experience working with the GCP tools and APIs.</string>
+		<string>Since we last mentioned Kubernetes in the Radar, it has become the default solution for most of our clients when deploying containers into a cluster of machines. The alternatives didn’t capture as much mindshare, and in some cases our clients are even changing their ‘engine’ to Kubernetes. Kubernetes has become the container orchestration platform of choice for major public cloud platforms, including Microsoft&apos;s Azure Container Service and Google Cloud (see the GKE blip). And there are many useful products enriching the fast-growing Kubernetes ecosystem. Platforms that try to hide Kubernetes under an abstraction layer, however, have yet to prove themselves.</string>
+		<key>Level</key>
+		<string>ADOPT</string>
+		<key>Quadrant</key>
+		<string>Platforms</string>
+		<key>Position</key>
+		<dict>
+			<key>X</key>
+			<real>-0.2</real>
+			<key>Z</key>
+			<real>0.1</real>
+		</dict>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>Azure</string>
+		<key>Number</key>
+		<integer>27</integer>
+		<key>Description</key>
+		<string>Microsoft has steadily improved Azure and today not much separates the core cloud experience provided by the major cloud providers – Amazon, Google and Microsoft. The cloud providers seem to agree and seek to differentiate themselves in other areas such as features, services and cost structure. Microsoft is the provider who shows real interest in the legal requirements of European companies. They’ve a nuanced and plausible strategy, including unique offerings such as Azure Germany and Azure Stack, which gives some certainty to European companies in anticipation of the GDPR and possible legislative changes in the United States.</string>
 		<key>Level</key>
 		<string>TRIAL</string>
 		<key>Quadrant</key>
@@ -386,11 +517,49 @@
 	</dict>
 	<dict>
 		<key>Name</key>
-		<string>Google Cloud Platform</string>
+		<string>Contentful</string>
 		<key>Number</key>
-		<integer>30</integer>
+		<integer>28</integer>
 		<key>Description</key>
-		<string>As Google Cloud Platform (GCP) has expanded in terms of available geographic regions and maturity of services, customers globally can now seriously consider it for their cloud strategy. In some areas, GCP has reached feature parity with its main competitor, Amazon Web Services, while in other areas it has differentiated itself — notably with accessible machine learning platforms, data engineering tools, and a workable Kubernetes as a service solution (GKE). In practice, our teams have nothing but praise for the developer experience working with the GCP tools and APIs.</string>
+		<string>Headless Content Management Systems (CMSes) are becoming a common component of digital platforms. Contentful is a modern headless CMS that our teams have successfully integrated into their development workflows. We particularly like its API-first approach and implementing CMS as Code. It supports powerful content modelling primitives as code and content model evolution scripts, which allow treating it as other data store schemas and applying evolutionary database design practices to CMS development. Other notable features that we’ve liked include inclusion of two CDNs by default to deliver media assets and JSON documents, good support for localization, and the ability — albeit with some effort — to integrate with Auth0.</string>
+		<key>Level</key>
+		<string>TRIAL</string>
+		<key>Quadrant</key>
+		<string>Platforms</string>
+		<key>Position</key>
+		<dict>
+			<key>X</key>
+			<real>-0.2</real>
+			<key>Z</key>
+			<real>0.1</real>
+		</dict>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>EMQ</string>
+		<key>Number</key>
+		<integer>29</integer>
+		<key>Description</key>
+		<string>EMQ is a scalable open source multiplatform MQTT broker. It’s written in Erlang/OTP for higher performance, handling millions of concurrent connections. It supports multiple protocols including MQTT, MQTT Sensor Networks, CoAP as well as WebSockets, making it suitable for both IoT and mobile devices. We’ve started using EMQ in our projects and have enjoyed its ease of installation and use, its ability to route messages to different destinations including Kafka and PostgreSQL, as well as its API-driven approach for its monitoring and configuration.</string>
+		<key>Level</key>
+		<string>TRIAL</string>
+		<key>Quadrant</key>
+		<string>Platforms</string>
+		<key>Position</key>
+		<dict>
+			<key>X</key>
+			<real>-0.2</real>
+			<key>Z</key>
+			<real>0.1</real>
+		</dict>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>Flood IO</string>
+		<key>Number</key>
+		<integer>31</integer>
+		<key>Description</key>
+		<string>Load testing became easier with the maturity of tools such as Gatling and Locust. At the same time, elastic cloud infrastructures make it possible to simulate a large number of client instances. We&apos;re delighted to see Flood and other cloud platforms go further by leveraging these technologies. Flood IO is an SaaS load-testing service that helps to distribute and execute testing scripts across hundreds of servers in the cloud. Our teams find it simple to migrate performance testing to Flood by reusing existing Gatling scripts.</string>
 		<key>Level</key>
 		<string>TRIAL</string>
 		<key>Quadrant</key>
@@ -407,11 +576,87 @@
 		<key>Name</key>
 		<string>GKE</string>
 		<key>Number</key>
-		<integer>40</integer>
+		<integer>31</integer>
 		<key>Description</key>
-		<string>While the software development ecosystem is converging on Kubernetes as the orchestration platform for containers, running Kubernetes clusters remains operationally complex. GKE (Google Kubernetes Engine) is a managed Kubernetes solution for deploying containerized applications that alleviates the operational overhead of running and maintaining Kubernetes clusters. Our teams have had a good experience using GKE, with the platform doing the heavy lifting of applying security patches, monitoring and auto-repairing the nodes, and managing multicluster and multiregion networking. In our experience, Google&apos;s API-first approach in exposing platform capabilities, as well as using industry standards such as OAuth for service authorization, improve the developer experience. It&apos;s important to consider that GKE is under rapid development which, despite the developers&apos; best efforts to abstract consumers from underlying changes, has impacted us temporarily in the past. We&apos;re expecting continuous improvement around maturity of Infrastructure as code with Terraform on GKE and similar tools.</string>
+		<string>While the software development ecosystem is converging on Kubernetes as the orchestration platform for containers, running Kubernetes clusters remains operationally complex. Google Kubernetes Engine (GKE) is a managed Kubernetes solution for deploying containerized applications that alleviates the operational overhead of running and maintaining Kubernetes clusters. Our teams have had a good experience using GKE, with the platform doing the heavy lifting of applying security patches, monitoring and auto-repairing the nodes, and managing multicluster and multiregion networking. In our experience, Google&apos;s API-first approach in exposing platform capabilities, as well as using industry standards such as OAuth for service authorisation, improve the developer experience. It&apos;s important to consider that GKE is under rapid development with many of its APIs in beta release which, despite the developers&apos; best efforts to abstract consumers from underlying changes, can impact you. We&apos;re expecting continuous improvement around maturity of infrastructure as code with Terraform on GKE and similar tools.</string>
 		<key>Level</key>
-		<string>ADOPT</string>
+		<string>TRIAL</string>
+		<key>Quadrant</key>
+		<string>Platforms</string>
+		<key>Position</key>
+		<dict>
+			<key>X</key>
+			<real>-0.2</real>
+			<key>Z</key>
+			<real>0.1</real>
+		</dict>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>Google Cloud Platform</string>
+		<key>Number</key>
+		<integer>32</integer>
+		<key>Description</key>
+		<string>As Google Cloud Platform (GCP) has expanded in terms of available geographic regions and maturity of services, customers globally can now seriously consider it for their cloud strategy. In some areas, GCP has reached feature parity with its main competitor, Amazon Web Services, while in other areas it has differentiated itself — notably with accessible machine learning platforms, data engineering tools, and a workable Kubernetes as a service solution (GKE). In practice, our teams have nothing but praise for the developer experience working with the GCP tools and APIs.</string>
+		<key>Level</key>
+		<string>TRIAL</string>
+		<key>Quadrant</key>
+		<string>Platforms</string>
+		<key>Position</key>
+		<dict>
+			<key>X</key>
+			<real>-0.2</real>
+			<key>Z</key>
+			<real>0.1</real>
+		</dict>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>Keycloak</string>
+		<key>Number</key>
+		<integer>33</integer>
+		<key>Description</key>
+		<string>In a microservice, or any other distributed architecture, one of the most common needs is to secure the services or APIs through authentication and authorization features. This is where Keycloak comes in. Keycloak is an open source identity and access management solution that makes it easy to secure applications or microservices with little to no code. It supports single sign-on, social login and standard protocols such as OpenID Connect, OAuth 2.0 and SAML out of the box. Our teams have been using this tool and plan to keep using it for the foreseeable future. But it requires a little work to set up. Because configuration happens both at initialization and at runtime through APIs, it&apos;s necessary to write scripts to ensure deployments are repeatable.</string>
+		<key>Level</key>
+		<string>TRIAL</string>
+		<key>Quadrant</key>
+		<string>Platforms</string>
+		<key>Position</key>
+		<dict>
+			<key>X</key>
+			<real>-0.2</real>
+			<key>Z</key>
+			<real>0.1</real>
+		</dict>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>WeChat</string>
+		<key>Number</key>
+		<integer>34</integer>
+		<key>Description</key>
+		<string>WeChat, often seen as a WhatsApp equivalent, is becoming the de facto business platform in China. Many people may not know but WeChat is also one of the most popular online payment platforms. With the app&apos;s built-in CMS and membership management, small businesses are now conducting their commerce entirely on WeChat. Through the Service Account feature, large organizations can interface their internal system to their employees. Given that more than 70 percent of Chinese people are using WeChat, it&apos;s an important consideration for businesses that want to expand into the China market.</string>
+		<key>Level</key>
+		<string>TRIAL</string>
+		<key>Quadrant</key>
+		<string>Platforms</string>
+		<key>Position</key>
+		<dict>
+			<key>X</key>
+			<real>-0.2</real>
+			<key>Z</key>
+			<real>0.1</real>
+		</dict>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>AWS Fargate</string>
+		<key>Number</key>
+		<integer>35</integer>
+		<key>Description</key>
+		<string>AWS Fargate is a recent entry into the docker-as-a-service space, currently limited to the US-East-1 region. For teams using AWS Elastic Container Service (ECS), AWS Fargate is a good alternative without having to manage, provision and configure any underlying EC2 instances or clusters. Fargate allows defining (ECS or EKS – ECS for Kubernetes) tasks as a Fargate type, and they will run on the AWS Fargate infrastructure. If you like the focus on business functionality that AWS Lambda gives you, Fargate is the closest you can get when applications can&apos;t be deployed as single functions.</string>
+		<key>Level</key>
+		<string>ASSESS</string>
 		<key>Quadrant</key>
 		<string>Platforms</string>
 		<key>Position</key>
@@ -424,11 +669,315 @@
 	</dict>
 	<dict>
 		<key>Name</key>
-		<string>jsoniter</string>
+		<string>Azure Service Fabric</string>
 		<key>Number</key>
-		<integer>58</integer>
+		<integer>36</integer>
 		<key>Description</key>
-		<string>If you&apos;re looking for a JSON encoder/decoder with high performance in Go and Java, check out the open source jsoniter library. The library is compatible with the standard JSON encoding package in Go.</string>
+		<string>Azure Service Fabric is a distributed systems platform built for microservices and containers. It can act as a PaaS with its reliable services, or like a container orchestrator with its ability to manage containers. What distinguishes Service Fabric though are programming models such as Reliable Actors built on top of reliable services. When it comes to IoT use cases, for example, Reliable Actors offers some compelling advantages — in addition to the reliability and platform benefits of being on Service Fabric, you also get its state management and replication capabilities. In keeping with continued focus on open source software (OSS), Microsoft will be transitioning Service Fabric to an open development process on Github. All this makes Azure Service Fabric worth trialling — particularly for organizations who are invested in the .NET framework.</string>
+		<key>Level</key>
+		<string>ASSESS</string>
+		<key>Quadrant</key>
+		<string>Platforms</string>
+		<key>Position</key>
+		<dict>
+			<key>X</key>
+			<real>-0.25</real>
+			<key>Z</key>
+			<real>0.2</real>
+		</dict>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>Azure Stack</string>
+		<key>Number</key>
+		<integer>37</integer>
+		<key>Description</key>
+		<string>Cloud computing brings significant benefits over self-hosted virtualized solutions but sometimes data simply cannot leave an organization’s premises, usually for latency or regulatory reasons. For European companies, the current political climate also raises more concerns about placing data in the hands of US-based entities. With Azure Stack, Microsoft adds an interesting offering as a middle ground between full-featured public clouds and simple on-premises virtualization: a slimmed-down version of the software that runs Microsoft’s Azure Global cloud is combined with a rack of preconfigured commodity hardware from the usual suspects like HP and Lenovo, providing an organization with the core Azure experience on premises. By default, support is split between Microsoft and the hardware vendors (and they promise to cooperate), but system integrators can offer complete Azure Stack solutions, too.</string>
+		<key>Level</key>
+		<string>ASSESS</string>
+		<key>Quadrant</key>
+		<string>Platforms</string>
+		<key>Position</key>
+		<dict>
+			<key>X</key>
+			<real>-0.25</real>
+			<key>Z</key>
+			<real>0.2</real>
+		</dict>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>Cloud Spanner</string>
+		<key>Number</key>
+		<integer>38</integer>
+		<key>Description</key>
+		<string>Cloud Spanner is a fully managed relational database service offering high availability and strong consistency without compromising latency. Google has been working on a globally distributed database called Spanner for quite some time. It has recently released the service to the outside world as Cloud Spanner. You can scale your database instance from one to thousands of nodes across the globe without worrying about data consistency. By levering TrueTime, a highly available and distributed clock, Cloud Spanner provides strong consistency for reads and snapshots. You can use standard SQL to read data from Cloud Spanner, but for write operations you have to use their RPC API. Although not all services would require a global-scale distributed database, the general availability of Cloud Spanner is a big shift in the way we think about databases. And its design is influencing open source products such as CockroachDB.</string>
+		<key>Level</key>
+		<string>ASSESS</string>
+		<key>Quadrant</key>
+		<string>Platforms</string>
+		<key>Position</key>
+		<dict>
+			<key>X</key>
+			<real>-0.25</real>
+			<key>Z</key>
+			<real>0.2</real>
+		</dict>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>Corda</string>
+		<key>Number</key>
+		<integer>39</integer>
+		<key>Description</key>
+		<string>After thorough exploration, R3, an important player in the blockchain space, realized that blockchain doesn&apos;t fit their purpose well, so they created Corda. Corda is a distributed ledger technology (DLT) platform focused on the financial field. R3 have a very clear value proposition and know that their problem requires a pragmatic technology approach. This matches our own experience; current blockchain solutions may not be the reasonable choice for some business cases, due to mining costs and operational inefficiency. Although the development experience we have on Corda thus far has not been the smoothest, APIs are still unstable after v1.0 release, we expect to see the DLT space mature further.</string>
+		<key>Level</key>
+		<string>ASSESS</string>
+		<key>Quadrant</key>
+		<string>Platforms</string>
+		<key>Position</key>
+		<dict>
+			<key>X</key>
+			<real>-0.25</real>
+			<key>Z</key>
+			<real>0.2</real>
+		</dict>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>Cosmos DB</string>
+		<key>Number</key>
+		<integer>40</integer>
+		<key>Description</key>
+		<string>Cosmos DB is Microsoft&apos;s globally distributed, multimodel database service, which became generally available earlier this year. While most modern NoSQL databases offer tunable consistency, Cosmos DB makes it a first-class citizen and offers five different consistency models. It&apos;s worth highlighting that it also supports multiple models — key value, document, column family and graph — all of which map to its internal data model, called atom-record-sequence (ARS). One interesting aspect of Cosmos DB is that it offers service level agreements (SLAs) on its latency, throughput, consistency and availability. With its wide range of applicability, it has set a high standard for other cloud vendors to match.</string>
+		<key>Level</key>
+		<string>ASSESS</string>
+		<key>Quadrant</key>
+		<string>Platforms</string>
+		<key>Position</key>
+		<dict>
+			<key>X</key>
+			<real>-0.25</real>
+			<key>Z</key>
+			<real>0.2</real>
+		</dict>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>Godot</string>
+		<key>Number</key>
+		<integer>41</integer>
+		<key>Description</key>
+		<string>As AR and VR continue to gain traction, we continue to explore tools with which we can create immersive virtual worlds. Our positive experience with Unity, one of the two major gaming engines, led us to feature it in previous Radars. We still like Unity but are also excited about Godot, a relatively new entrant to the field. Godot is open source software and although not as fully featured as the big commercial engines, it comes with a more modern software design and less clutter. Offering C# and Python further lowers the barrier to entry for developers outside the gaming industry. Godot version 3, released earlier this year, adds support for VR and support for AR is on the horizon.</string>
+		<key>Level</key>
+		<string>ASSESS</string>
+		<key>Quadrant</key>
+		<string>Platforms</string>
+		<key>Position</key>
+		<dict>
+			<key>X</key>
+			<real>-0.25</real>
+			<key>Z</key>
+			<real>0.2</real>
+		</dict>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>Interledger</string>
+		<key>Number</key>
+		<integer>42</integer>
+		<key>Description</key>
+		<string>Most people may know the &quot;Internet of money&quot; through Bitcoin. In fact, this idea can be traced to the early stages of the Web. HTTP even reserved a status code for digital payment. The challenging part of this idea is to transfer value between different ledgers in different entities. Blockchain technology promotes this idea through building a distributed shared ledger. The current challenge is how to achieve interoperability between different blockchain ledgers and interoperability with traditional centralized ledgers. Interledger is a protocol to connect different ledgers. This protocol uses connectors and a cryptographic mechanism such as HTLC to route secure payments across ledgers. It’s not hard to join the payment network through its suites. Interledger was first initiated by Ripple and is now steadily developed by a W3C community group.</string>
+		<key>Level</key>
+		<string>ASSESS</string>
+		<key>Quadrant</key>
+		<string>Platforms</string>
+		<key>Position</key>
+		<dict>
+			<key>X</key>
+			<real>-0.25</real>
+			<key>Z</key>
+			<real>0.2</real>
+		</dict>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>Language Server Protocol</string>
+		<key>Number</key>
+		<integer>43</integer>
+		<key>Description</key>
+		<string>Much of the power of sophisticated IDEs comes from their ability to parse a program into an abstract syntax tree (AST) and then use that AST for program analysis and manipulation. This supports features such as autocomplete, finding callers and refactoring. Language servers pull this capability into a process that allows any text editor to access an API to work with the AST. Microsoft has led the creation of the Language Server Protocol (LSP), harvested from their OmniSharp and TypeScript Server projects. Any editor that uses this protocol can work with any language that has an LSP-compliant server. This means we can keep using our favorite editors without forgoing the rich text editing modes of many languages — much to the delight of our Emacs addicts.</string>
+		<key>Level</key>
+		<string>ASSESS</string>
+		<key>Quadrant</key>
+		<string>Platforms</string>
+		<key>Position</key>
+		<dict>
+			<key>X</key>
+			<real>-0.25</real>
+			<key>Z</key>
+			<real>0.2</real>
+		</dict>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>LoRaWAN</string>
+		<key>Number</key>
+		<integer>44</integer>
+		<key>Description</key>
+		<string>LoRaWAN is a low-power wide-area network, designed for low-power consumption and communication over long distances using low bitrates. It provides for communication between devices and gateways, which can then forward the data to, for example, applications or servers. A typical usage is for a distributed set of sensors, or for Internet of Things (IoT) devices, for which long battery life and long-range communication is a must. LoRaWAN addresses two of the key problems with attempting to use normal Wi-Fi for such applications: range and power consumption. There are several implementations, a notable one being The Things Network, a free, open source implementation.</string>
+		<key>Level</key>
+		<string>ASSESS</string>
+		<key>Quadrant</key>
+		<string>Platforms</string>
+		<key>Position</key>
+		<dict>
+			<key>X</key>
+			<real>-0.25</real>
+			<key>Z</key>
+			<real>0.2</real>
+		</dict>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>Mongoose OS</string>
+		<key>Number</key>
+		<integer>45</integer>
+		<key>Description</key>
+		<string>With an accelerated growth of connected embedded devices and wider accessibility of hardware, Mongoose OS fills a noticeable gap for embedded software developers: the gap between Arduino firmware suitable for prototyping and bare-metal microcontrollers&apos; native SDKs. Mongoose OS is a microcontroller operating system that comes with a set of libraries and a development framework to support typical Internet of Things (IoT) applications with connectivity to generic MQTT servers and popular IoT cloud platforms such as Google Cloud IoT Core and AWS IoT by default. In fact, Google recommends a Mongoose starter kit for its Cloud IoT Core. We’ve had a seamless experience using Mongoose OS in our embedded projects building connected workspaces. We especially liked its built-in security at the individual device level and OTA firmware updates, among other features. At the time of writing, only a limited number of microcontrollers and boards are supported with more popular ARM-based microcontrollers still under development.</string>
+		<key>Level</key>
+		<string>ASSESS</string>
+		<key>Quadrant</key>
+		<string>Platforms</string>
+		<key>Position</key>
+		<dict>
+			<key>X</key>
+			<real>-0.25</real>
+			<key>Z</key>
+			<real>0.2</real>
+		</dict>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>Netlify</string>
+		<key>Number</key>
+		<integer>46</integer>
+		<key>Description</key>
+		<string>We like simple tools that solve one problem really well, and Netlify fits this description nicely. You can create static website content, check it into GitHub and then quickly and easily get your site live and available. There is a CLI available to control the process; content delivery networks (CDNs) are supported; it can work alongside tools such as Grunt; and, most importantly, Netlify supports HTTPS.</string>
+		<key>Level</key>
+		<string>ASSESS</string>
+		<key>Quadrant</key>
+		<string>Platforms</string>
+		<key>Position</key>
+		<dict>
+			<key>X</key>
+			<real>-0.25</real>
+			<key>Z</key>
+			<real>0.2</real>
+		</dict>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>TensorFlow Serving</string>
+		<key>Number</key>
+		<integer>47</integer>
+		<key>Description</key>
+		<string>Machine-learning models are starting to creep into everyday business applications. When enough training data is available, these algorithms can address problems that might have previously required complex statistical models or heuristics. As we move from experimental use to production, we need a reliable way to host and deploy the models that can be accessed remotely and scale with the number of consumers. TensorFlow Serving addresses part of that problem by exposing a remote gRPC interface to an exported model; this allows a trained model to be deployed in a variety of ways. TensorFlow Serving also accepts a stream of models to incorporate continuous training updates, and its authors maintain a Dockerfile to ease the deployment process. Presumably, the choice of gRPC is to be consistent with the TensorFlow execution model; however, we’re generally wary of protocols that require code generation and native bindings.</string>
+		<key>Level</key>
+		<string>ASSESS</string>
+		<key>Quadrant</key>
+		<string>Platforms</string>
+		<key>Position</key>
+		<dict>
+			<key>X</key>
+			<real>-0.25</real>
+			<key>Z</key>
+			<real>0.2</real>
+		</dict>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>TICK Stack</string>
+		<key>Number</key>
+		<integer>48</integer>
+		<key>Description</key>
+		<string>TICK Stack is a platform composed of open source components which makes collection, storage, graphing and alerting on-time series data such as metrics and events easy. The components of the TICK Stack are: Telegraf, a server agent for collecting and reporting metrics; InfluxDB, a high-performance time series database; Chronograf, a user interface for the platform; and Kapacitor, a data-processing engine that can process, stream and batch data from InfluxDB. Unlike Prometheus, which is based on the Pull model, the TICK Stack is based on the Push model of collecting data. The heart of the system is the InfluxDB component which is one of the best time series databases. This stack is backed by InfluxData and needs the enterprise version for features such as DB clustering, but it’s still a fairly good choice for monitoring. We’re using it in a few places in production and have had good experiences with it.</string>
+		<key>Level</key>
+		<string>ASSESS</string>
+		<key>Quadrant</key>
+		<string>Platforms</string>
+		<key>Position</key>
+		<dict>
+			<key>X</key>
+			<real>-0.25</real>
+			<key>Z</key>
+			<real>0.2</real>
+		</dict>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>Web Bluetooth</string>
+		<key>Number</key>
+		<integer>49</integer>
+		<key>Description</key>
+		<string>Web Bluetooth allows us to control any Bluetooth Low Energy device directly from the browser. This allows us to target scenarios that previously could only be solved with a native app. The specification is published by the Web Bluetooth Community Group and describes an API to discover and communicate with devices over the Bluetooth 4 wireless standard. Right now, Chrome is the only major browser which currently supports this specification. With Physical Web and Web Bluetooth, we now have other avenues for getting users to interact with devices without them having to install yet another app on their phone. This is an exciting space which is worth keeping an eye on.</string>
+		<key>Level</key>
+		<string>ASSESS</string>
+		<key>Quadrant</key>
+		<string>Platforms</string>
+		<key>Position</key>
+		<dict>
+			<key>X</key>
+			<real>-0.25</real>
+			<key>Z</key>
+			<real>0.2</real>
+		</dict>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>Windows Containers</string>
+		<key>Number</key>
+		<integer>50</integer>
+		<key>Description</key>
+		<string>Microsoft is catching up in the container space with Windows Containers enabling running Windows applications as containers on Windows-based environments. At the time of writing, Microsoft provides two Windows OS images as Docker containers — Windows Server 2016 Server Core and Windows Server 2016 Nano Server — that can run as a Windows Server Container with Docker. Our teams have started using Windows containers in scenarios where build agents and similar containers have been working successfully. Microsoft is aware that there’s room for improvements such as decreasing the large image sizes and enriching ecosystem support and documentation.</string>
+		<key>Level</key>
+		<string>ASSESS</string>
+		<key>Quadrant</key>
+		<string>Platforms</string>
+		<key>Position</key>
+		<dict>
+			<key>X</key>
+			<real>-0.25</real>
+			<key>Z</key>
+			<real>0.2</real>
+		</dict>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>Overambitious API gateways</string>
+		<key>Number</key>
+		<integer>51</integer>
+		<key>Description</key>
+		<string>We remain concerned about business logic and process orchestration implemented in middleware, especially where it requires expert skills and tooling while creating single points of scaling and control. Vendors in the highly competitive API gateway market are continuing this trend by adding features through which they attempt to differentiate their products. This results in overambitious API gateway products whose functionality — on top of what is essentially a reverse proxy — encourages designs that continue to be difficult to test and deploy. API gateways do provide utility in dealing with some specific concerns — such as authentication and rate limiting — but any domain smarts should live in applications or services.</string>
+		<key>Level</key>
+		<string>HOLD</string>
+		<key>Quadrant</key>
+		<string>Platforms</string>
+		<key>Position</key>
+		<dict>
+			<key>X</key>
+			<real>-0.25</real>
+			<key>Z</key>
+			<real>0.2</real>
+		</dict>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>Appium Test Distribution</string>
+		<key>Number</key>
+		<integer>52</integer>
+		<key>Description</key>
+		<string>We&apos;ve featured Appium in the Radar in the past. It&apos;s one of the most popular mobile test automation frameworks. As we scale our test suite, being able to run our tests in parallel against an array of devices is key in having short feedback loops. Appium Test Distribution solves this problem very effectively with its ability to run tests in parallel as well as run the same tests on multiple devices. Among other things, it distinguishes itself by its ability to add and remove devices in which tests run without any manual setup required and with its ability to run tests on remote devices. We&apos;ve used it in a few projects at ThoughtWorks over the last couple of years and it worked very well for us.</string>
 		<key>Level</key>
 		<string>TRIAL</string>
 		<key>Quadrant</key>
@@ -443,13 +992,260 @@
 	</dict>
 	<dict>
 		<key>Name</key>
-		<string>Flow</string>
+		<string>BackstopJS</string>
+		<key>Number</key>
+		<integer>53</integer>
+		<key>Description</key>
+		<string>We&apos;ve been enjoying BackstopJS for visual regression testing of web applications. The configurable viewports and ability to adjust tolerances are particularly useful, as is the visual comparison tool, which makes it easier to spot minor variations. It has good scriptability and the option to run in Headless Chrome, PhantomJS and SlimerJS. We find it particularly helpful when running it against living component style guides.</string>
+		<key>Level</key>
+		<string>TRIAL</string>
+		<key>Quadrant</key>
+		<string>Tools</string>
+		<key>Position</key>
+		<dict>
+			<key>X</key>
+			<real>0.2</real>
+			<key>Z</key>
+			<real>-0.2</real>
+		</dict>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>Buildkite</string>
+		<key>Number</key>
+		<integer>54</integer>
+		<key>Description</key>
+		<string>Our teams very much like the hosted CI/CD tool Buildkite for its simplicity and quick setup. With Buildkite, you provide your own machines to execute builds — on premise or in the cloud — and install a lightweight agent application to connect the build agent to the hosted service. In many cases, having this level of control over the configuration of your build agents is a plus when compared to using hosted agents.</string>
+		<key>Level</key>
+		<string>TRIAL</string>
+		<key>Quadrant</key>
+		<string>Tools</string>
+		<key>Position</key>
+		<dict>
+			<key>X</key>
+			<real>0.2</real>
+			<key>Z</key>
+			<real>-0.2</real>
+		</dict>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>CircleCI</string>
+		<key>Number</key>
+		<integer>55</integer>
+		<key>Description</key>
+		<string>CircleCI is a continuous integration engine offered as SaaS and on premise. CircleCI has been the go-to SaaS CI tool for many of our development teams, who needed a low-friction and easy-to-setup build and deployment pipeline. CircleCI version 2.0 supports workflows of build jobs, with fan-in and fan-out flows and manual gates, as well as mobile development. It allows developers to run the pipelines locally and easily integrates with Slack and other notification and alerting systems. We recommend you take a closer look at the security practices of CircleCI, just as you would with any other SaaS product that hosts your company’s assets.</string>
+		<key>Level</key>
+		<string>TRIAL</string>
+		<key>Quadrant</key>
+		<string>Tools</string>
+		<key>Position</key>
+		<dict>
+			<key>X</key>
+			<real>0.2</real>
+			<key>Z</key>
+			<real>-0.2</real>
+		</dict>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>CVXPY</string>
+		<key>Number</key>
+		<integer>56</integer>
+		<key>Description</key>
+		<string>It’s surprising how many problems can be expressed as mathematical optimization problems and often convex problems that can be efficiently solved. CVXPY is an open source Python-embedded modeling language for convex optimization problems. It’s maintained by academics at Stanford University and offers a batteries-included install for several open source and commercial solvers. The documentation includes many examples which should inspire developers to use it. It’s particularly useful for prototyping solutions even though commercially licensed solvers, such Gurobi or IBM CPLEX, may be required. In most cases though, it suffices by itself. However, the same group has written many extension packages such as DCCP and related software such as CVXOPT based on recent advances in optimization.</string>
+		<key>Level</key>
+		<string>TRIAL</string>
+		<key>Quadrant</key>
+		<string>Tools</string>
+		<key>Position</key>
+		<dict>
+			<key>X</key>
+			<real>0.2</real>
+			<key>Z</key>
+			<real>-0.2</real>
+		</dict>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>gopass</string>
+		<key>Number</key>
+		<integer>57</integer>
+		<key>Description</key>
+		<string>gopass is a password management solution for teams, built on GPG and Git. It&apos;s a descendant of pass and adds features such as: support for recipient management and multiple password stores in a single tree; an interactive search functionality; time-based one-time password (TOTP) support; and storage of binary data. Migration of your pass store is fairly straightforward, because gopass is largely compatible with the format pass uses. This also means integration into provisioning workflows can be achieved with a single call to a stored secret.</string>
+		<key>Level</key>
+		<string>TRIAL</string>
+		<key>Quadrant</key>
+		<string>Tools</string>
+		<key>Position</key>
+		<dict>
+			<key>X</key>
+			<real>0.2</real>
+			<key>Z</key>
+			<real>-0.2</real>
+		</dict>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>Headless Chrome for front-end test</string>
+		<key>Number</key>
+		<integer>58</integer>
+		<key>Description</key>
+		<string>Since mid-2017, Chrome users have had the option of running the browser in headless mode. This feature is ideally suited to running front-end browser tests without the overhead of displaying actions on a screen. Previously, this was largely the province of PhantomJS but Headless Chrome is rapidly replacing the JavaScript-driven WebKit approach. Tests in Headless Chrome should run much faster, and behave more like a real browser, but our teams have found that it does use more memory than PhantomJS. With all these advantages, Headless Chrome for front-end test is likely to become the de facto standard.</string>
+		<key>Level</key>
+		<string>TRIAL</string>
+		<key>Quadrant</key>
+		<string>Tools</string>
+		<key>Position</key>
+		<dict>
+			<key>X</key>
+			<real>0.2</real>
+			<key>Z</key>
+			<real>-0.2</real>
+		</dict>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>Helm</string>
+		<key>Number</key>
+		<integer>59</integer>
+		<key>Description</key>
+		<string>Helm is a package manager for Kubernetes. The set of Kubernetes resources that together define an application is packaged as charts. These charts can describe a single resource, such as a Redis pod, or a full stack of a web application: HTTP servers, databases and caches. Helm, by default, comes with a repository of curated Kubernetes applications that are maintained in the official charts repository. It’s also easy to set up a private chart repository for internal usage. Helm has two components: a command line utility called Helm and a cluster component called Tiller. Securing a Kubernetes cluster is a wide and nuanced topic, but we highly recommend setting up Tiller in a role-based access control (RBAC) environment. We’ve used Helm in a number of client projects and it’s dependency management, templating and hook mechanism has greatly simplified the application lifecycle management in Kubernetes.</string>
+		<key>Level</key>
+		<string>TRIAL</string>
+		<key>Quadrant</key>
+		<string>Tools</string>
+		<key>Position</key>
+		<dict>
+			<key>X</key>
+			<real>0.2</real>
+			<key>Z</key>
+			<real>-0.2</real>
+		</dict>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>Jupyter</string>
+		<key>Number</key>
+		<integer>60</integer>
+		<key>Description</key>
+		<string>Over the last couple of years, we&apos;ve noticed a steady rise in the popularity of analytics notebooks. These are Mathematica-inspired applications that combine text, visualization and code in a living, computational document. Increased interest in machine learning — along with the emergence of Python as the programming language of choice for practitioners in this field — has focused particular attention on Python notebooks, of which Jupyter seems to be gaining the most traction among ThoughtWorks teams. People seem to keep finding creative uses for Jupyter beyond a simple analytics tool. For example, see Jupyter for automated testing.</string>
+		<key>Level</key>
+		<string>TRIAL</string>
+		<key>Quadrant</key>
+		<string>Tools</string>
+		<key>Position</key>
+		<dict>
+			<key>X</key>
+			<real>0.2</real>
+			<key>Z</key>
+			<real>-0.2</real>
+		</dict>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>Kong API Gateway</string>
+		<key>Number</key>
+		<integer>61</integer>
+		<key>Description</key>
+		<string>Kong is an open source API gateway which also comes as an enterprise product integrating with proprietary API analytics and a developer portal. Kong can be deployed, in a variety of configurations, as an edge API gateway, as an internal API proxy, or even as a sidecar in a service mesh configuration. OpenResty, through its Nginx modules, provides a strong and performant foundation, with Lua plugins for extensions. Kong can either use PostgreSQL for single-region deployments or Cassandra for multiregion configurations. Our developers have enjoyed Kong&apos;s high performance, its API-first approach (which enables automation of its configuration) and its ease of deployment as a container. Kong API Gateway, unlike overambitious API gateways, has a smaller set of features but it implements the essential set of API gateway capabilities such as traffic control, security, logging, monitoring and authentication.</string>
+		<key>Level</key>
+		<string>TRIAL</string>
+		<key>Quadrant</key>
+		<string>Tools</string>
+		<key>Position</key>
+		<dict>
+			<key>X</key>
+			<real>0.2</real>
+			<key>Z</key>
+			<real>-0.2</real>
+		</dict>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>kops</string>
+		<key>Number</key>
+		<integer>62</integer>
+		<key>Description</key>
+		<string>kops is a command line tool for creating and managing high-availability production Kubernetes clusters. kops has become our go-to tool to self-manage Kubernetes clusters on AWS, not the least because of its rapidly growing open source community. It also supports installing, upgrading and managing Kubernetes clusters on Google Cloud. Our experience with kops on Google, however, is very limited because of our preference for GKE, the managed Kubernetes offering. We recommend using kops in reusable scripts to create infrastructure as code. We&apos;re interested to see how kops continues to evolve to support managed Kubernetes clusters such as EKS, Amazon&apos;s own managed Kubernetes service.</string>
+		<key>Level</key>
+		<string>TRIAL</string>
+		<key>Quadrant</key>
+		<string>Tools</string>
+		<key>Position</key>
+		<dict>
+			<key>X</key>
+			<real>0.2</real>
+			<key>Z</key>
+			<real>-0.2</real>
+		</dict>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>Patroni</string>
+		<key>Number</key>
+		<integer>63</integer>
+		<key>Description</key>
+		<string>Patroni is a template for PostgreSQL high availability. Born out of the need to provide automatic failure for PostgreSQL, Patroni is a Python-based PostgreSQL controller that leverages a distributed configuration store (such as etcd, ZooKeeper, or Consul) to manage the state of the PostgreSQL cluster. Patroni supports both streaming and synchronous replication models and provides a rich set of REST APIs for dynamic configuration of the PostgreSQL cluster. If you want to achieve high availability in a distributed PostgreSQL setup, you have to consider many edge cases, and we like the fact that Patroni provides a template to achieve most of the common use cases.</string>
+		<key>Level</key>
+		<string>TRIAL</string>
+		<key>Quadrant</key>
+		<string>Tools</string>
+		<key>Position</key>
+		<dict>
+			<key>X</key>
+			<real>0.2</real>
+			<key>Z</key>
+			<real>-0.2</real>
+		</dict>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>WireMock</string>
+		<key>Number</key>
+		<integer>64</integer>
+		<key>Description</key>
+		<string>A key driver for architectures based on microservices is independent evolvability of services. For example, when two services depend on each other, the testing process for one usually involves stubs and mocks for the other one. These can be written by hand, but as with mocking in unit tests, a framework helps developers focus on the actual test scenario. We have known of WireMock for a while but we’ve preferred running tests with mountebank. Over the past year, though, WireMock has really caught up and we now recommend it as a good alternative.</string>
+		<key>Level</key>
+		<string>TRIAL</string>
+		<key>Quadrant</key>
+		<string>Tools</string>
+		<key>Position</key>
+		<dict>
+			<key>X</key>
+			<real>0.2</real>
+			<key>Z</key>
+			<real>-0.2</real>
+		</dict>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>Yarn</string>
 		<key>Number</key>
 		<integer>65</integer>
 		<key>Description</key>
-		<string>Flow is a static type checker for JavaScript that allows you to add type checking across the codebase incrementally. Unlike Typescript, which is a different language, Flow can be added incrementally to an existing JavaScript codebase supporting the 5th, 6th and 7th editions of ECMAScript. We suggest adding Flow to your continuous integration pipeline, starting with the code that concerns you most. Flow adds to the clarity of the code, increases the reliability of refactoring and catches type-related bugs early during the build.</string>
+		<string>Yarn is a fast, reliable and secured package manager for JavaScript. Using a lock file and a deterministic algorithm, Yarn is able to guarantee that an installation that worked on one system will work exactly the same way on any other system. By efficiently queuing up requests, Yarn maximizes network utilization and as a result we’ve seen faster package downloads. Yarn continues to be our tool of choice for JavaScript package management in spite of the latest improvements in npm (version 5).</string>
 		<key>Level</key>
-		<string>HOLD</string>
+		<string>TRIAL</string>
+		<key>Quadrant</key>
+		<string>Tools</string>
+		<key>Position</key>
+		<dict>
+			<key>X</key>
+			<real>0.2</real>
+			<key>Z</key>
+			<real>-0.2</real>
+		</dict>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>Apex</string>
+		<key>Number</key>
+		<integer>66</integer>
+		<key>Description</key>
+		<string>Apex is a tool to build, deploy and manage AWS Lambda functions with ease. With Apex, you can write functions in languages that are not yet natively supported in AWS, including Golang, Rust and others. This is made possible by a Node.js shim, which creates a child process and processes events through stdin and stdout. Apex has a lot of nice features that improve the developer experience, and we particularly like the ability to test functions locally and perform a dry run of the changes before they&apos;re applied to AWS resources.</string>
+		<key>Level</key>
+		<string>ASSESS</string>
 		<key>Quadrant</key>
 		<string>Tools</string>
 		<key>Position</key>
@@ -462,13 +1258,241 @@
 	</dict>
 	<dict>
 		<key>Name</key>
-		<string>Yarn</string>
+		<string>ArchUnit</string>
+		<key>Number</key>
+		<integer>67</integer>
+		<key>Description</key>
+		<string>ArchUnit is a Java testing library for checking architecture characteristics such as package and class dependencies, annotation verification and even layer consistency. The fact that it runs as unit tests, within your existing test setup, pleases us, even though it&apos;s available for Java architectures only. The ArchUnit test suite can be incorporated into a CI environment or a deployment pipeline, making it easier to implement fitness functions in an evolutionary architecture way.</string>
+		<key>Level</key>
+		<string>ASSESS</string>
+		<key>Quadrant</key>
+		<string>Tools</string>
+		<key>Position</key>
+		<dict>
+			<key>X</key>
+			<real>0.3</real>
+			<key>Z</key>
+			<real>-0.3</real>
+		</dict>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>cfn_nag</string>
+		<key>Number</key>
+		<integer>68</integer>
+		<key>Description</key>
+		<string>The cloud and continuous delivery had a dramatic effect on infrastructure security. When following infrastructure as code, the entire infrastructure — which includes networks, firewalls and accounts — is defined in scripts and configuration files, and with Phoenix Servers and Environments, the infrastructure is recreated in each deployment, often many times a day. In such a scenario, testing the infrastructure after it&apos;s created is neither sufficient nor feasible. A tool that helps address this problem is cfn_nag. It scans the CloudFormation templates used with AWS for patterns that may indicate insecure infrastructure, and it does so before the infrastructure is created. Running a tool such as cfn_nag in a build pipeline is fast and it can detect a number of problems before they even reach a cloud environment.</string>
+		<key>Level</key>
+		<string>ASSESS</string>
+		<key>Quadrant</key>
+		<string>Tools</string>
+		<key>Position</key>
+		<dict>
+			<key>X</key>
+			<real>0.3</real>
+			<key>Z</key>
+			<real>-0.3</real>
+		</dict>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>Conduit</string>
+		<key>Number</key>
+		<integer>69</integer>
+		<key>Description</key>
+		<string>Conduit is a lightweight service mesh for Kubernetes. Conduit embraces the out-of-process architecture with data plane proxy written in Rust and a control plane in Go. The data plane proxy runs as a sidecar for all TCP traffic in the Kubernetes cluster and the control plane runs in a separate namespace in Kubernetes exposing REST APIs to control the behavior of the data plane proxy. By proxying all requests, Conduit provides a wealth of metrics for monitoring and observability of interactions in the service mesh for HTTP, HTTP/2 and gRPC traffic. Even though Conduit is relatively new to this space, we recommend it because it’s simple to install and operate.</string>
+		<key>Level</key>
+		<string>ASSESS</string>
+		<key>Quadrant</key>
+		<string>Tools</string>
+		<key>Position</key>
+		<dict>
+			<key>X</key>
+			<real>0.3</real>
+			<key>Z</key>
+			<real>-0.3</real>
+		</dict>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>Cypress</string>
+		<key>Number</key>
+		<integer>70</integer>
+		<key>Description</key>
+		<string>Fixing end-to-end test failures in CI can be a painful experience, especially in headless mode. Cypress is a useful tool that helps developers build end-to-end tests easily and records all test steps as a video in an MP4 file. Instead of reproducing the issue in headless mode, developers can watch the testing video in order to fix it. Cypress is a powerful platform, not only a testing framework. Currently, we&apos;ve integrated its CLI with headless CI in our projects.</string>
+		<key>Level</key>
+		<string>ASSESS</string>
+		<key>Quadrant</key>
+		<string>Tools</string>
+		<key>Position</key>
+		<dict>
+			<key>X</key>
+			<real>0.3</real>
+			<key>Z</key>
+			<real>-0.3</real>
+		</dict>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>Dependabot</string>
+		<key>Number</key>
+		<integer>71</integer>
+		<key>Description</key>
+		<string>Keeping dependencies up to date is a chore, but it&apos;s important to manage upgrades frequently and incrementally. We want the process to be as painless and automated as possible. Our teams have often hand-rolled scripts to automate parts of the process; now, however, we integrate commercial offerings to do that work. Dependabot is a service that integrates with your GitHub repositories and automatically checks your project dependencies for new versions. When required, Dependabot will open a pull request with upgraded dependencies. Using features of your CI server, you can automatically test upgrades for compatibility and automatically merge compatible upgrades to master. There are alternatives to Dependabot, including Renovate for JavaScript projects and Depfu for JavaScript and Ruby projects. Our teams, however, recommend Dependabot because of its multilanguage support and ease of use.</string>
+		<key>Level</key>
+		<string>ASSESS</string>
+		<key>Quadrant</key>
+		<string>Tools</string>
+		<key>Position</key>
+		<dict>
+			<key>X</key>
+			<real>0.3</real>
+			<key>Z</key>
+			<real>-0.3</real>
+		</dict>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>Flow</string>
+		<key>Number</key>
+		<integer>72</integer>
+		<key>Description</key>
+		<string>Flow is a static type checker for JavaScript that allows you to add type checking across the codebase incrementally. Unlike Typescript, which is a different language, Flow can be added incrementally to an existing JavaScript codebase supporting the 5th, 6th and 7th editions of ECMAScript. We suggest adding Flow to your continuous integration pipeline, starting with the code that concerns you most. Flow adds to the clarity of the code, increases the reliability of refactoring and catches type-related bugs early during the build.</string>
+		<key>Level</key>
+		<string>ASSESS</string>
+		<key>Quadrant</key>
+		<string>Tools</string>
+		<key>Position</key>
+		<dict>
+			<key>X</key>
+			<real>0.3</real>
+			<key>Z</key>
+			<real>-0.3</real>
+		</dict>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>Headless Firefox</string>
+		<key>Number</key>
+		<integer>73</integer>
+		<key>Description</key>
+		<string>When developing front-end applications, we&apos;ve mentioned Headless Chrome as a better alternative to PhantomJS for front-end testing in a previous edition of the Radar. Now we suggest assessing Headless Firefox as a viable option in this area. In the same way as Headless Chrome, Firefox in a headless mode runs the browser without the visible UI components, executing the UI tests suite much faster.</string>
+		<key>Level</key>
+		<string>ASSESS</string>
+		<key>Quadrant</key>
+		<string>Tools</string>
+		<key>Position</key>
+		<dict>
+			<key>X</key>
+			<real>0.3</real>
+			<key>Z</key>
+			<real>-0.3</real>
+		</dict>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>nsp</string>
+		<key>Number</key>
+		<integer>74</integer>
+		<key>Description</key>
+		<string>nsp is a command line tool to identify known vulnerabilities in Node.js applications. By running the check command on the root of a Node.js project, nsp generates the vulnerabilities report by checking against the published advisories. nsp provides a way to customize the check command to hide all vulnerabilities below the given CVSS score or exit with an error code if at least one finding has a CVSS score above the given value. Once the advisories are saved through the gather command, nsp can also be used in offline mode.</string>
+		<key>Level</key>
+		<string>ASSESS</string>
+		<key>Quadrant</key>
+		<string>Tools</string>
+		<key>Position</key>
+		<dict>
+			<key>X</key>
+			<real>0.3</real>
+			<key>Z</key>
+			<real>-0.3</real>
+		</dict>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>Parcel</string>
+		<key>Number</key>
+		<integer>75</integer>
+		<key>Description</key>
+		<string>Parcel is a web application bundler similar to Webpack or Browserify. We’ve featured Webpack previously in our Radar and it continues to be a great tool. Parcel distinguishes itself from its rivals through developer experience and speed. It has all the standard bundling features and provides true zero-configuration experience, making it really easy to get started with and use. It has fast bundle times and beats its competitors in many benchmarks. Parcel has gained a lot of community interest and is worth keeping an eye on.</string>
+		<key>Level</key>
+		<string>ASSESS</string>
+		<key>Quadrant</key>
+		<string>Tools</string>
+		<key>Position</key>
+		<dict>
+			<key>X</key>
+			<real>0.3</real>
+			<key>Z</key>
+			<real>-0.3</real>
+		</dict>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>Scout2</string>
 		<key>Number</key>
 		<integer>76</integer>
 		<key>Description</key>
-		<string>Yarn is a new package manager that replaces the existing workflow for the npm client while remaining compatible with the npm registry. With the npm client, we may end up with a different tree structure under node_modules based on the order that dependencies are installed. This nondeterministic nature can cause &quot;works on my machine&quot; problems. By breaking the installation steps into resolution, fetching and linking, Yarn avoids these issues using deterministic algorithms and lockfiles and thus guarantees repeatable installations. We&apos;ve also seen significantly faster builds in our continuous integration (CI) environment because of Yarn caching all the packages it downloads.</string>
+		<string>Scout2 is a security auditing tool for AWS environments. Instead of manually navigating through web pages, you can rely on Scout2 to fetch all the configuration data of an AWS environment for you; it even generates an attack surface report. Scout2 ships with preconfigured rules and can be easily extended to support more services and test cases. Since Scout2 only performs AWS API calls to fetch configuration data and identify security gaps, it is not necessary to complete and submit the AWS Vulnerability / Penetration Testing Request Form.</string>
 		<key>Level</key>
-		<string>HOLD</string>
+		<string>ASSESS</string>
+		<key>Quadrant</key>
+		<string>Tools</string>
+		<key>Position</key>
+		<dict>
+			<key>X</key>
+			<real>0.3</real>
+			<key>Z</key>
+			<real>-0.3</real>
+		</dict>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>Sentry</string>
+		<key>Number</key>
+		<integer>77</integer>
+		<key>Description</key>
+		<string>Sentry is an error-tracking tool that helps monitor and fix errors in real time. Error tracking and management tools such as Sentry distinguish themselves from traditional logging solutions such as the ELK Stack in their focus on discovering, investigating and fixing errors. Sentry has been around for some time and is quite popular — error-tracking tools are increasingly useful with the current focus on &quot;mean time to recovery&quot;. Sentry — with its integration options with Github, Hipchat, Heroku, Slack, among other platforms — enables us to keep a close eye on our apps. It can provide error notifications following a release, enable us to track whether new commits actually fix the issue and alert us if an issue comes back due to a regression.</string>
+		<key>Level</key>
+		<string>ASSESS</string>
+		<key>Quadrant</key>
+		<string>Tools</string>
+		<key>Position</key>
+		<dict>
+			<key>X</key>
+			<real>0.3</real>
+			<key>Z</key>
+			<real>-0.3</real>
+		</dict>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>Sonobuoy</string>
+		<key>Number</key>
+		<integer>78</integer>
+		<key>Description</key>
+		<string>Sonobuoy is a diagnostic tool for running end-to-end conformance tests on any Kubernetes cluster in a nondestructive way. The team at Heptio, which was founded by two creators of the Kubernetes projects, built this tool to ensure that the wide array of Kubernetes distributions and configurations conform to the best practices, while following the open source standardization for interoperability of clusters. We&apos;re experimenting with Sonobuoy to run as part of our infrastructure as code build pipeline, as well as continuous monitoring of our Kubernetes installations, to validate the behavior and health of the whole cluster.</string>
+		<key>Level</key>
+		<string>ASSESS</string>
+		<key>Quadrant</key>
+		<string>Tools</string>
+		<key>Position</key>
+		<dict>
+			<key>X</key>
+			<real>0.3</real>
+			<key>Z</key>
+			<real>-0.3</real>
+		</dict>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>Swashbuckle for .NET Core</string>
+		<key>Number</key>
+		<integer>79</integer>
+		<key>Description</key>
+		<string>In the current state of technology services, exposing RESTFul APIs is increasingly adopted and API documentation is very important for consumers. In this space, Swagger has been largely used across teams and we would like to highlight Swashbuckle for .NET Core. Swashbuckle for .NET Core is a tool that generates living API documentation in Swagger, based on the code for .NET Core projects. When using it, you can also explore and test operations of APIs through its UI.</string>
+		<key>Level</key>
+		<string>ASSESS</string>
 		<key>Quadrant</key>
 		<string>Tools</string>
 		<key>Position</key>
@@ -481,13 +1505,13 @@
 	</dict>
 	<dict>
 		<key>Name</key>
-		<string>ARKit&amp;ARCore</string>
+		<string>AssertJ</string>
 		<key>Number</key>
-		<integer>87</integer>
+		<integer>80</integer>
 		<key>Description</key>
-		<string>We&apos;ve seen a flurry of activity in mobile augmented reality much of it fueled by ARKit and ARCore, the native AR libraries used by Apple and Google, respectively. These libraries are bringing mobile AR technologies to the mainstream. However, the challenge will be for companies to find use cases that go beyond gimmicky and provide genuine solutions that actually enhance the user experience.</string>
+		<string>AssertJ is a Java library that provides a fluent interface for assertions, which makes it easy to convey intent within test code. AssertJ gives readable error messages, soft assertions and improved collections and exception support. Many of our teams choose AssertJ as their default assertion library instead of JUnit combined with Java Hamcrest.</string>
 		<key>Level</key>
-		<string>ASSESS</string>
+		<string>ADOPT</string>
 		<key>Quadrant</key>
 		<string>Language&amp;Frameworks</string>
 		<key>Position</key>
@@ -500,11 +1524,467 @@
 	</dict>
 	<dict>
 		<key>Name</key>
-		<string>CSS-In-JS</string>
+		<string>Enzyme</string>
+		<key>Number</key>
+		<integer>81</integer>
+		<key>Description</key>
+		<string>Enzyme has become the defacto standard for unit testing React UI components. Unlike many other snapshot-based testing utilities, Enzyme enables you to test without doing on-device rendering, which results in faster and more granular testing. This is a contributing factor in our ability to massively reduce the amount of functional testing we find we have to do in React applications. In many of our projects it’s used within a unit testing framework such as Jest.</string>
+		<key>Level</key>
+		<string>ADOPT</string>
+		<key>Quadrant</key>
+		<string>Language&amp;Frameworks</string>
+		<key>Position</key>
+		<dict>
+			<key>X</key>
+			<real>0.3</real>
+			<key>Z</key>
+			<real>0.1</real>
+		</dict>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>Kotlin</string>
+		<key>Number</key>
+		<integer>82</integer>
+		<key>Description</key>
+		<string>Kotlin has experienced an accelerated rate of adoption and rapid growth of tooling support. Some of the reasons behind its popularity are its concise syntax, null safety, ease of transition from Java and interoperability with other JVM-based languages in general, and that it doubles as a great introductory language to functional programming. With JetBrains adding the ability to compile Kotlin to native binaries on multiple platforms, as well as transpile to JavaScript, we believe it has the potential of much wider use by the larger community of mobile and native application developers. Although at the time of writing, some of the tooling such as static and coverage code analysis have yet to mature, given our experience of using Kotlin in many production applications, we believe Kotlin is ready for general adoption.</string>
+		<key>Level</key>
+		<string>ADOPT</string>
+		<key>Quadrant</key>
+		<string>Language&amp;Frameworks</string>
+		<key>Position</key>
+		<dict>
+			<key>X</key>
+			<real>0.3</real>
+			<key>Z</key>
+			<real>0.1</real>
+		</dict>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>Apollo</string>
+		<key>Number</key>
+		<integer>83</integer>
+		<key>Description</key>
+		<string>Since it was first introduced in the Radar, we’ve seen a steady adoption of GraphQL, particularly as a remote interface for a Backend for Frontend (BFF). As they gain more experience, our teams have reached consensus on Apollo, a GraphQL client, as the preferred way to access GraphQL data from a React application. Although the Apollo project also provides a server framework and a GraphQL gateway, the Apollo client simplifies the problem of binding UI components to data served by any GraphQL backend. Notably, Apollo is used by Amazon AWS in their recent launch of the new AWS AppSync service.</string>
+		<key>Level</key>
+		<string>TRIAL</string>
+		<key>Quadrant</key>
+		<string>Language&amp;Frameworks</string>
+		<key>Position</key>
+		<dict>
+			<key>X</key>
+			<real>0.3</real>
+			<key>Z</key>
+			<real>0.1</real>
+		</dict>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>CSS Grid Layout</string>
+		<key>Number</key>
+		<integer>84</integer>
+		<key>Description</key>
+		<string>CSS is the preferred choice for laying out web pages, even when it did not provide much explicit support for creating layouts. Flexbox helped with simpler, one-dimensional layouts, but developers usually reached for libraries and toolkits for more complex layouts. CSS Grid Layout is a two-dimensional grid-based layout system that provides a mechanism to divide available space for layout into columns and rows using a set of predictable sizing behaviors. Grid does not require any libraries and plays well with Flexbox and other CSS display elements. However, since IE11 is only partially supported, it ignores users who still depend on a Microsoft browser on Windows 7.</string>
+		<key>Level</key>
+		<string>TRIAL</string>
+		<key>Quadrant</key>
+		<string>Language&amp;Frameworks</string>
+		<key>Position</key>
+		<dict>
+			<key>X</key>
+			<real>0.3</real>
+			<key>Z</key>
+			<real>0.1</real>
+		</dict>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>CSS Modules</string>
+		<key>Number</key>
+		<integer>85</integer>
+		<key>Description</key>
+		<string>Most large CSS codebases require complex naming schemes to help avoid naming conflicts in the global namespace. CSS Modules address these problems by creating a local scope for all class names in a single CSS file. This file is imported to a JavaScript module, where CSS classes are referenced as strings. Then, in the build pipeline (Webpack, Browserify, etc.), the class names are replaced with generated unique strings. This is a significant change in responsibilities. Previously, a human had to manage the global namespace, to avoid class naming conflicts; now that responsibility rests with the build tooling. A small downside we&apos;ve encountered with CSS Modules: functional tests are usually out of the local scope and can therefore not reference classes by the name defined in the CSS file. We recommend using IDs or data attributes instead.</string>
+		<key>Level</key>
+		<string>TRIAL</string>
+		<key>Quadrant</key>
+		<string>Language&amp;Frameworks</string>
+		<key>Position</key>
+		<dict>
+			<key>X</key>
+			<real>0.3</real>
+			<key>Z</key>
+			<real>0.1</real>
+		</dict>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>Hyperledger Composer</string>
+		<key>Number</key>
+		<integer>86</integer>
+		<key>Description</key>
+		<string>The Hyperledger project has grown into a broader collaboration and now contains a series of subprojects. It supports Blockchain implementations for different purposes; for example, Burrow is dedicated to build a permissioned Ethereum and Indy is more focused on digital identity. Among these platforms, Fabric is the most mature one. Most of time when people talk about adopting Hyperledger they are actually thinking about Hyperledger Fabric. However, the programming abstraction of chaincode is relatively low level given it manipulates the state of the ledger directly. Moreover, it always takes a lot of time to set up infrastructure before writing the first line of blockchain code. Hyperledger Composer, which builds on top of Fabric, accelerates the process of turning ideas into software. Composer provides DSLs to model business assets, define access control and build a business network. By using Composer you could quickly validate your idea through a browser without setting up any infrastructure. Just remember that the Composer itself isn&apos;t Blockchain — you still need to deploy it on Fabric.</string>
+		<key>Level</key>
+		<string>TRIAL</string>
+		<key>Quadrant</key>
+		<string>Language&amp;Frameworks</string>
+		<key>Position</key>
+		<dict>
+			<key>X</key>
+			<real>0.3</real>
+			<key>Z</key>
+			<real>0.1</real>
+		</dict>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>Keras</string>
+		<key>Number</key>
+		<integer>87</integer>
+		<key>Description</key>
+		<string>Keras is a high-level interface in Python for building neural networks. Created by a Google engineer, Keras is open source and runs on top of either TensorFlow or Theano. It provides an amazingly simple interface for creating powerful deep-learning algorithms to train on CPUs or GPUs. Keras is well designed with modularity, simplicity, and extensibility in mind. Unlike a library such as Caffe, Keras supports more general network architectures such as recurrent nets, making it overall more useful for text analysis, NLP and general machine learning. If computer vision, or any other specialized branch of machine learning, is your primary concern, Caffe may be a more appropriate choice. However, if you’re looking to learn a simple yet powerful framework, Keras should be your first choice.</string>
+		<key>Level</key>
+		<string>TRIAL</string>
+		<key>Quadrant</key>
+		<string>Language&amp;Frameworks</string>
+		<key>Position</key>
+		<dict>
+			<key>X</key>
+			<real>0.3</real>
+			<key>Z</key>
+			<real>0.1</real>
+		</dict>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>OpenZeppelin</string>
+		<key>Number</key>
+		<integer>88</integer>
+		<key>Description</key>
+		<string>Security is the cornerstone of the blockchain economy. In the last issue of the Radar, we highlighted the importance of testing and auditing smart contracts dependencies. OpenZeppelin is a framework to help build secure smart contracts in Solidity. The team behind OpenZeppelin summed up a series of pitfalls and best practices around smart contracts&apos; security and embedded these experiences into the source code. The framework is well reviewed and validated by the open source community. We recommend the use of OpenZeppelin instead of writing your own implementation of the ERC20/ERC721 token. OpenZeppelin is also integrated with Truffle.</string>
+		<key>Level</key>
+		<string>TRIAL</string>
+		<key>Quadrant</key>
+		<string>Language&amp;Frameworks</string>
+		<key>Position</key>
+		<dict>
+			<key>X</key>
+			<real>0.1</real>
+			<key>Z</key>
+			<real>0.3</real>
+		</dict>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>Android Architecture Components</string>
+		<key>Number</key>
+		<integer>89</integer>
+		<key>Description</key>
+		<string>Historically, Google&apos;s Android documentation examples lacked architecture and structure. This changes with the release of Android Architecture Components, a set of opinionated libraries that help developers create Android applications with better architecture. They address longstanding pain points of Android development: handling lifecycles; pagination; SQLite databases; and data persistence over configuration changes. The libraries don&apos;t need to be used together — you can pick the ones you need most and integrate them into your existing project.</string>
+		<key>Level</key>
+		<string>ASSESS</string>
+		<key>Quadrant</key>
+		<string>Language&amp;Frameworks</string>
+		<key>Position</key>
+		<dict>
+			<key>X</key>
+			<real>0.1</real>
+			<key>Z</key>
+			<real>0.3</real>
+		</dict>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>Atlas and BeeHive</string>
+		<key>Number</key>
+		<integer>90</integer>
+		<key>Description</key>
+		<string>A multi-app strategy is really controversial, particularly at a time when fewer and fewer users are downloading new apps. Instead of introducing a new app and struggling with the download numbers, multiteams have to deliver functionality via a single app that is already widely installed, which creates an architectural challenge. Atlas and BeeHive are modularization solutions for Android and iOS apps, respectively. Atlas and BeeHive enable multiteams working on physically isolated modules to reassemble or dynamically load these modules from a facade app. Both are Alibaba open source projects, since Alibaba encountered the same problem of dwindling downloads and single-app architectural challenges.</string>
+		<key>Level</key>
+		<string>ASSESS</string>
+		<key>Quadrant</key>
+		<string>Language&amp;Frameworks</string>
+		<key>Position</key>
+		<dict>
+			<key>X</key>
+			<real>0.1</real>
+			<key>Z</key>
+			<real>0.3</real>
+		</dict>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>Clara rules</string>
 		<key>Number</key>
 		<integer>91</integer>
 		<key>Description</key>
-		<string>CSS in JS is a technique of writing CSS styling in the JavaScript programming language. This encourages a common pattern of writing the styling with the JavaScript component it applies to, co-locating presentational and logical concerns. The new players — including JSS, emotion and styled-components — rely on the tooling to translate the CSS-in-JS code to separate CSS stylesheets, to make them suitable for browser consumption. This is the second-generation approach to writing CSS in JavaScript and unlike the previous approaches doesn’t rely on in-line styles. That means it provides the benefit of supporting all CSS features, sharing of CSS using the npm ecosystem and utilization of components across multiple platforms. Our teams have found styled-components working well with component-based frameworks, such as React, and unit testing of CSS with jest-styled-components. This space is new and rapidly changing; the approach requires some effort for manual debugging of the generated class names in the browser, and it may not apply to some projects where the front-end architecture does not support reusing components and requires global styling.</string>
+		<string>Our first rule of thumb in selecting a rules engine is normally: you don&apos;t need a rules engine. We&apos;ve seen too many people tying themselves to a hard-to-test black-box rules engine for spurious reasons, when custom code would have been a better solution. That said, we&apos;ve had success using Clara rules for scenarios where a rules engine does make sense. We like that it uses simple Clojure code to express and evaluate the rules, which means they are amenable to refactoring, testing and source control. Rather than chasing the illusion that business people should directly manipulate the rules, it drives collaboration between the business experts and developers.</string>
+		<key>Level</key>
+		<string>ASSESS</string>
+		<key>Quadrant</key>
+		<string>Language&amp;Frameworks</string>
+		<key>Position</key>
+		<dict>
+			<key>X</key>
+			<real>0.1</real>
+			<key>Z</key>
+			<real>0.3</real>
+		</dict>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>Flutter</string>
+		<key>Number</key>
+		<integer>92</integer>
+		<key>Description</key>
+		<string>Flutter is a cross-platform framework that enables you to write native mobile apps in Dart. It benefits from Dart and can be compiled into native code and communicates with the target platform without bridge and context switching — something that can cause performance bottlenecks in frameworks such as React Native or Weex. Flutter’s hot-reload feature is impressive and provides superfast visual feedback when editing code. Currently Flutter is still in beta, but we’ll continue keeping an eye on it to see how its ecosystem matures.</string>
+		<key>Level</key>
+		<string>ASSESS</string>
+		<key>Quadrant</key>
+		<string>Language&amp;Frameworks</string>
+		<key>Position</key>
+		<dict>
+			<key>X</key>
+			<real>0.1</real>
+			<key>Z</key>
+			<real>0.3</real>
+		</dict>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>Gobot</string>
+		<key>Number</key>
+		<integer>93</integer>
+		<key>Description</key>
+		<string>The ability to compile the Go programming language to bare metal targets has raised interest among developers in using the language for embedded systems. Gobot is a framework for robotics, physical computing, and the Internet of Things, written in the Go programming language and supporting a variety of platforms. We&apos;ve used the framework for experimental robotic projects where real-time response hasn&apos;t been a requirement, and we’ve created open source software drivers with Gobot. Gobot HTTP APIs enable simple hardware integration with mobile devices to create richer applications.</string>
+		<key>Level</key>
+		<string>ASSESS</string>
+		<key>Quadrant</key>
+		<string>Language&amp;Frameworks</string>
+		<key>Position</key>
+		<dict>
+			<key>X</key>
+			<real>0.1</real>
+			<key>Z</key>
+			<real>0.3</real>
+		</dict>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>Hyperapp</string>
+		<key>Number</key>
+		<integer>94</integer>
+		<key>Description</key>
+		<string>Given the number of JavaScript application frameworks we’ve featured in the Radar over the years we asked ourselves, do we really need to call out another one? We decided that Hyperapp is worth a look because of its minimalist approach. It has a very small footprint, less than 1KB, and yet covers all the essential functionality for writing a web application. This is only possible with an elegant design that reduces everything to the absolute minimum, which in turn makes it easier to understand and use the framework. Despite being relatively new, it has attracted a good-size community and we recommend to at least consider it when picking a framework for a new application.</string>
+		<key>Level</key>
+		<string>ASSESS</string>
+		<key>Quadrant</key>
+		<string>Language&amp;Frameworks</string>
+		<key>Position</key>
+		<dict>
+			<key>X</key>
+			<real>0.1</real>
+			<key>Z</key>
+			<real>0.3</real>
+		</dict>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>PyTorch</string>
+		<key>Number</key>
+		<integer>95</integer>
+		<key>Description</key>
+		<string>PyTorch is a complete rewrite of the Torch machine learning framework from Lua to Python. Although quite new and immature compared to Tensorflow, programmers find PyTorch much easier to work with. Because of its object-orientation and native Python implementation, models can be expressed more clearly and succinctly and debugged during execution. Although many of these frameworks have emerged recently, PyTorch has the backing of Facebook and broad range of partner organisations, including NVIDIA, which should ensure continuing support for CUDA architectures. ThoughtWorks teams find PyTorch useful for experimenting and developing models but still rely on TensorFlow’s performance for production-scale training and classification.</string>
+		<key>Level</key>
+		<string>ASSESS</string>
+		<key>Quadrant</key>
+		<string>Language&amp;Frameworks</string>
+		<key>Position</key>
+		<dict>
+			<key>X</key>
+			<real>0.1</real>
+			<key>Z</key>
+			<real>0.3</real>
+		</dict>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>Rasa</string>
+		<key>Number</key>
+		<integer>96</integer>
+		<key>Description</key>
+		<string>Rasa is a new entrant in the area of chatbots. Instead of using a simple decision tree it uses neural networks to map intent and internal state to a response. Rasa integrates with natural language processing solutions such as spaCy; and, unlike other solutions we&apos;ve featured in the Radar, Rasa is open source software and can be self-hosted, which makes it a viable solution when ownership of data is of concern. Our experiences with using Rasa Stack for an internal application have been positive.</string>
+		<key>Level</key>
+		<string>ASSESS</string>
+		<key>Quadrant</key>
+		<string>Language&amp;Frameworks</string>
+		<key>Position</key>
+		<dict>
+			<key>X</key>
+			<real>0.1</real>
+			<key>Z</key>
+			<real>0.3</real>
+		</dict>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>Reactor</string>
+		<key>Number</key>
+		<integer>97</integer>
+		<key>Description</key>
+		<string>Reactor is a library for building non-blocking applications on the JVM — version 8 and above — based on the Reactive Streams specification. Reactive programming emphasizes moving from imperative logic to asynchronous, non-blocking and functional style code, especially when dealing with external resources. Reactor implements the reactive stream specification and provides two publisher APIs — Flux (0 to N elements) and Mono (0 or 1 element) — to effectively model push-based stream processing. Reactor project is well suited for microservices architecture and offers back pressure–ready network engines for HTTP, WebSockets, TCP and UDP traffic.</string>
+		<key>Level</key>
+		<string>ASSESS</string>
+		<key>Quadrant</key>
+		<string>Language&amp;Frameworks</string>
+		<key>Position</key>
+		<dict>
+			<key>X</key>
+			<real>0.1</real>
+			<key>Z</key>
+			<real>0.3</real>
+		</dict>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>RIBs</string>
+		<key>Number</key>
+		<integer>98</integer>
+		<key>Description</key>
+		<string>RIBs — which is short for router, interactor and builder — is a cross-platform architecture mobile framework from Uber. The key idea of RIBs is to decouple business logic from the view tree, and thus ensure the app is driven by business logic. This is actually an application of Clean Architecture in mobile application development. By applying consistent architecture patterns across native Android and iOS, RIBs provides clear statement management and good testability. We advise putting business logic in the back-end service rather than leak it into the view, so if you do have a complicated mobile application, RIBs can help manage this complexity.</string>
+		<key>Level</key>
+		<string>ASSESS</string>
+		<key>Quadrant</key>
+		<string>Language&amp;Frameworks</string>
+		<key>Position</key>
+		<dict>
+			<key>X</key>
+			<real>0.1</real>
+			<key>Z</key>
+			<real>0.3</real>
+		</dict>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>Solidity</string>
+		<key>Number</key>
+		<integer>99</integer>
+		<key>Description</key>
+		<string>Programming for smart contracts requires a more expressive language than a scripting system for transactions. Solidity is the most popular among the new programming languages designed for smart contracts. Solidity is a contract-oriented, statically typed language whose syntax is similar to JavaScript. It provides abstractions for writing self-enforcing business logic in smart contracts. The toolchain around Solidity is growing fast. Nowadays, Solidity is the primary choice on the Ethereum platform. Given the immutable nature of deployed smart contracts, it should go without saying that rigorous testing and audit of dependencies is vital.</string>
+		<key>Level</key>
+		<string>ASSESS</string>
+		<key>Quadrant</key>
+		<string>Language&amp;Frameworks</string>
+		<key>Position</key>
+		<dict>
+			<key>X</key>
+			<real>0.1</real>
+			<key>Z</key>
+			<real>0.3</real>
+		</dict>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>SwiftNIO</string>
+		<key>Number</key>
+		<integer>100</integer>
+		<key>Description</key>
+		<string>We’re in favor of asynchronous and reactive styles of programming especially for network I/O-bound distributed systems. Reactive libraries often sit on top of a lower level nonblocking communication framework such as Netty. Recently SwiftNIO, an open source nonblocking networking framework from Apple, has grabbed our attention. SwiftNIO is similar to Netty but written in Swift. It’s currently supported on MacOS and Ubuntu and implements HTTP as a higher-level protocol. We’re excited to see the usage of this framework and integration of it into higher-level application frameworks and other protocols.</string>
+		<key>Level</key>
+		<string>ASSESS</string>
+		<key>Quadrant</key>
+		<string>Language&amp;Frameworks</string>
+		<key>Position</key>
+		<dict>
+			<key>X</key>
+			<real>0.1</real>
+			<key>Z</key>
+			<real>0.3</real>
+		</dict>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>Tensorflow Eager Execution</string>
+		<key>Number</key>
+		<integer>101</integer>
+		<key>Description</key>
+		<string>In the last issue we featured PyTorch, a deep-learning modeling framework that allows an imperative programming style. Now TensorFlow Eager Execution provides this imperative style in TensorFlow by enabling execution of modeling statements outside of the context of a session. This improvement could provide the ease of debugging and finer-grained model control of PyTorch with the widespread popularity and performance of TensorFlow models. The feature is still quite new so we’re anxious to see how it performs and how it’ll be received by the TensorFlow community.</string>
+		<key>Level</key>
+		<string>ASSESS</string>
+		<key>Quadrant</key>
+		<string>Language&amp;Frameworks</string>
+		<key>Position</key>
+		<dict>
+			<key>X</key>
+			<real>0.1</real>
+			<key>Z</key>
+			<real>0.3</real>
+		</dict>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>TensorFlow Lite</string>
+		<key>Number</key>
+		<integer>102</integer>
+		<key>Description</key>
+		<string>TensorFlow Lite is the designated successor of TensorFlow Mobile, which we mentioned in our previous Radar. Like Mobile it is a lightweight solution tuned and optimized for mobile devices (Android and iOS). We expect the standard use case to be the deployment of pretrained models into mobile apps but TensorFlow Lite also supports on-device learning which opens further areas of application.</string>
+		<key>Level</key>
+		<string>ASSESS</string>
+		<key>Quadrant</key>
+		<string>Language&amp;Frameworks</string>
+		<key>Position</key>
+		<dict>
+			<key>X</key>
+			<real>0.1</real>
+			<key>Z</key>
+			<real>0.3</real>
+		</dict>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>troposphere</string>
+		<key>Number</key>
+		<integer>103</integer>
+		<key>Description</key>
+		<string>We’re trying out troposphere as a way of defining the infrastructure as code on AWS for our projects where AWS CloudFormation is used instead of Terraform. troposphere is a Python library that allows us to write Python code to generate CloudFormation JSON descriptions. What we like about troposphere is that it facilitates catching JSON errors early, applying type checking, and unit testing and DRY composition of AWS resources.</string>
+		<key>Level</key>
+		<string>ASSESS</string>
+		<key>Quadrant</key>
+		<string>Language&amp;Frameworks</string>
+		<key>Position</key>
+		<dict>
+			<key>X</key>
+			<real>0.1</real>
+			<key>Z</key>
+			<real>0.3</real>
+		</dict>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>Truffle</string>
+		<key>Number</key>
+		<integer>104</integer>
+		<key>Description</key>
+		<string>Truffle is a development framework that brings a modern web development experience to the Ethereum platform. It takes over the job of smart contract compiling, library linking and deployment, as well as dealing with artifacts in different blockchain networks. One of the reasons we love Truffle is that it encourages people to write tests for their smart contracts. You need to take tests really seriously as smart contract programming is often related to money. With its built-in testing framework and integration with TestRPC, Truffle makes it possible to write the contract in a TDD way. We expect to see more technologies similar to Truffle to promote continuous integration in the blockchain area.</string>
+		<key>Level</key>
+		<string>ASSESS</string>
+		<key>Quadrant</key>
+		<string>Language&amp;Frameworks</string>
+		<key>Position</key>
+		<dict>
+			<key>X</key>
+			<real>0.1</real>
+			<key>Z</key>
+			<real>0.3</real>
+		</dict>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>WebAssembly</string>
+		<key>Number</key>
+		<integer>105</integer>
+		<key>Description</key>
+		<string>WebAssembly is a big step forward in the capabilities of the browser as a code execution environment. Supported by all major browsers and backward compatible, it&apos;s a binary compilation format designed to run in the browser at near native speeds. It opens up the range of languages you can use to write front-end functionality, with early focus on C, C++ and Rust, and it&apos;s also an LLVM compilation target. When run in the sandbox, it can interact with JavaScript and shares the same permissions and security model. When used with Firefox’s new streaming compiler, it also results in faster page initialization. Although it&apos;s still early days, this W3C standard is definitely one to start exploring.</string>
 		<key>Level</key>
 		<string>ASSESS</string>
 		<key>Quadrant</key>
