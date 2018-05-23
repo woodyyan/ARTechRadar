@@ -10,7 +10,7 @@ import Foundation
 import SceneKit
 
 class RadarDotNode: SCNNode {
-    private let y: Float = 0.08
+    private let y: Float = 0.05
     
     var sphere: SphereNode!
     var title: TextNode!
