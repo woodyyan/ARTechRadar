@@ -12,17 +12,22 @@ import ARKit
 extension ViewController: ARSCNViewDelegate, ARSessionDelegate {
     
     func session(_ session: ARSession, cameraDidChangeTrackingState camera: ARCamera) {
-//        statusViewController.showTrackingQualityInfo(for: camera.trackingState, autoHide: true)
-//
-//        switch camera.trackingState {
-//        case .notAvailable, .limited:
-//            statusViewController.escalateFeedback(for: camera.trackingState, inSeconds: 3.0)
-//        case .normal:
-//            statusViewController.cancelScheduledMessage(for: .trackingStateEscalation)
-//
-//            // Unhide content after successful relocalization.
-//            virtualObjectLoader.loadedObjects.forEach { $0.isHidden = false }
-//        }
+        messageLabel.isHidden = false
+        messageLabel.text = camera.trackingState.presentationString
+
+        switch camera.trackingState {
+        case .notAvailable, .limited:
+            var message = camera.trackingState.presentationString
+            if let recommendation = camera.trackingState.recommendation {
+                message.append(": \(recommendation)")
+            }
+            messageLabel.text = message
+        case .normal:
+            messageLabel.isHidden = true
+            messageLabel.text = ""
+            // Unhide content after successful relocalization.
+            //virtualObjectLoader.loadedObjects.forEach { $0.isHidden = false }
+        }
     }
     
     func session(_ session: ARSession, didFailWithError error: Error) {
@@ -35,6 +40,13 @@ extension ViewController: ARSCNViewDelegate, ARSessionDelegate {
     // MARK: - ARSCNViewDelegate
     
     func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
+        guard anchor is ARPlaneAnchor else { return }
+        
+        DispatchQueue.main.async {
+            self.messageLabel.isHidden = false
+            self.messageLabel.text = "SURFACE DETECTED"
+        }
+        
         if !hasRadarLoaded {
             renderRadar(node: node)
             hasRadarLoaded = true

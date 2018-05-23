@@ -16,6 +16,8 @@ class ViewController: UIViewController {
     
     @IBOutlet var sceneView: ARSCNView!
     
+    @IBOutlet weak var messageLabel: UILabel!
+    
     var focusSquare = FocusSquare()
     
     let updateQueue = DispatchQueue(label: "com.example.apple-samplecode.arkitexample.serialSceneKitQueue")
@@ -39,10 +41,10 @@ class ViewController: UIViewController {
         
         let scene = SCNScene()
         sceneView.scene = scene
-        sceneView.autoenablesDefaultLighting = false
-        if let environmentMap = UIImage(named: "art.scnassets/environment_blur.exr") {
-            sceneView.scene.lightingEnvironment.contents = environmentMap
-        }
+        sceneView.autoenablesDefaultLighting = true
+//        if let environmentMap = UIImage(named: "art.scnassets/environment_blur.exr") {
+//            sceneView.scene.lightingEnvironment.contents = environmentMap
+//        }
         
         addGesture()
     }
@@ -51,7 +53,8 @@ class ViewController: UIViewController {
         if hasRadarLoaded {
             hasRadarLoaded = false
             
-//            statusViewController.cancelAllScheduledMessages()
+            messageLabel.text = ""
+            messageLabel.isHidden = true
             
             for node in sceneView.scene.rootNode.childNodes {
                 node.removeFromParentNode()
@@ -67,7 +70,8 @@ class ViewController: UIViewController {
         configuration.planeDetection = [.horizontal]
         sceneView.session.run(configuration, options: [.resetTracking, .removeExistingAnchors])
         
-//        statusViewController.scheduleMessage("FIND A SURFACE TO PLACE AN OBJECT", inSeconds: 7.5, messageType: .planeEstimation)
+        messageLabel.text = "Find a surface to place the Tech Radar"
+        messageLabel.isHidden = false
     }
     
     func updateFocusSquare() {
@@ -75,7 +79,8 @@ class ViewController: UIViewController {
             focusSquare.hide()
         } else {
             focusSquare.unhide()
-            //statusViewController.scheduleMessage("TRY MOVING LEFT OR RIGHT", inSeconds: 5.0, messageType: .focusSquare)
+            messageLabel.text = "Try moving left or right"
+            messageLabel.isHidden = false
         }
         
         // Perform hit testing only when ARKit tracking is in a good state.
@@ -85,7 +90,8 @@ class ViewController: UIViewController {
                 self.sceneView.scene.rootNode.addChildNode(self.focusSquare)
                 self.focusSquare.state = .detecting(hitTestResult: result, camera: camera)
             }
-//            statusViewController.cancelScheduledMessage(for: .focusSquare)
+            messageLabel.text = ""
+            messageLabel.isHidden = true
         } else {
             updateQueue.async {
                 self.focusSquare.state = .initializing
@@ -114,12 +120,7 @@ class ViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        // Create a session configuration
-        let configuration = ARWorldTrackingConfiguration()
-
-        configuration.planeDetection = .horizontal
-        // Run the view's session
-        sceneView.session.run(configuration)
+        resetTracking()
     }
     
     override func viewWillDisappear(_ animated: Bool) {

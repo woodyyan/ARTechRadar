@@ -29,6 +29,14 @@
                                     <action selector="restartExperience:" destination="BV1-FR-VrT" eventType="touchUpInside" id="8T4-SA-auY"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" layoutMarginsFollowReadableWidth="YES" text="status Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4xc-o6-vRP" userLabel="Message Label">
+                                <rect key="frame" x="16" y="21" width="293" height="21"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -40,6 +48,7 @@
                         <viewLayoutGuide key="safeArea" id="f4C-yY-4eS"/>
                     </view>
                     <connections>
+                        <outlet property="messageLabel" destination="4xc-o6-vRP" id="aJw-Bc-xxc"/>
                         <outlet property="sceneView" destination="eHf-e4-f9L" id="Sao-QQ-vv9"/>
                     </connections>
                 </viewController>
