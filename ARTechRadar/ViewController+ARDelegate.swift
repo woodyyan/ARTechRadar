@@ -40,16 +40,15 @@ extension ViewController: ARSCNViewDelegate, ARSessionDelegate {
     // MARK: - ARSCNViewDelegate
     
     func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
-        guard anchor is ARPlaneAnchor else { return }
+        guard let planeAnchor = anchor as? ARPlaneAnchor else { return }
         
         DispatchQueue.main.async {
             self.messageLabel.isHidden = false
             self.messageLabel.text = "SURFACE DETECTED"
         }
         
-        if !hasRadarLoaded {
-            renderRadar(node: node)
-            hasRadarLoaded = true
+        updateQueue.async {
+            self.techRadarNode?.adjustOntoPlaneAnchor(planeAnchor, using: node)
         }
     }
     
@@ -70,25 +69,28 @@ extension ViewController: ARSCNViewDelegate, ARSessionDelegate {
     
     func renderer(_ renderer: SCNSceneRenderer, didUpdate node: SCNNode, for anchor: ARAnchor) {
         updateQueue.async {
-//            if let planeAnchor = anchor as? ARPlaneAnchor {
-//                for object in self.virtualObjectLoader.loadedObjects {
-//                    object.adjustOntoPlaneAnchor(planeAnchor, using: node)
-//                }
-//            } else {
-//                if let objectAtAnchor = self.virtualObjectLoader.loadedObjects.first(where: { $0.anchor == anchor }) {
-//                    objectAtAnchor.simdPosition = anchor.transform.translation
-//                    objectAtAnchor.anchor = anchor
-//                }
-//            }
+            ll
+            if let planeAnchor = anchor as? ARPlaneAnchor {
+                for object in self.virtualObjectLoader.loadedObjects {
+                    object.adjustOntoPlaneAnchor(planeAnchor, using: node)
+                }
+            } else {
+                if let objectAtAnchor = self.virtualObjectLoader.loadedObjects.first(where: { $0.anchor == anchor }) {
+                    objectAtAnchor.simdPosition = anchor.transform.translation
+                    objectAtAnchor.anchor = anchor
+                }
+            }
         }
     }
     
-    private func renderRadar(node: SCNNode) {
+    func renderRadar() -> TechRadarNode {
+        let node = TechRadarNode()
         let basicRadius: Float = 0.2
         let radarAnchor = SCNVector3(0, 0, 0)
         addRadarPlane(node: node, basicRadius: basicRadius, radarAnchor: radarAnchor)
         addRadarDots(node: node)
         addRadarQuadrant(node: node, basicRadius: basicRadius, radarAnchor: radarAnchor)
+        return node
     }
     
     func addRadarQuadrant(node: SCNNode, basicRadius: Float, radarAnchor: SCNVector3) {

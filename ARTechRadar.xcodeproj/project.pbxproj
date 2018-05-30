@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		82029CD920BBDCA900A44B1F /* TechRadarNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82029CD820BBDCA900A44B1F /* TechRadarNode.swift */; };
 		8236B00020B2CD7400F7CA45 /* ViewController+ARDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8236AFFF20B2CD7400F7CA45 /* ViewController+ARDelegate.swift */; };
 		8236B00320B2CF7700F7CA45 /* FocusSquare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8236B00220B2CF7700F7CA45 /* FocusSquare.swift */; };
 		8236B00520B2CFA600F7CA45 /* FocusSquareSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8236B00420B2CFA600F7CA45 /* FocusSquareSegment.swift */; };
@@ -66,6 +67,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		82029CD820BBDCA900A44B1F /* TechRadarNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechRadarNode.swift; sourceTree = "<group>"; };
 		8236AFFF20B2CD7400F7CA45 /* ViewController+ARDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+ARDelegate.swift"; sourceTree = "<group>"; };
 		8236B00220B2CF7700F7CA45 /* FocusSquare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusSquare.swift; sourceTree = "<group>"; };
 		8236B00420B2CFA600F7CA45 /* FocusSquareSegment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusSquareSegment.swift; sourceTree = "<group>"; };
@@ -271,6 +273,7 @@
 				F80DDDF0207CB1FB004519B3 /* RadarDotNode.swift */,
 				F851467C209B054C00877AEC /* PlaneNode.swift */,
 				F851467E20AC231500877AEC /* DescriptionNode.swift */,
+				82029CD820BBDCA900A44B1F /* TechRadarNode.swift */,
 			);
 			path = Nodes;
 			sourceTree = "<group>";
@@ -447,6 +450,7 @@
 				F8CD8D0020513F8E00222B39 /* CubeNode.swift in Sources */,
 				F851467F20AC231500877AEC /* DescriptionNode.swift in Sources */,
 				829450861F9DE799004D066E /* ViewController.swift in Sources */,
+				82029CD920BBDCA900A44B1F /* TechRadarNode.swift in Sources */,
 				8236B00320B2CF7700F7CA45 /* FocusSquare.swift in Sources */,
 				8280CDBC2085DD1E00C7A1F5 /* RadarDataService.swift in Sources */,
 				829450821F9DE799004D066E /* AppDelegate.swift in Sources */,

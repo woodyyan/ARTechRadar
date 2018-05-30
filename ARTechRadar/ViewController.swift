@@ -14,13 +14,15 @@ class ViewController: UIViewController {
     let baseHeight: Float = 0.05
     var hasRadarLoaded = false
     
+    var techRadarNode: TechRadarNode!
+    
     @IBOutlet var sceneView: ARSCNView!
     
     @IBOutlet weak var messageLabel: UILabel!
     
     var focusSquare = FocusSquare()
     
-    let updateQueue = DispatchQueue(label: "com.example.apple-samplecode.arkitexample.serialSceneKitQueue")
+    let updateQueue = DispatchQueue(label: "com.thoughtworks.techradar")
     
     var screenCenter: CGPoint {
         let bounds = sceneView.bounds
@@ -107,12 +109,37 @@ class ViewController: UIViewController {
     }
     
     @objc func tap(sender: UITapGestureRecognizer) {
-        let location = sender.location(in: sceneView)
-        let hitResults = sceneView.hitTest(location, options: nil)
-        
-        if !hitResults.isEmpty {
-            if let hitNode = hitResults.first?.node.parent as? RadarDotNode {
-                hitNode.displayDescription()
+        if hasRadarLoaded {
+            let location = sender.location(in: sceneView)
+            let hitResults = sceneView.hitTest(location, options: nil)
+            
+            if !hitResults.isEmpty {
+                if let hitNode = hitResults.first?.node.parent as? RadarDotNode {
+                    hitNode.displayDescription()
+                }
+            }
+        } else {
+            guard let cameraTransform = self.sceneView.session.currentFrame?.camera.transform,
+                let focusSquareAlignment = focusSquare.recentFocusSquareAlignments.last,
+                focusSquare.state != .initializing else {
+                    return
+            }
+            
+            // The focus square transform may contain a scale component, so reset scale to 1
+            let focusSquareScaleInverse = 1.0 / focusSquare.simdScale.x
+            let scaleMatrix = float4x4(uniformScale: focusSquareScaleInverse)
+            let focusSquareTransformWithoutScale = focusSquare.simdWorldTransform * scaleMatrix
+            
+            techRadarNode = self.renderRadar()
+            techRadarNode.setTransform(focusSquareTransformWithoutScale,
+                                       relativeTo: cameraTransform,
+                                       smoothMovement: false,
+                                       alignment: focusSquareAlignment,
+                                       allowAnimation: false)
+            
+            updateQueue.async {
+                self.sceneView.scene.rootNode.addChildNode(self.techRadarNode!)
+                self.sceneView.addOrUpdateAnchor(for: self.techRadarNode!)
             }
         }
     }
