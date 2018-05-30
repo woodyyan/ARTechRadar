@@ -31,16 +31,18 @@ class RadarDotNode: SCNNode {
         
         self.descript = DescriptionNode.init(generateDescription())
         descript.position = SCNVector3.init(radarDot.position.x, y + 0.25, radarDot.position.z)
+        descript.isHidden = true
         
         self.addChildNode(sphere)
         self.addChildNode(title)
+        self.addChildNode(descript)
     }
     
     private func generateDescription() -> NSAttributedString {
         let attributedString = NSMutableAttributedString(string: "")
         
         let titleFont = UIFont(name: "OpenSans-SemiBold", size: 22)!
-        let titleAttributes = [NSAttributedStringKey.foregroundColor: radarDot.color, NSAttributedStringKey.font: titleFont]
+        let titleAttributes = [NSAttributedStringKey.foregroundColor: radarDot.color.darkerColor(percent: 0.3), NSAttributedStringKey.font: titleFont]
         attributedString.append(NSAttributedString(string: radarDot.name + "\n", attributes: titleAttributes))
         
         let descriptionAttributes = [NSAttributedStringKey.font: UIFont(name: "OpenSans-Light", size: 14)!]
@@ -62,11 +64,11 @@ class RadarDotNode: SCNNode {
     }
     
     public func displayDescription() {
-        if !self.childNodes.contains(descript) {
-            self.addChildNode(descript)
+        if self.descript.isHidden {
+            self.descript.isHidden = false
             self.sphere.geometry?.materials[0].emission.contents = self.radarDot.color
         } else {
-            descript.removeFromParentNode()
+            self.descript.isHidden = true
             self.sphere.geometry?.materials[0].emission.contents = UIColor.black
         }
     }

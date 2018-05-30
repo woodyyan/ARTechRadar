@@ -47,10 +47,10 @@ extension ViewController: ARSCNViewDelegate, ARSessionDelegate {
             self.messageLabel.text = "SURFACE DETECTED"
         }
         
-        if !hasRadarLoaded {
-            renderRadar(node: node)
-            hasRadarLoaded = true
-        }
+//        if !hasRadarLoaded {
+//            renderRadar(node: node)
+//            hasRadarLoaded = true
+//        }
     }
     
     func renderer(_ renderer: SCNSceneRenderer, updateAtTime time: TimeInterval) {
@@ -83,12 +83,15 @@ extension ViewController: ARSCNViewDelegate, ARSessionDelegate {
         }
     }
     
-    private func renderRadar(node: SCNNode) {
+    public func renderRadar(node: SCNNode, hitTestResult: ARHitTestResult) {
+        let radarNode = SCNNode()
         let basicRadius: Float = 0.2
         let radarAnchor = SCNVector3(0, 0, 0)
-        addRadarPlane(node: node, basicRadius: basicRadius, radarAnchor: radarAnchor)
-        addRadarDots(node: node)
-        addRadarQuadrant(node: node, basicRadius: basicRadius, radarAnchor: radarAnchor)
+        addRadarPlane(node: radarNode, basicRadius: basicRadius, radarAnchor: radarAnchor)
+        addRadarDots(node: radarNode)
+        addRadarQuadrant(node: radarNode, basicRadius: basicRadius, radarAnchor: radarAnchor)
+        radarNode.position = SCNVector3(hitTestResult.worldTransform.translation.x, hitTestResult.worldTransform.translation.y, hitTestResult.worldTransform.translation.z)
+        node.addChildNode(radarNode)
     }
     
     func addRadarQuadrant(node: SCNNode, basicRadius: Float, radarAnchor: SCNVector3) {

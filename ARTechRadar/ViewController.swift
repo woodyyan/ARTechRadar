@@ -89,6 +89,10 @@ class ViewController: UIViewController {
             updateQueue.async {
                 self.sceneView.scene.rootNode.addChildNode(self.focusSquare)
                 self.focusSquare.state = .detecting(hitTestResult: result, camera: camera)
+                if ((result.anchor as? ARPlaneAnchor) != nil) && !self.hasRadarLoaded {
+                    self.renderRadar(node: self.sceneView.scene.rootNode, hitTestResult: result)
+                    self.hasRadarLoaded = true
+                }
             }
             messageLabel.text = ""
             messageLabel.isHidden = true
